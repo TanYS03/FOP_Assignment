@@ -5,5 +5,7 @@ public class Main {
         System.out.println("Hello world!");
         System.out.println("What is this");
         int i=0;
+                String a ="o";
+        String b="o";
     }
 }
