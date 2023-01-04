@@ -7,5 +7,6 @@ public class Main {
         int i=0;
                 String a ="o";
         String b="o";
+        String c="o";
     }
 }
