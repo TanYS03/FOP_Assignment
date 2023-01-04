@@ -8,5 +8,6 @@ public class Main {
                 String a ="o";
         String b="o";
         String c="o";
+        String op="hi";
     }
 }
