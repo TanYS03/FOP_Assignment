@@ -8,11 +8,12 @@ import java.util.regex.Matcher;
 public class ExtractText {
     public static void main(String[] args){
         StringBuilder str = readAndWriteTextIntoFile("C:\\Users\\User\\Downloads\\extracted_log");  
-        countTypesOfTasks("error");  
+         
         countTypesOfTasks("epyc");     
         countTypesOfTasks("opteron");
         countTypesOfTasks("gpu");
-        findKeyWords("C:\\Users\\User\\Downloads\\extracted_log");
+        
+        findAndInputUsernames();
         countErrors();
     }
 
@@ -53,48 +54,65 @@ public class ExtractText {
                         line = reader.readLine(); 
                     }
                     System.out.println( "The number of '" + tasks + "' found is: " + count);
+                    System.out.println(" ");
            }catch (FileNotFoundException ex) {System.out.println("File not found");}
             catch (IOException e){}           
     }    
 
-    //function: read through the text files and sort out different types of partititons.
-    public static void findKeyWords(String filePath){
-            try {
-                BufferedReader reader = new BufferedReader(new FileReader(filePath));
-                PrintWriter writer = new PrintWriter("C:\\Users\\User\\Downloads\\keyword.txt");
-                    ArrayList<String> ls = new ArrayList<String>();
-                    HashSet<String> set = new HashSet<String>();
-                    String line;
-
-                    while((line = reader.readLine()) != null) {
-                        Pattern pattern = Pattern.compile("\\[.*\\] (.*): (.*)");
-                        Matcher matcher = pattern.matcher(line);
-                            if (matcher.matches()) {         
-                                ls.add(matcher.group(1));
-                            }
-                    }
-                    ls.forEach(set::add);
-                    set.forEach(writer::println);
-                    writer.close();
-        }catch(FileNotFoundException ex){System.out.println("File  not found");}
-            catch(IOException ex){}
-    }       
-
-
+    
+    // function: read raw datas, find and count errors caused by users
     public static void countErrors(){
+            try {
+                BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Downloads\\extracted_log"));
+                PrintWriter writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
+                    
+                    String line;     
+                    int count = 0;
+                    while((line = reader.readLine()) != null)
+                    {
+                        Pattern pattern = Pattern.compile("\\[.*\\].*(error: This association).*");
+                        Matcher matcher = pattern.matcher(line);
+                            if(matcher.matches()){
+                                writer.println(line);
+                                count++;
+                        }
+                    }
+                    System.out.println(count);
+                    writer.close();
+                    reader.close();
+           }catch (FileNotFoundException ex) {System.out.println("File not found");}
+            catch (IOException e){}       
+    }
+
+
+    // function: write the usernames into a file named "usernames.txt".
+    public static void findAndInputUsernames(){
         try {
             BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Downloads\\extracted_log"));
-            PrintWriter writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
-            
-                String line;      
+            PrintWriter writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\usernames.txt"));
+                HashSet<String> users = new HashSet<>();
+                ArrayList<String> month = new ArrayList<>();
+                month.add("June");
+                month.add("July");
+                month.add("August");
+                month.add("September");
+                month.add("October");
+                month.add("November");
+                month.add("December");
+                String line;     
 
-                while((line = reader.readLine()) != null){
-                    Pattern pattern = Pattern.compile("error:");
+                while((line = reader.readLine()) != null)
+                {
+                    Pattern pattern = Pattern.compile("\\[.*\\].*(error: This association).*(user=)(.*)(,).*");
                     Matcher matcher = pattern.matcher(line);
-                        if(matcher.matches()){
-                        System.out.println(line);
+                        if(matcher.matches()) {                            
+                            writer.println(matcher.group(3));
+                            users.add(matcher.group(3));
                     }
+                    
                 }
+                System.out.println(users);
+                System.out.println(users.size());
                 writer.close();
                 reader.close();
        }catch (FileNotFoundException ex) {System.out.println("File not found");}
