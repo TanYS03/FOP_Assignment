@@ -6,9 +6,8 @@ public class Assignment {
         // StringBuilder str = readAndWriteTextIntoFile("C:\\Users\\User\\Downloads\\extracted_log");
         // System.out.println(str);
       
-        countTypesOfTasks("gpu");  
-        countTypesOfTasks("opteron");   
-        countTypesOfTasks("epyc");
+        countTypesOfTasks();  
+
 
     }
 
