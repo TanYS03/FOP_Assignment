@@ -48,6 +48,7 @@ public class ExtractText {
                 PrintWriter writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
                 String line = reader.readLine();               
                 int count = 0;
+
                     while(line != null) 
                     {             
                         if(line.contains(tasks)) {
@@ -80,7 +81,8 @@ public class ExtractText {
                                 count++;
                         }
                     }
-                    System.out.println(count);
+                    System.out.println("Total errors caused by users are: " + count);
+                    System.out.println(" ");
                     writer.close();
                     reader.close();
            }catch (FileNotFoundException ex) {System.out.println("File not found");}
@@ -106,8 +108,9 @@ public class ExtractText {
                     }
                     
                 }
-                System.out.println(users);
+                System.out.println("Users list:\n " + users);
                 System.out.println("The number of users are: " + users.size());
+                System.out.println(" ");
                 writer.close();
                 reader.close();
        }catch (FileNotFoundException ex) {System.out.println("File not found");}
@@ -153,7 +156,7 @@ public class ExtractText {
                         month.add(set);
                     } 
                         Collections.sort(month);
-                        System.out.println(month);
+                        // System.out.println(month);
                                           
                      
                 for (int i = 0; i < month.size(); i++)                                 
@@ -166,7 +169,7 @@ public class ExtractText {
                         Matcher matcher = pattern.matcher(line);
 
                         if(matcher.matches()) {
-                            System.out.println(line);
+                            // System.out.println(line);
                             writer.println(line);
                         }
                     }
