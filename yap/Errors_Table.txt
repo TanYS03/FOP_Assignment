@@ -1,4 +1,5 @@
-                         Name |             Time     |        Associations num
+ 
+ Name               |                   Time                   |  Associations num
  'aah'                |    2022-08-24T17:10:29.685   |  238            
  'aah'                |    2022-08-24T17:12:57.908   |  238            
  'aah'                |    2022-08-24T17:13:55.128   |  238            

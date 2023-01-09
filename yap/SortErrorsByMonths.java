@@ -164,7 +164,7 @@ public static ArrayList<String> inputErrorsByMonths(HashSet<String> months) {
          catch(IOException ex){}
     }
 
-
+    // function: display username, time and association number in a table
     public static void displayInfoInTable(HashSet<String> users){
         ArrayList<String> usersname = new ArrayList<String>();
         try{
@@ -177,7 +177,8 @@ public static ArrayList<String> inputErrorsByMonths(HashSet<String> months) {
             System.out.println(usersname);
 
             String line;
-            writer.printf("         %-20s |             %-9s|        %-15s\n","Name","Time","Associations num");
+            writer.println(" ");
+            writer.printf(" %-18s |  %-30s          |  %-15s\n","Name","                 Time","Associations num");
             for (String name : usersname) {
                 reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
                 
