@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.util.*;
 
 public class ExtractText {
     public static void main(String[] args){
@@ -15,6 +16,8 @@ public class ExtractText {
         
         findAndInputUsernames();
         countErrors();
+        HashSet<String> months = sortErrorsByMonths();
+        inputErrorsByMonths(months);
     }
 
     // function: read and write datas into a new file.
@@ -91,14 +94,6 @@ public class ExtractText {
             BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Downloads\\extracted_log"));
             PrintWriter writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\usernames.txt"));
                 HashSet<String> users = new HashSet<>();
-                ArrayList<String> month = new ArrayList<>();
-                month.add("June");
-                month.add("July");
-                month.add("August");
-                month.add("September");
-                month.add("October");
-                month.add("November");
-                month.add("December");
                 String line;     
 
                 while((line = reader.readLine()) != null)
@@ -112,12 +107,77 @@ public class ExtractText {
                     
                 }
                 System.out.println(users);
-                System.out.println(users.size());
+                System.out.println("The number of users are: " + users.size());
                 writer.close();
                 reader.close();
        }catch (FileNotFoundException ex) {System.out.println("File not found");}
         catch (IOException e){}       
     }
+
+
+    // function: sort errors into different months
+    public static HashSet<String> sortErrorsByMonths() {
+        HashSet<String> months = new HashSet<>();
+        try { BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
+                String line;     
+                
+               
+                while((line = reader.readLine()) != null)
+                    {   
+                        Pattern pattern = Pattern.compile("\\[.*-(.*)-[0-9]{2}.*\\].*(error: This association).*");
+                        Matcher matcher = pattern.matcher(line);
+                                if(matcher.matches()) {
+                                    months.add(matcher.group(1));
+                            }
+                    }
+                    
+                    reader.close();
+                   
+            } catch (FileNotFoundException ex) {System.out.println("File not found");}
+              catch (IOException e) {}    
+              return months;     
+       }
+       
+    // function: input error according to different months into its respective file.
+    public static void inputErrorsByMonths(HashSet<String> months) {
+         
+            try { 
+                BufferedReader reader = null;
+                PrintWriter writer = null;
+                
+                String line;   
+                ArrayList<String> month = new ArrayList<String> ();
+
+                for(String set: months)
+                    {
+                        month.add(set);
+                    } 
+                        Collections.sort(month);
+                        System.out.println(month);
+                                          
+                     
+                for (int i = 0; i < month.size(); i++)                                 
+                {
+                    reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
+                    writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\" + month.get(i) + ".txt"));
+
+                    while((line = reader.readLine()) != null) {
+                        Pattern pattern = Pattern.compile("\\[.*-(" + month.get(i) + ")-[0-9]{2}.*\\].*(error: This association).*");
+                        Matcher matcher = pattern.matcher(line);
+
+                        if(matcher.matches()) {
+                            System.out.println(line);
+                            writer.println(line);
+                        }
+                    }
+
+                    writer.close();
+                }
+            
+            reader.close();                    
+            } catch (FileNotFoundException ex) {System.out.println("File not found");}
+             catch (IOException e) {}    
+        }
 }
    
    
