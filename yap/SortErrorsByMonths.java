@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.AbstractMap.SimpleEntry;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import java.util.*;
@@ -56,7 +57,7 @@ public static HashSet<String> findAndInputUsernames(){
 
                 while((line = reader.readLine()) != null)
                 {
-                    Pattern pattern = Pattern.compile("\\[.*\\].*(error: This association).*(user=)(.*)(,).*");
+                    Pattern pattern = Pattern.compile("\\[.*\\].*(error: This association).*(user=)'(.*)'(.*)(,).*");
                     Matcher matcher = pattern.matcher(line);
                         if(matcher.matches()) {                            
                             writer.println(matcher.group(3));
@@ -79,8 +80,7 @@ public static HashSet<String> sortErrorsByMonths() {
     HashSet<String> months = new HashSet<>();
         try { BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
                 String line;     
-                
-            
+                            
                 while((line = reader.readLine()) != null)
                     {   
                         Pattern pattern = Pattern.compile("\\[.*-(.*)-[0-9]{2}.*\\].*(error: This association).*");
@@ -88,7 +88,7 @@ public static HashSet<String> sortErrorsByMonths() {
                             if(matcher.matches()) {
                                 months.add(matcher.group(1));
                             }
-                    }                    
+                    }                  
                     reader.close();
                 
             } catch (FileNotFoundException ex) {System.out.println("File not found");}
@@ -178,7 +178,7 @@ public static ArrayList<String> inputErrorsByMonths(HashSet<String> months) {
 
             String line;
             writer.println(" ");
-            writer.printf(" %-18s |  %-30s          |  %-15s\n","Name","                 Time","Associations num");
+            writer.printf(" %-27s|  %-41s          |  %-15s\n","Name","                 Time","Associations num");
             for (String name : usersname) {
                 reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
                 
@@ -186,7 +186,7 @@ public static ArrayList<String> inputErrorsByMonths(HashSet<String> months) {
                     Pattern pattern = Pattern.compile("\\[(.*)\\] (error: This association) ([0-9]*).*");
                     Matcher matcher = pattern.matcher(line);
                         if(line.contains(name) && matcher.matches()){
-                            writer.printf(" %-20s |    %-26s|  %-15s\n",name, matcher.group(1),matcher.group(3));
+                            writer.printf(" %-27s |     %-30s        |  %-15s\n",name, matcher.group(1),matcher.group(3));
                         }
                 }
             }
@@ -196,4 +196,9 @@ public static ArrayList<String> inputErrorsByMonths(HashSet<String> months) {
         }catch(FileNotFoundException ex){System.out.println("File not found");}
          catch(IOException ex){}
     }
+
+    public static void findAccesserrorsTypes(){
+
+    }
+    
 }
