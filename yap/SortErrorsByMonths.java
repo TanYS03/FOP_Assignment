@@ -8,23 +8,24 @@ import java.util.regex.Matcher;
 import java.util.*;
 public class SortErrorsByMonths {
 
+    public static final String DEFAULT = "C:\\Users\\User\\Downloads\\extracted_log";
     public static void main(String[] args){
         
-        findAndInputUsernames();
+        
         countErrors();
         HashSet<String> months = sortErrorsByMonths();
         inputErrorsByMonths(months);
         ArrayList<String> month = inputErrorsByMonths(months);
         getAssociationNumber(month);
         HashSet<String> users = findAndInputUsernames();
-        // displayInfoInTable(users);
+        displayInfoInTable(users);
         countErrorsCausedByUsers(users);
     }
 
-     // function: read raw datas, find and count errors caused by users
-     public static void countErrors(){
+    // function: read raw datas, find and count errors caused by users
+    public static void countErrors(){
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Downloads\\extracted_log"));
+            BufferedReader reader = new BufferedReader(new FileReader(DEFAULT));
             PrintWriter writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
                 
                 String line;     
@@ -51,7 +52,7 @@ public class SortErrorsByMonths {
     public static HashSet<String> findAndInputUsernames(){
     HashSet<String> users = new HashSet<>();
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Downloads\\extracted_log"));
+            BufferedReader reader = new BufferedReader(new FileReader(DEFAULT));
             PrintWriter writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\usernames.txt"));
                 
                 String line;     
@@ -161,9 +162,10 @@ public class SortErrorsByMonths {
             }
             
             reader.close();
-        }catch(FileNotFoundException e){System.out.println("File not found");}
-         catch(IOException ex){}
+        } catch(FileNotFoundException e){System.out.println("File not found");}
+          catch(IOException ex){}
     }
+
 
     // function: display username, time ,association number , and types of errors in a table.
     public static void displayInfoInTable(HashSet<String> users){
@@ -181,7 +183,7 @@ public class SortErrorsByMonths {
             String line;
             System.out.println(" ");
             System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n", "-".repeat(27), "-".repeat(30), "-".repeat(30), "-".repeat(20));
-            System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n","           Name","            Time","        Associations num","      Error Types");
+            System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n","           Name","            Time","        Associations num","     Error Types");
             System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n", "-".repeat(27), "-".repeat(30), "-".repeat(30), "-".repeat(20));
             for (String name : usersname) {
                 reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
@@ -190,16 +192,18 @@ public class SortErrorsByMonths {
                     Pattern pattern = Pattern.compile("\\[(.*)\\] (error: This association) ([0-9]*).*(does not have access to )(.*)");
                     Matcher matcher = pattern.matcher(line);
                         if(line.contains(name) && matcher.matches()){
-                            System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n",name, matcher.group(1),matcher.group(3), matcher.group(5));
+                            System.out.printf("|            %-16s |     %-26s |               %-16s |      %-15s |\n",name, matcher.group(1),matcher.group(3), matcher.group(5));
                         }
                 }
             }
+            System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n", "-".repeat(27), "-".repeat(30), "-".repeat(30), "-".repeat(20));
             reader.close();
             writer.flush();
             writer.close();
-        }catch(FileNotFoundException ex){System.out.println("File not found");}
-         catch(IOException ex){}
+        } catch(FileNotFoundException ex){System.out.println("File not found");}
+          catch(IOException ex){}
     }
+
 
     // function: display the number of errors caused by each users.
     public static void countErrorsCausedByUsers(HashSet<String> users){
@@ -208,26 +212,32 @@ public class SortErrorsByMonths {
         for(String set : users){
             usernames.add(set);
         }
-        
+       
         Collections.sort(usernames);
+        System.out.println(" ");
+            try {
+                BufferedReader reader = null;                
+                String line;
 
-        try {
-            BufferedReader reader = null;
-            
-            String line;
-            for (String name : usernames) 
-            {
-                reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\usernames.txt"));
-                int count = 0;
-                while((line = reader.readLine()) != null) {
-                    if(line.contains(name)){
-                        count++;
-                    }
+                    for (String name : usernames) {
+                        reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\usernames.txt"));
+                        int count = 0;
+                            while((line = reader.readLine()) != null) {
+                                if(line.contains(name)){
+                                    count++;
+                                }
+                        } 
+                        
+                        System.out.printf("%s %-17s |   %-1d\n", "Number of errors caused by ===>", name, count );
+                    } 
+                reader.close();
+            } catch (FileNotFoundException e) {System.out.println("File not found");}
+              catch(IOException ex) {};
+    }
 
-                } System.out.printf("%s %-17s : %5d\n", "Errors caused by ===>", name, count );
-            } 
-            reader.close();
-        } catch (FileNotFoundException e) {System.out.println("File not found");}
-          catch(IOException ex) {};
+
+    // function: count total number of errors in given range of time inputted by
+    public static void countErrorsInAGivenRange(){
+        
     }
 }
