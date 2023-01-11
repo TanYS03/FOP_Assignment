@@ -64,7 +64,7 @@ public static HashSet<String> findAndInputUsernames(){
                             users.add(matcher.group(3));
                     }                
                 }
-                System.out.println("Users list:\n " + users);
+                // System.out.println("Users list:\n " + users);
                 System.out.println("The number of users are: " + users.size());
                 System.out.println(" ");
                 writer.close();
@@ -164,9 +164,10 @@ public static ArrayList<String> inputErrorsByMonths(HashSet<String> months) {
          catch(IOException ex){}
     }
 
-    // function: display username, time and association number in a table
+    // function: display username, time ,association number , and types of errors in a table.
     public static void displayInfoInTable(HashSet<String> users){
         ArrayList<String> usersname = new ArrayList<String>();
+        
         try{
             BufferedReader reader = null;
             PrintWriter writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\Errors_Table.txt"));
@@ -174,19 +175,21 @@ public static ArrayList<String> inputErrorsByMonths(HashSet<String> months) {
                 usersname.add(sets);
             }
             Collections.sort(usersname);
-            System.out.println(usersname);
+            System.out.println("Usernames list:\n " + usersname);
 
             String line;
-            writer.println(" ");
-            writer.printf(" %-27s|  %-41s          |  %-15s\n","Name","                 Time","Associations num");
+            System.out.println(" ");
+            System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n", "-".repeat(27), "-".repeat(30), "-".repeat(30), "-".repeat(20));
+            System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n","           Name","            Time","        Associations num","      Error Types");
+            System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n", "-".repeat(27), "-".repeat(30), "-".repeat(30), "-".repeat(20));
             for (String name : usersname) {
                 reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
                 
                 while((line = reader.readLine()) != null){
-                    Pattern pattern = Pattern.compile("\\[(.*)\\] (error: This association) ([0-9]*).*");
+                    Pattern pattern = Pattern.compile("\\[(.*)\\] (error: This association) ([0-9]*).*(does not have access to )(.*)");
                     Matcher matcher = pattern.matcher(line);
                         if(line.contains(name) && matcher.matches()){
-                            writer.printf(" %-27s |     %-30s        |  %-15s\n",name, matcher.group(1),matcher.group(3));
+                            System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n",name, matcher.group(1),matcher.group(3), matcher.group(5));
                         }
                 }
             }
@@ -197,8 +200,5 @@ public static ArrayList<String> inputErrorsByMonths(HashSet<String> months) {
          catch(IOException ex){}
     }
 
-    public static void findAccesserrorsTypes(){
-
-    }
     
 }
