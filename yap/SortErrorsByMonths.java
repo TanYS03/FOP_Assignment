@@ -17,7 +17,8 @@ public class SortErrorsByMonths {
         ArrayList<String> month = inputErrorsByMonths(months);
         getAssociationNumber(month);
         HashSet<String> users = findAndInputUsernames();
-        displayInfoInTable(users);
+        // displayInfoInTable(users);
+        countErrorsCausedByUsers(users);
     }
 
      // function: read raw datas, find and count errors caused by users
@@ -46,8 +47,8 @@ public class SortErrorsByMonths {
 }
 
 
-// function: write the usernames into a file named "usernames.txt".
-public static HashSet<String> findAndInputUsernames(){
+    // function: write the usernames into a file named "usernames.txt".
+    public static HashSet<String> findAndInputUsernames(){
     HashSet<String> users = new HashSet<>();
         try {
             BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Downloads\\extracted_log"));
@@ -75,8 +76,8 @@ public static HashSet<String> findAndInputUsernames(){
 }
 
 
-// function: sort errors into different months
-public static HashSet<String> sortErrorsByMonths() {
+    // function: sort errors into different months
+    public static HashSet<String> sortErrorsByMonths() {
     HashSet<String> months = new HashSet<>();
         try { BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
                 String line;     
@@ -97,8 +98,8 @@ public static HashSet<String> sortErrorsByMonths() {
    }
 
    
-// function: input error according to different months into its respective file.
-public static ArrayList<String> inputErrorsByMonths(HashSet<String> months) {
+    // function: input error according to different months into its respective file.
+    public static ArrayList<String> inputErrorsByMonths(HashSet<String> months) {
      ArrayList<String> month = new ArrayList<String> ();
     try { 
             BufferedReader reader = null;
@@ -200,5 +201,33 @@ public static ArrayList<String> inputErrorsByMonths(HashSet<String> months) {
          catch(IOException ex){}
     }
 
-    
+    // function: display the number of errors caused by each users.
+    public static void countErrorsCausedByUsers(HashSet<String> users){
+        
+        ArrayList<String> usernames = new ArrayList<>();
+        for(String set : users){
+            usernames.add(set);
+        }
+        
+        Collections.sort(usernames);
+
+        try {
+            BufferedReader reader = null;
+            
+            String line;
+            for (String name : usernames) 
+            {
+                reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\usernames.txt"));
+                int count = 0;
+                while((line = reader.readLine()) != null) {
+                    if(line.contains(name)){
+                        count++;
+                    }
+
+                } System.out.printf("%s %-17s : %5d\n", "Errors caused by ===>", name, count );
+            } 
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found");}
+          catch(IOException ex) {};
+    }
 }
