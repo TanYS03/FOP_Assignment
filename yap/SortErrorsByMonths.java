@@ -9,21 +9,50 @@ import java.util.*;
 public class SortErrorsByMonths {
 
     public static final String DEFAULT = "C:\\Users\\User\\Downloads\\extracted_log";
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        while(true){
+        Scanner input = new Scanner(System.in);
+        System.out.println(" ");
+        System.out.println("1 - Check total errors caused by users.");
+        System.out.println("2 - Display a table with usernames, time, association number and types of errors.");
+        System.out.println("3 - Show a username list and number of errors caused by each user.");
+        System.out.println("Q - Quit the system.\n");
+        System.out.print("Please enter your command: ");
+        String cmd = input.nextLine();
+
+            HashSet<String> months = sortErrorsByMonths();
+            inputErrorsByMonths(months);
+            ArrayList<String> month = inputErrorsByMonths(months);
+            getAssociationNumber(month);
+            HashSet<String> users = findAndInputUsernames();
+
+            if(cmd.equals("1")){
+                countErrors();
+            }
+            
+            else if(cmd.equals("2")){
+                displayInfoInTable(users);
+            }
+
+            else if(cmd.equals("3")) {
+                countErrorsCausedByUsers(users);
+            }
+
+            else if(cmd.equalsIgnoreCase("q")){
+                System.out.println("System quited. Thanks for using!!\n");
+                break;
+            }
+
+            else{
+                System.out.println("*---Invalid command---*. ");
+            }
+        }
+
         
-        
-        countErrors();
-        HashSet<String> months = sortErrorsByMonths();
-        inputErrorsByMonths(months);
-        ArrayList<String> month = inputErrorsByMonths(months);
-        getAssociationNumber(month);
-        HashSet<String> users = findAndInputUsernames();
-        displayInfoInTable(users);
-        countErrorsCausedByUsers(users);
     }
 
     // function: read raw datas, find and count errors caused by users
-    public static void countErrors(){
+    public static void countErrors() {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(DEFAULT));
             PrintWriter writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
@@ -39,7 +68,7 @@ public class SortErrorsByMonths {
                             count++;
                     }
                 }
-                System.out.println("Total errors caused by users are: " + count);
+                System.out.println("\n=> Total errors caused by users are: " + count);
                 System.out.println(" ");
                 writer.close();
                 reader.close();
@@ -49,7 +78,7 @@ public class SortErrorsByMonths {
 
 
     // function: write the usernames into a file named "usernames.txt".
-    public static HashSet<String> findAndInputUsernames(){
+    public static HashSet<String> findAndInputUsernames() {
     HashSet<String> users = new HashSet<>();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(DEFAULT));
@@ -67,7 +96,7 @@ public class SortErrorsByMonths {
                     }                
                 }
                 // System.out.println("Users list:\n " + users);
-                System.out.println("The number of users are: " + users.size());
+                // System.out.println("The number of users are: " + users.size());
                 System.out.println(" ");
                 writer.close();
                 reader.close();
@@ -140,7 +169,7 @@ public class SortErrorsByMonths {
 
 
     // function: get association number of each line of error from text files.
-    public static void getAssociationNumber(ArrayList<String> months){
+    public static void getAssociationNumber(ArrayList<String> months) {
         try{
             BufferedReader reader = null;
             PrintWriter writer = null;
@@ -168,7 +197,7 @@ public class SortErrorsByMonths {
 
 
     // function: display username, time ,association number , and types of errors in a table.
-    public static void displayInfoInTable(HashSet<String> users){
+    public static void displayInfoInTable(HashSet<String> users) {
         ArrayList<String> usersname = new ArrayList<String>();
         
         try{
@@ -178,7 +207,7 @@ public class SortErrorsByMonths {
                 usersname.add(sets);
             }
             Collections.sort(usersname);
-            System.out.println("Usernames list:\n " + usersname);
+            // System.out.println("Usernames list:\n " + usersname);
 
             String line;
             System.out.println(" ");
@@ -206,7 +235,7 @@ public class SortErrorsByMonths {
 
 
     // function: display the number of errors caused by each users.
-    public static void countErrorsCausedByUsers(HashSet<String> users){
+    public static void countErrorsCausedByUsers(HashSet<String> users) {
         
         ArrayList<String> usernames = new ArrayList<>();
         for(String set : users){
@@ -236,8 +265,8 @@ public class SortErrorsByMonths {
     }
 
 
-    // function: count total number of errors in given range of time inputted by
-    public static void countErrorsInAGivenRange(){
+    // // function: count total number of errors in given range of time inputted by
+    // public static void countErrorsInAGivenRange() {
         
-    }
+    // }
 }
