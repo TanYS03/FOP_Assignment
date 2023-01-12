@@ -13,18 +13,21 @@ public class SortErrorsByMonths {
         while(true){
         Scanner input = new Scanner(System.in);
         System.out.println(" ");
-        System.out.println("1 - Check total errors caused by users.");
-        System.out.println("2 - Display a table with usernames, time, association number and types of errors.");
-        System.out.println("3 - Show a username list and number of errors caused by each user.");
-        System.out.println("Q - Quit the system.\n");
-        System.out.print("Please enter your command: ");
+        System.out.println("_".repeat(90) + "\n");
+        System.out.println("1 --> Check total errors caused by users.");
+        System.out.println("2 --> Display a table with usernames, time, association number and types of errors.");
+        System.out.println("3 --> Show a username list and number of errors caused by each user.");
+        System.out.println("4 --> Count errors in a given range.");
+        System.out.println("Q --> Quit the system.");
+        System.out.println("_".repeat(90) + "\n");
+        System.out.print("Please enter your command --> ");
         String cmd = input.nextLine();
 
-            HashSet<String> months = sortErrorsByMonths();
-            inputErrorsByMonths(months);
-            ArrayList<String> month = inputErrorsByMonths(months);
-            getAssociationNumber(month);
-            HashSet<String> users = findAndInputUsernames();
+        HashSet<String> months = sortErrorsByMonths();
+        inputErrorsByMonths(months);
+        ArrayList<String> month = inputErrorsByMonths(months);
+        getAssociationNumber(month);
+        HashSet<String> users = findAndInputUsernames();
 
             if(cmd.equals("1")){
                 countErrors();
@@ -38,6 +41,21 @@ public class SortErrorsByMonths {
                 countErrorsCausedByUsers(users);
             }
 
+            else if(cmd.equals("4")){
+                System.out.print("Please enter the start of the month: ");
+                String a = input.nextLine();
+                System.out.print("Please enter the end of the month: ");
+                String b = input.nextLine();
+                System.out.println(" ");
+                if(checkIfInputIsInteger(a, b)){
+                    int x = Integer.parseInt(a);
+                    int y = Integer.parseInt(b);
+                    countErrorsInAGivenRange(x, y);
+                } else {                    
+                    System.out.println("\n*---Invalid command.---*");
+                }
+            }
+            
             else if(cmd.equalsIgnoreCase("q")){
                 System.out.println("System quited. Thanks for using!!\n");
                 break;
@@ -45,10 +63,9 @@ public class SortErrorsByMonths {
 
             else{
                 System.out.println("*---Invalid command---*. ");
-            }
+            }  
+            System.out.println("\n*".repeat(3));          
         }
-
-        
     }
 
     // function: read raw datas, find and count errors caused by users
@@ -265,8 +282,45 @@ public class SortErrorsByMonths {
     }
 
 
-    // // function: count total number of errors in given range of time inputted by
-    // public static void countErrorsInAGivenRange() {
+    // function: count total number of errors in given range of time inputted by user
+    public static void countErrorsInAGivenRange(int startMonth, int endMonth) {
         
-    // }
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
+            String line;
+            int sum = 0;
+            while ((line = reader.readLine()) != null){
+                Pattern pattern = Pattern.compile("\\[.*-(.*)-.*\\] .*");
+                Matcher matcher = pattern.matcher(line);
+                matcher.matches();
+                
+                int month = Integer.parseInt(matcher.group(1));
+                
+                if (month <= endMonth && month >= startMonth) {
+                    sum++;
+                    continue;
+                }                  
+
+                if (month > endMonth)
+                    break;
+            }
+            System.out.println("The total number of errors in the given range is: " + sum);
+            reader.close();
+        }catch (FileNotFoundException e) {System.out.println("File not found");}
+         catch (IOException ex) {}
+    }
+
+    
+    // function: to check whether the input of the range of months is an integer or not.
+    public static boolean checkIfInputIsInteger(String a, String b){
+        try{
+            int x = Integer.parseInt(a);
+            int y = Integer.parseInt(b);
+            return true;
+
+        } catch(NumberFormatException e) {
+            System.out.println("Input is not an integer value.");
+            return false;
+        }          
+    }
 }
