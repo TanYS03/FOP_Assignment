@@ -6,22 +6,35 @@ import java.util.AbstractMap.SimpleEntry;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import java.util.*;
-public class SortErrorsByMonths {
+import javax.swing.*;
 
+public class SortErrorsByMonths {
+    
     public static final String DEFAULT = "C:\\Users\\User\\Downloads\\extracted_log";
+    public static final String DEFAULT1 = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt";
+    public static final String DEFAULT2 = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\usernames.txt";
+
     public static void main(String[] args) {
+        
         while(true){
+        String in = JOptionPane.showInputDialog (
+         "1 --> Check total errors caused by users.\n" + 
+         "2 --> Display a table with usernames, time, association number and types of errors.\n" + 
+         "3 --> Show a username list and number of errors caused by each user.\n" + 
+         "4 --> Count errors in a given range of months.\n" + 
+         "Q --> Quit the system." ) ;
+
         Scanner input = new Scanner(System.in);
-        System.out.println(" ");
-        System.out.println("_".repeat(90) + "\n");
-        System.out.println("1 --> Check total errors caused by users.");
-        System.out.println("2 --> Display a table with usernames, time, association number and types of errors.");
-        System.out.println("3 --> Show a username list and number of errors caused by each user.");
-        System.out.println("4 --> Count errors in a given range.");
-        System.out.println("Q --> Quit the system.");
-        System.out.println("_".repeat(90) + "\n");
-        System.out.print("Please enter your command --> ");
-        String cmd = input.nextLine();
+        // System.out.println(" ");
+        // System.out.println("_".repeat(90) + "\n");
+        // System.out.println("1 --> Check total errors caused by users.");
+        // System.out.println("2 --> Display a table with usernames, time, association number and types of errors.");
+        // System.out.println("3 --> Show a username list and number of errors caused by each user.");
+        // System.out.println("4 --> Count errors in a given range of months.");
+        // System.out.println("Q --> Quit the system.");
+        // System.out.println("_".repeat(90) + "\n");
+        // System.out.print("Please enter your command --> ");
+        // String cmd = input.nextLine();
 
         HashSet<String> months = sortErrorsByMonths();
         inputErrorsByMonths(months);
@@ -29,53 +42,57 @@ public class SortErrorsByMonths {
         getAssociationNumber(month);
         HashSet<String> users = findAndInputUsernames();
 
-            if(cmd.equals("1")){
-                countErrors();
+            if(in.equals("1")){
+                int errors = countErrors();
+                JOptionPane.showMessageDialog(null, "Total number of errors caused by users : " + errors, "Total errors", JOptionPane.INFORMATION_MESSAGE);
             }
             
-            else if(cmd.equals("2")){
+            else if(in.equals("2")){
+                JOptionPane.showMessageDialog(null, "Table will be displayed in the terminal.", "Table display", JOptionPane.INFORMATION_MESSAGE);
                 displayInfoInTable(users);
             }
 
-            else if(cmd.equals("3")) {
+            else if(in.equals("3")) {
+                JOptionPane.showMessageDialog(null, "List will be displayed in the terminal.", "Total errors are displayed at the terminal.", JOptionPane.INFORMATION_MESSAGE);
                 countErrorsCausedByUsers(users);
             }
 
-            else if(cmd.equals("4")){
-                System.out.print("Please enter the start of the month: ");
-                String a = input.nextLine();
-                System.out.print("Please enter the end of the month: ");
-                String b = input.nextLine();
-                System.out.println(" ");
+            else if(in.equals("4")){
+
+                String a = JOptionPane.showInputDialog("Please enter the start of the month: ");                
+                String b = JOptionPane.showInputDialog("Please enter the end of the month: ");               
+                // System.out.println(" ");
                 if(checkIfInputIsInteger(a, b)){
                     int x = Integer.parseInt(a);
                     int y = Integer.parseInt(b);
-                    countErrorsInAGivenRange(x, y);
+                    int sum= countErrorsInAGivenRange(x, y);
+                    JOptionPane.showMessageDialog(null, "Total number of errors from " + a + " to " + b + " are : " + sum, "Number of errors in a given range", JOptionPane.INFORMATION_MESSAGE);
                 } else {                    
-                    System.out.println("\n*---Invalid command.---*");
+                    JOptionPane.showMessageDialog(null, "Not a valid command. Please enter proper month !", "Invalid Command", JOptionPane.INFORMATION_MESSAGE);
                 }
             }
             
-            else if(cmd.equalsIgnoreCase("q")){
-                System.out.println("System quited. Thanks for using!!\n");
+            else if(in.equalsIgnoreCase("q")){
+                JOptionPane.showMessageDialog(null, "System closed ! Thanks for using ! ", "System Closed", JOptionPane.INFORMATION_MESSAGE);
                 break;
             }
 
             else{
-                System.out.println("*---Invalid command---*. ");
+                JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE);
             }  
-            System.out.println("\n*".repeat(3));          
+            System.out.println("\n*".repeat(5));          
         }
     }
 
     // function: read raw datas, find and count errors caused by users
-    public static void countErrors() {
+    public static int countErrors() {
+        int count = 0;
         try {
             BufferedReader reader = new BufferedReader(new FileReader(DEFAULT));
-            PrintWriter writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
+            PrintWriter writer = new PrintWriter(new FileWriter(DEFAULT1));
                 
                 String line;     
-                int count = 0;
+                
                 while((line = reader.readLine()) != null)
                 {
                     Pattern pattern = Pattern.compile("\\[.*\\].*(error: This association).*");
@@ -85,12 +102,13 @@ public class SortErrorsByMonths {
                             count++;
                     }
                 }
-                System.out.println("\n=> Total errors caused by users are: " + count);
-                System.out.println(" ");
+                // System.out.println("\n=> Total errors caused by users are: " + count);
+                // System.out.println(" ");
                 writer.close();
                 reader.close();
        }catch (FileNotFoundException ex) {System.out.println("File not found");}
         catch (IOException e){}       
+        return count;
 }
 
 
@@ -99,7 +117,7 @@ public class SortErrorsByMonths {
     HashSet<String> users = new HashSet<>();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(DEFAULT));
-            PrintWriter writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\usernames.txt"));
+            PrintWriter writer = new PrintWriter(new FileWriter(DEFAULT2));
                 
                 String line;     
 
@@ -126,7 +144,7 @@ public class SortErrorsByMonths {
     // function: sort errors into different months
     public static HashSet<String> sortErrorsByMonths() {
     HashSet<String> months = new HashSet<>();
-        try { BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
+        try { BufferedReader reader = new BufferedReader(new FileReader(DEFAULT1));
                 String line;     
                             
                 while((line = reader.readLine()) != null)
@@ -164,7 +182,7 @@ public class SortErrorsByMonths {
                                                            
             for (int i = 0; i < month.size(); i++)                                 
             {
-                reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
+                reader = new BufferedReader(new FileReader(DEFAULT1));
                 writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\month" + month.get(i) + ".txt"));
 
                 while((line = reader.readLine()) != null) {
@@ -219,7 +237,7 @@ public class SortErrorsByMonths {
         
         try{
             BufferedReader reader = null;
-            PrintWriter writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\Errors_Table.txt"));
+            
             for (String sets : users) {
                 usersname.add(sets);
             }
@@ -244,8 +262,6 @@ public class SortErrorsByMonths {
             }
             System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n", "-".repeat(27), "-".repeat(30), "-".repeat(30), "-".repeat(20));
             reader.close();
-            writer.flush();
-            writer.close();
         } catch(FileNotFoundException ex){System.out.println("File not found");}
           catch(IOException ex){}
     }
@@ -283,12 +299,12 @@ public class SortErrorsByMonths {
 
 
     // function: count total number of errors in given range of time inputted by user
-    public static void countErrorsInAGivenRange(int startMonth, int endMonth) {
-        
+    public static int countErrorsInAGivenRange(int startMonth, int endMonth) {
+        int sum = 0;
         try{
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader(DEFAULT1));
             String line;
-            int sum = 0;
+            
             while ((line = reader.readLine()) != null){
                 Pattern pattern = Pattern.compile("\\[.*-(.*)-.*\\] .*");
                 Matcher matcher = pattern.matcher(line);
@@ -308,6 +324,7 @@ public class SortErrorsByMonths {
             reader.close();
         }catch (FileNotFoundException e) {System.out.println("File not found");}
          catch (IOException ex) {}
+         return sum;
     }
 
     
@@ -319,7 +336,7 @@ public class SortErrorsByMonths {
             return true;
 
         } catch(NumberFormatException e) {
-            System.out.println("Input is not an integer value.");
+            // System.out.println("Input is not an integer value.");
             return false;
         }          
     }
