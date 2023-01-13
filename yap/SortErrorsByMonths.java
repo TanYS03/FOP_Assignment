@@ -25,17 +25,6 @@ public class SortErrorsByMonths {
          "Q --> Quit the system." ) ;
 
         Scanner input = new Scanner(System.in);
-        // System.out.println(" ");
-        // System.out.println("_".repeat(90) + "\n");
-        // System.out.println("1 --> Check total errors caused by users.");
-        // System.out.println("2 --> Display a table with usernames, time, association number and types of errors.");
-        // System.out.println("3 --> Show a username list and number of errors caused by each user.");
-        // System.out.println("4 --> Count errors in a given range of months.");
-        // System.out.println("Q --> Quit the system.");
-        // System.out.println("_".repeat(90) + "\n");
-        // System.out.print("Please enter your command --> ");
-        // String cmd = input.nextLine();
-
         HashSet<String> months = sortErrorsByMonths();
         inputErrorsByMonths(months);
         ArrayList<String> month = inputErrorsByMonths(months);
@@ -101,9 +90,7 @@ public class SortErrorsByMonths {
                             writer.println(line);
                             count++;
                     }
-                }
-                // System.out.println("\n=> Total errors caused by users are: " + count);
-                // System.out.println(" ");
+                }                
                 writer.close();
                 reader.close();
        }catch (FileNotFoundException ex) {System.out.println("File not found");}
@@ -130,8 +117,6 @@ public class SortErrorsByMonths {
                             users.add(matcher.group(3));
                     }                
                 }
-                // System.out.println("Users list:\n " + users);
-                // System.out.println("The number of users are: " + users.size());
                 System.out.println(" ");
                 writer.close();
                 reader.close();
@@ -165,41 +150,39 @@ public class SortErrorsByMonths {
    
     // function: input error according to different months into its respective file.
     public static ArrayList<String> inputErrorsByMonths(HashSet<String> months) {
-     ArrayList<String> month = new ArrayList<String> ();
-    try { 
-            BufferedReader reader = null;
-            PrintWriter writer = null;
-            
-            String line;   
-            
+        ArrayList<String> month = new ArrayList<String> ();
+        try { 
+                BufferedReader reader = null;
+                PrintWriter writer = null;            
+                String line;   
 
-            for(String set: months)
+                for(String set: months)
+                    {
+                        month.add(set);
+                    } 
+                        Collections.sort(month);
+                        // System.out.println(month);
+                                                            
+                for (int i = 0; i < month.size(); i++)                                 
                 {
-                    month.add(set);
-                } 
-                    Collections.sort(month);
-                    // System.out.println(month);
-                                                           
-            for (int i = 0; i < month.size(); i++)                                 
-            {
-                reader = new BufferedReader(new FileReader(DEFAULT1));
-                writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\month" + month.get(i) + ".txt"));
+                    reader = new BufferedReader(new FileReader(DEFAULT1));
+                    writer = new PrintWriter(new FileWriter("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\month" + month.get(i) + ".txt"));
 
-                while((line = reader.readLine()) != null) {
-                    Pattern pattern = Pattern.compile("\\[.*-(" + month.get(i) + ")-[0-9]{2}.*\\].*(error: This association).*");
-                    Matcher matcher = pattern.matcher(line);
+                    while((line = reader.readLine()) != null) {
+                        Pattern pattern = Pattern.compile("\\[.*-(" + month.get(i) + ")-[0-9]{2}.*\\].*(error: This association).*");
+                        Matcher matcher = pattern.matcher(line);
 
-                    if(matcher.matches()) {
-                        // System.out.println(line);
-                        writer.println(line);
+                        if(matcher.matches()) {
+                            // System.out.println(line);
+                            writer.println(line);
+                        }
                     }
-                }
-                writer.close();
-            }            
-        reader.close();                    
-        } catch (FileNotFoundException ex) {System.out.println("File not found");}
-          catch (IOException e) {}    
-          return month;
+                    writer.close();
+                }            
+            reader.close();                    
+            } catch (FileNotFoundException ex) {System.out.println("File not found");}
+            catch (IOException e) {}    
+            return month;
     }    
 
 
@@ -218,13 +201,10 @@ public class SortErrorsByMonths {
                     Pattern pattern = Pattern.compile("\\[.*-(" + months.get(i) + ")-[0-9]{2}.*\\] (error: This association) ([0-9]*).*");
                     Matcher matcher = pattern.matcher(line);
                         if(matcher.matches()){
-                            // System.out.println(matcher.group(3));
                             writer.println(matcher.group(3));
                         }
-
                 }writer.close();
-            }
-            
+            }            
             reader.close();
         } catch(FileNotFoundException e){System.out.println("File not found");}
           catch(IOException ex){}
@@ -242,7 +222,6 @@ public class SortErrorsByMonths {
                 usersname.add(sets);
             }
             Collections.sort(usersname);
-            // System.out.println("Usernames list:\n " + usersname);
 
             String line;
             System.out.println(" ");
@@ -271,7 +250,7 @@ public class SortErrorsByMonths {
     public static void countErrorsCausedByUsers(HashSet<String> users) {
         
         ArrayList<String> usernames = new ArrayList<>();
-        for(String set : users){
+        for(String set : users) {
             usernames.add(set);
         }
        
@@ -285,11 +264,10 @@ public class SortErrorsByMonths {
                         reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\usernames.txt"));
                         int count = 0;
                             while((line = reader.readLine()) != null) {
-                                if(line.contains(name)){
+                                if(line.contains(name)) {
                                     count++;
                                 }
-                        } 
-                        
+                        }                         
                         System.out.printf("%s %-17s |   %-1d\n", "Number of errors caused by ===>", name, count );
                     } 
                 reader.close();
@@ -320,7 +298,6 @@ public class SortErrorsByMonths {
                 if (month > endMonth)
                     break;
             }
-            System.out.println("The total number of errors in the given range is: " + sum);
             reader.close();
         }catch (FileNotFoundException e) {System.out.println("File not found");}
          catch (IOException ex) {}
@@ -336,7 +313,6 @@ public class SortErrorsByMonths {
             return true;
 
         } catch(NumberFormatException e) {
-            // System.out.println("Input is not an integer value.");
             return false;
         }          
     }
