@@ -13,61 +13,86 @@ public class SortErrorsByMonths {
     public static final String DEFAULT = "C:\\Users\\User\\Downloads\\extracted_log";
     public static final String DEFAULT1 = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errors.txt";
     public static final String DEFAULT2 = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\usernames.txt";
+    public static final String DEFAULT3 = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\sched.txt";
 
     public static void main(String[] args) {
-        
-        while(true){
+        while(true) {
+        ImageIcon wrong = new ImageIcon("C:\\Users\\User\\Desktop\\WIX 1002 (FOP)\\err2.png");
+        ImageIcon exit = new ImageIcon("C:\\Users\\User\\Desktop\\WIX 1002 (FOP)\\off1.png");
         String in = JOptionPane.showInputDialog (
-         "1 --> Check total errors caused by users.\n" + 
-         "2 --> Display a table with usernames, time, association number and types of errors.\n" + 
-         "3 --> Show a username list and number of errors caused by each user.\n" + 
-         "4 --> Count errors in a given range of months.\n" + 
-         "Q --> Quit the system." ) ;
+         "1 -> Check total errors caused by users.\n" + 
+         "2 -> Display a table with usernames, time, association number and types of errors.\n" + 
+         "3 -> Show a username list and number of errors caused by each user.\n" + 
+         "4 -> Count errors in a given range of months.\n" + 
+         "Q -> Quit the system." ) ;
 
-        Scanner input = new Scanner(System.in);
         HashSet<String> months = sortErrorsByMonths();
         inputErrorsByMonths(months);
         ArrayList<String> month = inputErrorsByMonths(months);
         getAssociationNumber(month);
         HashSet<String> users = findAndInputUsernames();
+        
 
-            if(in.equals("1")){
+            if(in.equals("1")) {
                 int errors = countErrors();
                 JOptionPane.showMessageDialog(null, "Total number of errors caused by users : " + errors, "Total errors", JOptionPane.INFORMATION_MESSAGE);
             }
             
-            else if(in.equals("2")){
-                JOptionPane.showMessageDialog(null, "Table will be displayed in the terminal.", "Table display", JOptionPane.INFORMATION_MESSAGE);
-                displayInfoInTable(users);
-            }
-
+            else if(in.equals("2")) {
+                while(true) {
+                    String inp = JOptionPane.showInputDialog(null, "A => Sort By Alphabet\nB => Sort By Months\nQ => Back To Main Menu", "Table display", JOptionPane.INFORMATION_MESSAGE);                    
+                        if(inp.equalsIgnoreCase("A")) {
+                            JOptionPane.showMessageDialog(null, "Table will be displayed in the terminal", "Table Display", JOptionPane.INFORMATION_MESSAGE);
+                            displayInfoInTable(users);
+                        } else if (inp.equalsIgnoreCase("B")) {
+                            JOptionPane.showMessageDialog(null, "Table will be displayed in the terminal", "Table Display", JOptionPane.INFORMATION_MESSAGE);
+                            displayInfoTable(month);
+                        } else if (inp.equalsIgnoreCase("Q")) {
+                            // JOptionPane.showMessageDialog(null, "Back to main menu", "Back to main menu", JOptionPane.INFORMATION_MESSAGE);
+                            break;
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE, wrong);
+                        }                          
+                    }                
+                }
+               
             else if(in.equals("3")) {
                 JOptionPane.showMessageDialog(null, "List will be displayed in the terminal.", "Total errors are displayed at the terminal.", JOptionPane.INFORMATION_MESSAGE);
                 countErrorsCausedByUsers(users);
             }
 
-            else if(in.equals("4")){
-
-                String a = JOptionPane.showInputDialog("Please enter the start of the month: ");                
-                String b = JOptionPane.showInputDialog("Please enter the end of the month: ");               
-                // System.out.println(" ");
-                if(checkIfInputIsInteger(a, b)){
-                    int x = Integer.parseInt(a);
-                    int y = Integer.parseInt(b);
-                    int sum= countErrorsInAGivenRange(x, y);
-                    JOptionPane.showMessageDialog(null, "Total number of errors from " + a + " to " + b + " are : " + sum, "Number of errors in a given range", JOptionPane.INFORMATION_MESSAGE);
-                } else {                    
-                    JOptionPane.showMessageDialog(null, "Not a valid command. Please enter proper month !", "Invalid Command", JOptionPane.INFORMATION_MESSAGE);
+            else if(in.equals("4")) {
+                
+                while(true) {
+                    String a = JOptionPane.showInputDialog("Please enter the start of the month(enter q to quit): ");   
+                    if(a.equalsIgnoreCase("q")) {
+                        break;
+                    }             
+                    String b = JOptionPane.showInputDialog("Please enter the end of the month(enter q to quit): ");
+                    if(b.equalsIgnoreCase("q")) {
+                        break;
+                    }
+                   
+                    if(checkIfInputIsInteger(a, b)) {
+                        int x = Integer.parseInt(a);
+                        int y = Integer.parseInt(b);
+                        int sum= countErrorsInAGivenRange(x, y);
+                        JOptionPane.showMessageDialog(null, "Total number of errors from " + a + " to " + b + " are : " + sum, "Number of errors in a given range", JOptionPane.INFORMATION_MESSAGE);
+                        break;
+                    } else {                    
+                        JOptionPane.showMessageDialog(null, "Not a valid command. Please enter proper month !", "Invalid Command", JOptionPane.INFORMATION_MESSAGE,wrong);
+                    } 
                 }
+               
             }
             
             else if(in.equalsIgnoreCase("q")){
-                JOptionPane.showMessageDialog(null, "System closed ! Thanks for using ! ", "System Closed", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "System closed ! Thanks for using ! ", "System Closed", JOptionPane.INFORMATION_MESSAGE,exit);
                 break;
             }
 
             else{
-                JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE,wrong);
             }  
             System.out.println("\n*".repeat(5));          
         }
@@ -211,7 +236,7 @@ public class SortErrorsByMonths {
     }
 
 
-    // function: display username, time ,association number , and types of errors in a table.
+    // function: display username, time ,association number , and types of errors in a table.(sort by alphabet)
     public static void displayInfoInTable(HashSet<String> users) {
         ArrayList<String> usersname = new ArrayList<String>();
         
@@ -243,6 +268,34 @@ public class SortErrorsByMonths {
             reader.close();
         } catch(FileNotFoundException ex){System.out.println("File not found");}
           catch(IOException ex){}
+    }
+
+
+    // function: display username, time ,association number , and types of errors in a table.(sort by months)
+    public static void displayInfoTable(ArrayList<String> months) {
+        
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(DEFAULT1));
+            
+            String line ;
+            System.out.println(" ");
+            System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n", "-".repeat(27), "-".repeat(30), "-".repeat(30), "-".repeat(20));
+            System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n","           Name","            Time","        Associations num","     Error Types");
+            System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n", "-".repeat(27), "-".repeat(30), "-".repeat(30), "-".repeat(20));
+                    
+                    while((line = reader.readLine()) != null) {
+                    Pattern pattern = Pattern.compile("\\[(.*)\\] (error: This association) ([0-9]*).*(user=)'(.*)'(.*)(,).*(does not have access to )(.*)");
+                    Matcher matcher = pattern.matcher(line);
+
+                    if(matcher.matches()) {
+                        System.out.printf("|            %-16s |     %-26s |               %-16s |      %-15s |\n",matcher.group(5), matcher.group(1),matcher.group(3), matcher.group(9));
+                    }
+                }
+         
+            System.out.printf("| %-27s | %-30s | %-30s | %-20s |\n", "-".repeat(27), "-".repeat(30), "-".repeat(30), "-".repeat(20));
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found");} 
+          catch (IOException ex) {} 
     }
 
 
@@ -304,16 +357,23 @@ public class SortErrorsByMonths {
          return sum;
     }
 
-    
-    // function: to check whether the input of the range of months is an integer or not.
-    public static boolean checkIfInputIsInteger(String a, String b){
-        try{
-            int x = Integer.parseInt(a);
-            int y = Integer.parseInt(b);
-            return true;
 
+    // function: to check whether the input of the range of months is an integer or not.
+    public static boolean checkIfInputIsInteger(String a, String b) {
+        try{
+            int x ;
+            int y ;           
+            x = Integer.parseInt(a);
+            y = Integer.parseInt(b);
+            if(x <= 12 && y <= 12) {
+                return true;
+            } else {
+                return false;
+            }
+            
         } catch(NumberFormatException e) {
             return false;
         }          
     }
+
 }
