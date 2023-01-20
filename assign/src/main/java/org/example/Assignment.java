@@ -2,21 +2,12 @@ package org.example;
 
 import java.io.*;
 import java.util.Scanner;
-import java.io.File;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileOutputStream;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
 import java.util.regex.Pattern;
 import java .util.regex.Matcher;
-import static java.lang.String.valueOf;
-
 
 public class Assignment {
+    private static final String path = "D:/UM/WIX1002 Fundamentals of Programming/Assignment/extracted_log.txt";
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String find = "";
@@ -25,6 +16,7 @@ public class Assignment {
             System.out.println("-----------------------------------------------------------");
             System.out.printf("%-50s %-10s\n","number of job created/ended in particular month","jobRange");
             System.out.printf("%-50s %-10s\n","number of job created/ended in each month","allJobs");
+            System.out.printf("%-50s %-10s\n","number of job created/ended in particular time range","day");
             System.out.printf("%-50s %-10s\n","number of partitions","partition");
             System.out.print("What do you want to find?: ");
             find = input.nextLine();
@@ -56,14 +48,13 @@ public class Assignment {
             }
             System.out.println("*----------------------------------------------------------*");
         }while(!find.equals("-1"));
-//        JOptionPane.showM
     }
 
 
     public static void allJobs(){
         Scanner input = new Scanner(System.in);
         try{
-            BufferedReader inputstream = new BufferedReader (new FileReader("D:/UM/WIX1002 Fundamentals of Programming/org.example.Assignment/extracted_log.txt"));
+            BufferedReader inputstream = new BufferedReader (new FileReader(path));
             int month=0;
             String check="";
             String[] arrayMonth = {"06","07","08","09","10","11","12"};
@@ -105,10 +96,6 @@ public class Assignment {
 
             System.out.println("------------------------------------\n");
             inputstream.close();
-            Assignment obj = new Assignment();
-            obj.graph(Month,countAmount);
-//            org.example.graph Graph = new org.example.graph();
-//            Graph.call();
         }catch (IOException e){
             System.out.println("Input file problem");
         }
@@ -123,7 +110,7 @@ public class Assignment {
         char choice = input.next().charAt(0);
 
         try{
-            Scanner inputstream = new Scanner (new FileInputStream("D:/UM/WIX1002 Fundamentals of Programming/org.example.Assignment/extracted_log.txt"));
+            Scanner inputstream = new Scanner (new FileInputStream(path));
             String check="";
             String[] arrayMonth = {"06","07","08","09","10","11","12"};
             String[] Month ={"June","July","August","September","October","November","December"};
@@ -177,7 +164,7 @@ public class Assignment {
         Scanner input = new Scanner(System.in);
         String imonth="", fmonth = "";
         try{
-            Scanner inputstream = new Scanner (new FileInputStream("D:/UM/WIX1002 Fundamentals of Programming/org.example.Assignment/extracted_log.txt"));
+            Scanner inputstream = new Scanner (new FileInputStream(path));
             String[] arrayMonth = {"06","07","08","09","10","11","12"};
             String[] Month ={"June","July","August","September","October","November","December"};
             String[] arrayPartition = {"gpu-k10","gpu-k40c","gpu-v100s","gpu-titan","cpu-opteron","cpu-epyc"};
@@ -217,27 +204,12 @@ public class Assignment {
                 if(matcherDate.group(2).compareTo(fmonth)>0) break;
             }
 
-//                while (inputstream.hasNextLine()) {
-//                    String[] read = inputstream.nextLine().split(" "); //read the text word by word
-//                    String[] typePartition = read[read.length - 1].split("="); //split the partition and the type of partition
-//
-//                    String date = "" + (read[0].charAt(6) - '0') + (read[0].charAt(7) - '0'); //to form a String month with two digits
-//                    if (date.compareTo(imonth)>=0 && date.compareTo(fmonth)<=0 ) {   //to check the month
-//                        for (int i = 0; i < arrayPartition.length; i++) {
-//                            if (typePartition[typePartition.length - 1].equals(arrayPartition[i])) {
-//                                numPartition[i]++;
-//                                break;
-//                            }
-//                        }
-//                    }
-//                    if (date.compareTo(fmonth) > 0)
-//                        break;  //to break if the program look the line which already pass the needed month
-//                }
-//
             for (int i = 0; i < numPartition.length; i++)
                 System.out.printf("%-20s%-10d\n",arrayPartition[i],numPartition[i]);
             inputstream.close();
+            if(imonth.equals("06")&&fmonth.equals("12")){//only show graph when user want june to december
 
+            }
         }catch (IOException e){
             System.out.println("Input file problem");
         }
@@ -245,67 +217,13 @@ public class Assignment {
         String partition = input.next();
         partitionDetail(partition, imonth, fmonth);
     }
- public static void tables(String name, String amount, String[] x,  int[] y)  {
-     try {
-//     }catch(Exception e) {
-//         System.out.println("IS you");
-//     }
-//     try{
-         XSSFWorkbook workbook = new XSSFWorkbook();
-         System.out.println("ds");
-        XSSFSheet sheet = workbook.createSheet("Data");
-
-//        XSSFRow row;
-
-        Map<String, Object[]> Data = new TreeMap<String, Object[]>();
-
-        Data.put("1",new Object[]{name,amount});
-        for (int i = 0; i < y.length; i++) {
-            Data.put(valueOf(i+2),new Object[]{x[i],valueOf(y[i])});
-        }
-
-        Set<String> keyid = Data.keySet();
-
-        int rowid=0;
-        //writing the data into the sheets.
-
-        for(String tableData : keyid){
-            Row row = sheet.createRow(rowid++);
-            Object[] objectArr = Data.get(tableData);
-            int cellid=0;
-
-            for (Object obj : objectArr){
-                Cell cell = row.createCell(cellid++);
-                if(obj instanceof String)
-                    cell.setCellValue((String)(obj));
-                else if(obj instanceof Integer)
-                    cell.setCellValue((Integer)obj);
-//                cell.setCellValue(valueOf(obj));
-            }
-        }
-        //
-         System.out.println("hello");
-        File file = new File("d:/UM/WIX1002 Fundamentals of Programming/try1.xlsx");
-         FileOutputStream out = new FileOutputStream(file) ;
-
-         workbook.write(out);
-         out.close();
-
-         System.out.println("success");
-     }catch(Exception e){
-         System.out.println(e.getMessage());
-     }
-
-
-    }
-
 public static void check()  {
         try{
             PrintWriter outputstream = new PrintWriter(new FileOutputStream("D:/UM/WIX1002 Fundamentals of Programming/check.txt"));
-            Scanner inputstream = new Scanner(new FileInputStream("D:/UM/WIX1002 Fundamentals of Programming/org.example.Assignment/extracted_log.txt"));
+            Scanner inputstream = new Scanner(new FileInputStream(path));
             while(inputstream.hasNextLine()){
                 String line = inputstream.nextLine();
-                Pattern pattern = Pattern.compile("\\[2022-(\\d+)-(.*)T(.*)] sched: Allocate JobId=(\\d+) NodeList=(.*) #CPUs=(\\d+) Partition=(.*)");
+                Pattern pattern = Pattern.compile("\\[2022-(\\d+)-(.*)T(.*) _slurm_rpc_kill_job: (.*)");
                 Matcher matcher = pattern.matcher(line);
                 if(matcher.matches())
                     outputstream.println(line);
@@ -322,7 +240,7 @@ public static void check()  {
     public static void check2(){
         try{
             PrintWriter outputstream = new PrintWriter(new FileOutputStream("D:/UM/WIX1002 Fundamentals of Programming/check1.txt"));
-            Scanner inputstream = new Scanner(new FileInputStream("D:/UM/WIX1002 Fundamentals of Programming/org.example.Assignment/extracted_log.txt"));
+            Scanner inputstream = new Scanner(new FileInputStream(path));
             while(inputstream.hasNextLine()){
                 String line = inputstream.nextLine();
                 Pattern pattern = Pattern.compile("\\[(.*)] sched: Allocate JobId=(\\d+) NodeList=(.*) #CPUs=(\\d) Partition=(.*)");
@@ -342,21 +260,11 @@ public static void check()  {
     protected String[] month;
     protected int[] amount;
 
-public void graph(String[] Month, int[] countAmount){
-        String[] month = Month;
-        int[] amount = countAmount;
-}
-public String[] getMonth(){
-    return month;
-}
-   public int[] getAmount(){
-    return amount;
-    }
 
     public static void partitionDetail(String partition, String imonth, String fmonth){
         int count =0;
     try{
-        Scanner inputstream = new Scanner(new FileInputStream("D:/UM/WIX1002 Fundamentals of Programming/org.example.Assignment/extracted_log.txt"));
+        Scanner inputstream = new Scanner(new FileInputStream(path));
         System.out.println("------------------------------------------------------");
         System.out.printf("| %-15s | %-15s | %-15s|\n","Date","Time","Job ID");
         System.out.println("------------------------------------------------------");
@@ -384,7 +292,7 @@ public String[] getMonth(){
 
     public static void JobRangeDay(){
         try{
-            Scanner inputstream = new Scanner (new FileInputStream("D:/UM/WIX1002 Fundamentals of Programming/Assignment/extracted_log.txt"));
+            Scanner inputstream = new Scanner (new FileInputStream(path));
             Scanner input = new Scanner(System.in);
             String imonth="", fmonth = null;
             int checkDouble;
@@ -486,4 +394,16 @@ public String[] getMonth(){
         }
     }
 
+    public static void kill(){
+    try{
+        Scanner inputstream = new Scanner(new FileInputStream(path));
+
+    }catch (IOException e){
+        e.getMessage();
+    }
+
+    }
+
 }
+
+
