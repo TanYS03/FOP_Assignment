@@ -139,7 +139,7 @@ public class Test {
 //            if(!ask.equalsIgnoreCase("all")) {
 //                while (inputstream.hasNextLine()) {
 //                    String read = inputstream.nextLine();//read the text word by word
-//                    Pattern pattern = Pattern.compile("\\[(.*)] sched: Allocate JobId=(\\d+) NodeList=(.*) #CPUs=(\\d+) Partition=(.*)");
+//                    Pattern pattern = Pattern.compile("\\[(.*)] sched: Allocate JobId=(\\d+) NodeList=(.*) #CPUs=(\\d+) org.example.Partition=(.*)");
 //                    Matcher matcher = pattern.matcher(read);
 //                    Pattern patternDate = Pattern.compile("\\[2022-(\\d+)-(.+)] (.*)");
 //                    Matcher matcherDate = patternDate.matcher(read);
@@ -163,7 +163,7 @@ public class Test {
 //                    for (int i = 0; i < arrayMonth.length; i++) {
 //                        Pattern patternDate = Pattern.compile("\\[2022-(\\d+)-(.+)] (.*)");
 //                        Matcher matcherDate = patternDate.matcher(read);
-//                        Pattern pattern = Pattern.compile("\\[(.*)] sched: Allocate JobId=(\\d+) NodeList=(.*) #CPUs=(\\d+) Partition=(.*)");
+//                        Pattern pattern = Pattern.compile("\\[(.*)] sched: Allocate JobId=(\\d+) NodeList=(.*) #CPUs=(\\d+) org.example.Partition=(.*)");
 //                        Matcher matcher = pattern.matcher(read);
 //                        matcherDate.find();
 //                        if (!matcherDate.group(1).equals(arrayMonth[i]) && matcher.matches()) {
@@ -180,7 +180,7 @@ public class Test {
 //            for (int i = 0; i < numPartition.length; i++)
 //                System.out.printf("| %-20s | %5s%-10d|\n",arrayPartition[i]," ",numPartition[i]);
 //
-////            String name = "Type of Partition";
+////            String name = "Type of org.example.Partition";
 ////            String amount = "Amount";
 ////            tables(name,amount,arrayPartition,numPartition);
 //

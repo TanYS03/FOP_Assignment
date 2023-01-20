@@ -1,3 +1,5 @@
+package org.example;
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -119,7 +121,7 @@ public class Partition {
         result.setValue("cpu-epyc\n" + " 26% ", numPartition[5]);
 
         //Create a chart
-        JFreeChart chart = ChartFactory.createPieChart3D("Type of Partition ", result, true, true, false);
+        JFreeChart chart = ChartFactory.createPieChart3D("Type of org.example.Partition ", result, true, true, false);
         //Create a panel to display the chart
         ChartPanel panel = new ChartPanel(chart);
         chart.getTitle().setFont(new Font("Arial", Font.BOLD, 27));
