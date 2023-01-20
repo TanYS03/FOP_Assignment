@@ -1,10 +1,20 @@
 package org.example;
 
+import org.jfree.data.general.DefaultPieDataset;
+
 import java.io.*;
 import java.util.Scanner;
 import java.io.FileOutputStream;
 import java.util.regex.Pattern;
 import java .util.regex.Matcher;
+import javax.swing.JFrame;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PiePlot3D;
+import org.jfree.data.general.DefaultPieDataset;
+import org.jfree.util.Rotation;
+import java.awt.*;
 
 public class Assignment {
     private static final String path = "D:/UM/WIX1002 Fundamentals of Programming/Assignment/extracted_log.txt";
@@ -160,140 +170,8 @@ public class Assignment {
 
     }
 
-    public static void partition(){
-        Scanner input = new Scanner(System.in);
-        String imonth="", fmonth = "";
-        try{
-            Scanner inputstream = new Scanner (new FileInputStream(path));
-            String[] arrayMonth = {"06","07","08","09","10","11","12"};
-            String[] Month ={"June","July","August","September","October","November","December"};
-            String[] arrayPartition = {"gpu-k10","gpu-k40c","gpu-v100s","gpu-titan","cpu-opteron","cpu-epyc"};
-            int[] numPartition =new int[6];
-
-            System.out.print("Which month do you want to see?(june...december): "); //To ask the range of month or all month
-            String ask = input.next();
-            System.out.print("To :");
-            String month2 = input.next();
-
-            for (int i = 0; i < arrayMonth.length; i++) {
-                if (ask.equalsIgnoreCase(Month[i]))
-                    imonth = arrayMonth[i];
-                if (month2.equalsIgnoreCase(Month[i]))
-                    fmonth = arrayMonth[i];
-                }
-
-            System.out.println("-------------------------------------");
-            System.out.printf("| %-20s | %-2s%-9s|\n","Type of partition"," ","Amount");
-            System.out.println("-------------------------------------");
 
 
-            while(inputstream.hasNextLine()){
-                String read = inputstream.nextLine();
-                Pattern pattern = Pattern.compile("\\[2022-(\\d+)-(.*)T(.*)] sched: Allocate JobId=(\\d+) NodeList=(.*) #CPUs=(\\d+) Partition=(.*)");
-                Matcher matcher = pattern.matcher(read);
-                Pattern patternDate = Pattern.compile("\\[2022-(\\d+)-(.+)] (.*)");
-                Matcher matcherDate = patternDate.matcher(read);
-
-                matcherDate.find();
-                if(matcherDate.group(1).compareToIgnoreCase(imonth)>=0 && matcherDate.group(1).compareToIgnoreCase(fmonth)<=0) {
-                    if(matcher.matches())
-                        for (int i = 0; i < arrayPartition.length; i++) {
-                        if (matcher.group(7).equalsIgnoreCase(arrayPartition[i]) ) {
-                            numPartition[i]++;
-                            break;
-                        }
-                    }
-                }
-                if(matcherDate.group(2).compareTo(fmonth)>0) break;
-            }
-
-            for (int i = 0; i < numPartition.length; i++)
-                System.out.printf("| %-20s | %3s%-8d|\n",arrayPartition[i]," ",numPartition[i]);
-            System.out.println("-------------------------------------");
-
-            inputstream.close();
-            if(imonth.equals("06") && fmonth.equals("12")){//only show graph when user want june to december
-                PieChartforpartition(numPartition);
-            }
-        }catch (IOException e){
-            System.out.println("Input file problem");
-        }
-        System.out.println("Which partition do you want to look");
-        String partition = input.next();
-        partitionDetail(partition, imonth, fmonth);
-    }
-public static void check()  {
-        try{
-            PrintWriter outputstream = new PrintWriter(new FileOutputStream("D:/UM/WIX1002 Fundamentals of Programming/check.txt"));
-            Scanner inputstream = new Scanner(new FileInputStream(path));
-            while(inputstream.hasNextLine()){
-                String line = inputstream.nextLine();
-                Pattern pattern = Pattern.compile("\\[2022-(\\d+)-(.*)T(.*) _slurm_rpc_kill_job: (.*)");
-                Matcher matcher = pattern.matcher(line);
-                if(matcher.matches())
-                    outputstream.println(line);
-
-            }
-            inputstream.close();
-            outputstream.flush();
-        }catch(IOException e ){
-            e.getMessage();
-        }
-
-    }
-
-    public static void check2(){
-        try{
-            PrintWriter outputstream = new PrintWriter(new FileOutputStream("D:/UM/WIX1002 Fundamentals of Programming/check1.txt"));
-            Scanner inputstream = new Scanner(new FileInputStream(path));
-            while(inputstream.hasNextLine()){
-                String line = inputstream.nextLine();
-                Pattern pattern = Pattern.compile("\\[(.*)] sched: Allocate JobId=(\\d+) NodeList=(.*) #CPUs=(\\d) Partition=(.*)");
-                Matcher matcher = pattern.matcher(line);
-                if(matcher.matches())
-                    outputstream.println(line);
-
-            }
-            inputstream.close();
-            outputstream.flush();
-        }catch(IOException e ){
-            e.getMessage();
-        }
-
-    }
-
-    protected String[] month;
-    protected int[] amount;
-
-
-    public static void partitionDetail(String partition, String imonth, String fmonth){
-        int count =0;
-    try{
-        Scanner inputstream = new Scanner(new FileInputStream(path));
-        System.out.println("------------------------------------------------------");
-        System.out.printf("| %-15s | %-15s | %-15s|\n","Date","Time","Job ID");
-        System.out.println("------------------------------------------------------");
-        while(inputstream.hasNextLine()){
-            String line = inputstream.nextLine();
-            Pattern pattern = Pattern.compile("\\[2022-(\\d+)-(.+)] (.*)");
-            Matcher matcher = pattern.matcher(line);
-            Pattern patternPrint = Pattern.compile("\\[(.*)T(.*)] sched: Allocate JobId=(\\d+) NodeList=(.*) #CPUs=(\\d+) Partition=(.*)");
-            Matcher matcherPrint = patternPrint.matcher(line);
-
-            matcher.find();
-            if(matcher.group(1).compareToIgnoreCase(imonth)>=0 && matcher.group(1).compareToIgnoreCase(fmonth)<=0){
-                if(matcherPrint.matches())
-                if(matcherPrint.group(6).equalsIgnoreCase(partition))
-                    System.out.printf("| %-15s | %-15s | %-15s|\n",matcherPrint.group(1),matcherPrint.group(2),matcherPrint.group(3));
-            }
-        }
-
-        inputstream.close();
-    }catch(IOException e){
-        e.getMessage();
-    }
-        System.out.println("------------------------------------------------------\n");
-    }
 
     public static void JobRangeDay(){
         try{
@@ -398,6 +276,93 @@ public static void check()  {
             e.getMessage();
         }
     }
+
+    public static void PieChartforjobcreated(int[] countAmount){
+
+        DefaultPieDataset result = new DefaultPieDataset();
+        result.setValue("June\n" + " 24% ", countAmount[0]);
+        result.setValue("July\n" + " 14% ", countAmount[1]);
+        result.setValue("August\n" + " 13% ", countAmount[2]);
+        result.setValue("September\n" + " 14% ", countAmount[3]);
+        result.setValue("October\n" + " 19% ", countAmount[4]);
+        result.setValue("November\n" + " 10% ", countAmount[5]);
+        result.setValue("December\n" + " 6% ", countAmount[6]);
+
+        //Create a chart
+        JFreeChart chart = ChartFactory.createPieChart3D("Total Number of Job Created ", result, true, true, false);
+        //Create a panel to display the chart
+        ChartPanel panel = new ChartPanel(chart);
+        chart.getTitle().setFont(new Font("Arial", Font.BOLD, 27));
+        chart.getTitle().setPaint(Color.BLACK);
+        chart.getLegend().setItemFont(new Font("Arial", Font.ITALIC, 18));
+        chart.getLegend().setBackgroundPaint(Color.LIGHT_GRAY);
+
+
+        PiePlot3D plot=(PiePlot3D)chart.getPlot();
+        plot.setSectionPaint(0, Color.magenta);
+        plot.setSectionPaint(1, Color.LIGHT_GRAY);
+        plot.setSectionPaint(2, Color.CYAN);
+        plot.setSectionPaint(3, Color.YELLOW);
+        plot.setSectionPaint(4, Color.blue);
+        plot.setSectionPaint(5, Color.RED);
+        plot.setSectionPaint(6, Color.PINK);
+        plot.setLabelFont(new Font("Arial",Font.PLAIN, 14));
+        plot.setStartAngle(290);
+        plot.setDirection(Rotation.CLOCKWISE);
+        plot.setForegroundAlpha(0.5f);
+        plot.setNoDataMessage("No data to display");
+
+        //Add the panel to a frame
+        JFrame frame = new JFrame("Bar Chart Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(panel);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
+    public static void PieChartforjobended(int[] countAmount){
+
+        DefaultPieDataset result = new DefaultPieDataset();
+        result.setValue("June\n" + " 22% ", countAmount[0]);
+        result.setValue("July\n" + " 13% ", countAmount[1]);
+        result.setValue("August\n" + " 14% ", countAmount[2]);
+        result.setValue("September\n" + " 14% ", countAmount[3]);
+        result.setValue("October\n" + " 18% ", countAmount[4]);
+        result.setValue("November\n" + " 13% ", countAmount[5]);
+        result.setValue("December\n" + " 5% ", countAmount[6]);
+
+        //Create a chart
+        JFreeChart chart = ChartFactory.createPieChart3D("Total Number of Job Ended ", result, true, true, false);
+        //Create a panel to display the chart
+        ChartPanel panel = new ChartPanel(chart);
+        chart.getTitle().setFont(new Font("Arial", Font.BOLD, 27));
+        chart.getTitle().setPaint(Color.BLACK);
+        chart.getLegend().setItemFont(new Font("Arial", Font.ITALIC, 18));
+        chart.getLegend().setBackgroundPaint(Color.LIGHT_GRAY);
+
+
+        PiePlot3D plot=(PiePlot3D)chart.getPlot();
+        plot.setSectionPaint(0, Color.GREEN);
+        plot.setSectionPaint(1, Color.ORANGE);
+        plot.setSectionPaint(2, Color.BLUE);
+        plot.setSectionPaint(3, Color.magenta);
+        plot.setSectionPaint(4, Color.YELLOW);
+        plot.setSectionPaint(5, Color.cyan);
+        plot.setSectionPaint(6, Color.PINK);
+        plot.setLabelFont(new Font("Arial",Font.PLAIN, 14));
+        plot.setStartAngle(290);
+        plot.setDirection(Rotation.CLOCKWISE);
+        plot.setForegroundAlpha(0.5f);
+        plot.setNoDataMessage("No data to display");
+
+        //Add the panel to a frame
+        JFrame frame = new JFrame("Bar Chart Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(panel);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
 
     public static void kill(){
     try{
