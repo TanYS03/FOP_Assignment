@@ -182,7 +182,10 @@ public class Assignment {
                     fmonth = arrayMonth[i];
                 }
 
-            System.out.printf("%-20s%-10s\n","Type of partition","Amount");
+            System.out.println("-------------------------------------");
+            System.out.printf("| %-20s | %-2s%-9s|\n","Type of partition"," ","Amount");
+            System.out.println("-------------------------------------");
+
 
             while(inputstream.hasNextLine()){
                 String read = inputstream.nextLine();
@@ -205,7 +208,9 @@ public class Assignment {
             }
 
             for (int i = 0; i < numPartition.length; i++)
-                System.out.printf("%-20s%-10d\n",arrayPartition[i],numPartition[i]);
+                System.out.printf("| %-20s | %3s%-8d|\n",arrayPartition[i]," ",numPartition[i]);
+            System.out.println("-------------------------------------");
+
             inputstream.close();
             if(imonth.equals("06")&&fmonth.equals("12")){//only show graph when user want june to december
 
