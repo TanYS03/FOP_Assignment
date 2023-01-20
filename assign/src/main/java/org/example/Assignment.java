@@ -89,12 +89,12 @@ public class Assignment {
 
                             if(matcher.matches())
                                 countAmount[i]++;
-
                     }
                     System.out.printf("| %-15s | %5s%-10d|\n",Month[i]," ",countAmount[i]);
                 }
-
             System.out.println("------------------------------------\n");
+                if(choice=='C' || choice =='c') PieChartforjobcreated(countAmount);
+                if(choice=='E' || choice =='e') PieChartforjobended(countAmount); //for graph
             inputstream.close();
         }catch (IOException e){
             System.out.println("Input file problem");
@@ -212,8 +212,8 @@ public class Assignment {
             System.out.println("-------------------------------------");
 
             inputstream.close();
-            if(imonth.equals("06")&&fmonth.equals("12")){//only show graph when user want june to december
-
+            if(imonth.equals("06") && fmonth.equals("12")){//only show graph when user want june to december
+                PieChartforpartition(numPartition);
             }
         }catch (IOException e){
             System.out.println("Input file problem");
