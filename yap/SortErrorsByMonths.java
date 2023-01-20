@@ -12,6 +12,14 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
+import org.jfree.ui.ApplicationFrame;
+import org.jfree.ui.RefineryUtilities;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
+
 
 public class SortErrorsByMonths {
     
@@ -147,8 +155,9 @@ public class SortErrorsByMonths {
                                                               "5 -> Show September average time.\n" +
                                                               "6 -> Show October average time.\n" +
                                                               "7 -> Show November average time.\n" +
-                                                              "8 -> Show December average time.\n" + 
-                                                              "9 -> Total.\n" + 
+                                                              "8 -> Show December average time.\n" +
+                                                              "9 -> Show average time by month graph.\n"
+                                                              "10-> Total.\n" +
                                                               "Q -> Back to main menu.");
                     try {
          
@@ -544,8 +553,25 @@ public class SortErrorsByMonths {
                                 stos(decmaxtotal);
                                 System.out.println();
                             }
-                            
                             else if(cmd4.equals("9")) {
+                                averagetime.LineChart_AWT chart = new averagetime.LineChart_AWT(
+                                        "Average execution time by month" ,
+                                        "Average execution time by month",
+                                        getavg(junecounter,junes,juned,juneh,junem),
+                                        getavg(julycounter,julys,julyd,julyh,julym),
+                                        getavg(augcounter,augs,augd,augh,augm),
+                                        getavg(sepcounter,seps,sepd,seph,sepm),
+                                        getavg(octcounter,octs,octd,octh,octm),
+                                        getavg(novcounter,novs,novd,novh,novm),
+                                        getavg(deccounter,decs,decd,dech,decm));
+
+                                chart.pack( );
+                                RefineryUtilities.centerFrameOnScreen( chart );
+                                chart.setVisible( true );
+
+                            }
+
+                            else if(cmd4.equals("10")) {
                                 System.out.println("total month :" + totalmonth);
                                 System.out.println("total day :" + totalday);
                                 System.out.println("total  hour :" + totalhour);
@@ -1042,6 +1068,34 @@ public class SortErrorsByMonths {
             return b-a-1;
         
     }
+    public LineChart_AWT( String applicationTitle , String chartTitle,double juneavg,double julyavg,double augavg,double sepavg,double octavg,double novavg,double decavg ) {
+        super(applicationTitle);
+        JFreeChart lineChart = ChartFactory.createLineChart(
+                chartTitle,
+                "Year","Average Time",
+                createDataset(juneavg,julyavg,augavg,sepavg,octavg,novavg,decavg),
+                PlotOrientation.VERTICAL,
+                true,true,false);
+
+        ChartPanel chartPanel = new ChartPanel( lineChart );
+        chartPanel.setPreferredSize( new java.awt.Dimension( 560 , 367 ) );
+        setContentPane( chartPanel );
+    }
+
+    private DefaultCategoryDataset createDataset(double juneavg,double julyavg,double augavg,double sepavg,double octavg,double novavg,double decavg) {
+        DefaultCategoryDataset dataset = new DefaultCategoryDataset( );
+        dataset.addValue( juneavg , "Seconds" , "June" );
+        dataset.addValue( julyavg , "Seconds" , "July" );
+        dataset.addValue( augavg , "Seconds" ,  "August" );
+        dataset.addValue( sepavg , "Seconds" , "September" );
+        dataset.addValue( octavg , "Seconds" , "October" );
+        dataset.addValue( novavg , "Seconds" , "November" );
+        dataset.addValue( decavg , "Seconds" , "Decemebr" );
+        return dataset;
+    }
+
+
+}
 
 
 }
