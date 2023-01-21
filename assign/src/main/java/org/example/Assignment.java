@@ -39,19 +39,22 @@ public class Assignment {
                     jobRange();
                     break;
                 case "partition":
-                    partition();
+//                    partition();
                     break;
                 case "-1":
                     System.out.println("Thank you for using our program （^^)");
                     break;
                 case "check":
-                    check();
+//                    check();
                     break;
                 case "check2":
-                    check2();
+//                    check2();
                     break;
                 case "day":
                     JobRangeDay();
+                    break;
+                case "kill":
+                    kill();
                     break;
                 default:
                     System.out.println("Please rewrite again.");
@@ -363,16 +366,75 @@ public class Assignment {
         frame.setVisible(true);
     }
 
-
     public static void kill(){
-    try{
-        Scanner inputstream = new Scanner(new FileInputStream(path));
+        int[] sucessCount = new int[7];
+        int[] requestCount = new int[7];
+        int[] failureCount = new int[7];
+        String[] Month ={"June","July","August","September","October","November","December"};
 
-    }catch (IOException e){
-        e.getMessage();
+        try{
+            Scanner inputstream = new Scanner(new FileInputStream(path));
+            while(inputstream.hasNextLine()){
+                String line = inputstream.nextLine();
+                if(line.contains("_slurm_rpc_kill_job:")){
+                    if(line.contains("REQUEST_KILL_JOB")) checkMonth(line,requestCount);
+                    if(line.contains("job_str_signal()")) checkMonth(line,failureCount);
+                }
+            }
+            inputstream.close();
+        }catch (IOException e){
+            e.getMessage();
+        }
+        for (int i = 0; i < sucessCount.length; i++) {
+            sucessCount[i] = requestCount[i] - failureCount[i];
+        }
+        System.out.println("------------------------------------");
+        System.out.printf("| %-15s | %-15s|\n","Month","Success request");
+        System.out.println("------------------------------------");
+        for (int i = 0; i < sucessCount.length; i++) {
+            System.out.printf("| %-15s | %5s%-10d|\n",Month[i]," ",sucessCount[i]);
+        }
+        System.out.println("------------------------------------");
+
+        System.out.println("------------------------------------");
+        System.out.printf("| %-15s | %-15s|\n","Month","Failure request");
+        System.out.println("------------------------------------");
+        for (int i = 0; i < sucessCount.length; i++) {
+            System.out.printf("| %-15s | %5s%-10d|\n",Month[i]," ",failureCount[i]);
+        }
+        System.out.println("------------------------------------");
     }
 
+    static void checkMonth(String line, int[] monthCount){
+        Pattern pattern = Pattern.compile("\\[2022-(\\d+)-(.+)](.+)");
+        Matcher matcher = pattern.matcher(line);
+        matcher.find();
+        switch(matcher.group(1)){
+            case "06" :
+                monthCount[0]++;
+                break;
+            case "07":
+                monthCount[1]++;
+                break;
+            case "08":
+                monthCount[2]++;
+                break;
+            case "09":
+                monthCount[3]++;
+                break;
+            case "10":
+                monthCount[4]++;
+                break;
+            case "11":
+                monthCount[5]++;
+                break;
+            case "12":
+                monthCount[6]++;
+                break;
+        }
     }
+
+
 
 }
 
