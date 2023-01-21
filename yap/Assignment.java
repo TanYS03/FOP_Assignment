@@ -201,7 +201,7 @@ public class Assignment extends JFrame {
                         BufferedReader reader1 = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\jobdone.txt"));
                         BufferedReader reader2 = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\jobcreated.txt"));
 
-                        int totalcounter = 7530;
+                        int totalcounter = 8189;
                         int fminit;
                         int fhour;
                         int fday;
@@ -318,7 +318,7 @@ public class Assignment extends JFrame {
                         int novm = 0;
                         int decm = 0;
 
-                        for (int i = 0; i < 7530; i++) {
+                        for (int i = 0; i < 8189; i++) {
 
                             String[] sepcre = reader2.readLine().split(" ");
                             String[] sepdon = reader1.readLine().split(" ");
