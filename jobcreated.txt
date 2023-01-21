@@ -58,6 +58,9 @@
 [2022-06-01T16:00:09.044] sched: Allocate JobId=42875 NodeList=gpu04 #CPUs=4 Partition=gpu-k40c
 [2022-06-01T16:10:53.160] sched: Allocate JobId=42878 NodeList=gpu04 #CPUs=4 Partition=gpu-k40c
 [2022-06-01T16:15:53.712] sched: Allocate JobId=42879 NodeList=cpu13 #CPUs=32 Partition=cpu-epyc
+[2022-06-01T18:00:29.810] sched/backfill: _start_job: Started JobId=42876 in gpu-k40c on gpu04
+[2022-06-01T18:00:29.811] sched/backfill: _start_job: Started JobId=42877 in gpu-titan on gpu02
+[2022-06-01T18:00:29.827] sched/backfill: _start_job: Started JobId=42810 in gpu-k40c on gpu04
 [2022-06-01T18:00:32.413] sched: Allocate JobId=42811 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-06-01T19:18:36.400] sched: Allocate JobId=42880 NodeList=cpu12 #CPUs=48 Partition=cpu-epyc
 [2022-06-01T19:22:41.876] sched: Allocate JobId=42881 NodeList=gpu04 #CPUs=4 Partition=gpu-k40c
@@ -183,6 +186,7 @@
 [2022-06-06T10:14:35.903] sched: Allocate JobId=43070 NodeList=cpu11 #CPUs=4 Partition=cpu-opteron
 [2022-06-06T10:32:20.324] sched: Allocate JobId=43071 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
 [2022-06-06T10:34:02.508] sched: Allocate JobId=43072 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
+[2022-06-06T10:35:32.516] sched/backfill: _start_job: Started JobId=43073 in cpu-opteron on cpu01
 [2022-06-06T10:46:46.851] sched: Allocate JobId=43074 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-06-06T10:54:44.724] sched: Allocate JobId=43075 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-06-06T10:55:15.768] sched: Allocate JobId=43076 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
@@ -222,6 +226,7 @@
 [2022-06-06T19:23:00.837] sched: Allocate JobId=43124 NodeList=cpu04 #CPUs=32 Partition=cpu-opteron
 [2022-06-06T21:59:56.475] sched: Allocate JobId=43115 NodeList=gpu02 #CPUs=10 Partition=gpu-titan
 [2022-06-07T01:19:10.136] sched: Allocate JobId=43126 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
+[2022-06-07T01:21:32.810] sched/backfill: _start_job: Started JobId=43128 in cpu-opteron on cpu01
 [2022-06-07T01:27:13.939] sched: Allocate JobId=43129 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-06-07T01:28:43.143] sched: Allocate JobId=43130 NodeList=gpu04 #CPUs=1 Partition=gpu-k40c
 [2022-06-07T01:29:18.193] sched: Allocate JobId=43131 NodeList=cpu01 #CPUs=4 Partition=cpu-opteron
@@ -254,6 +259,7 @@
 [2022-06-07T12:22:59.823] sched: Allocate JobId=43170 NodeList=gpu01 #CPUs=32 Partition=gpu-k10
 [2022-06-07T12:28:31.450] sched: Allocate JobId=43171 NodeList=cpu12 #CPUs=24 Partition=cpu-epyc
 [2022-06-07T12:30:01.575] sched: Allocate JobId=43172 NodeList=gpu01 #CPUs=32 Partition=gpu-k10
+[2022-06-07T12:45:34.061] sched/backfill: _start_job: Started JobId=43174 in cpu-opteron on cpu01
 [2022-06-07T12:49:03.539] sched: Allocate JobId=43175 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-06-07T12:50:36.677] sched: Allocate JobId=43176 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-06-07T12:52:00.798] sched: Allocate JobId=43177 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
@@ -432,6 +438,7 @@
 [2022-06-11T13:50:21.470] sched: Allocate JobId=43449 NodeList=cpu11 #CPUs=32 Partition=cpu-opteron
 [2022-06-11T13:51:59.610] sched: Allocate JobId=43451 NodeList=cpu04 #CPUs=32 Partition=cpu-opteron
 [2022-06-11T14:03:27.881] sched: Allocate JobId=43457 NodeList=cpu08 #CPUs=16 Partition=cpu-opteron
+[2022-06-11T14:26:36.389] sched/backfill: _start_job: Started JobId=43439 in gpu-titan on gpu02
 [2022-06-11T16:35:28.201] sched: Allocate JobId=43456 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-06-11T18:25:08.190] sched: Allocate JobId=43463 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-06-11T18:28:35.591] sched: Allocate JobId=43464 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
@@ -528,6 +535,7 @@
 [2022-06-13T12:36:19.743] sched: Allocate JobId=43593 NodeList=gpu05 #CPUs=16 Partition=gpu-v100s
 [2022-06-13T12:57:26.342] sched: Allocate JobId=43597 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
 [2022-06-13T13:01:28.718] sched: Allocate JobId=43598 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
+[2022-06-13T14:02:37.548] sched/backfill: _start_job: Started JobId=43608 in gpu-titan on gpu02
 [2022-06-13T14:05:19.021] sched: Allocate JobId=43609 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-06-13T14:05:23.007] sched: Allocate JobId=43610 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-06-13T14:05:26.011] sched: Allocate JobId=43611 NodeList=cpu08 #CPUs=16 Partition=cpu-opteron
@@ -830,6 +838,7 @@
 [2022-06-17T22:03:37.853] sched: Allocate JobId=44099 NodeList=gpu02 #CPUs=16 Partition=gpu-titan
 [2022-06-17T22:09:25.526] sched: Allocate JobId=44100 NodeList=gpu02 #CPUs=16 Partition=gpu-titan
 [2022-06-17T22:13:22.996] sched: Allocate JobId=44101 NodeList=gpu02 #CPUs=16 Partition=gpu-titan
+[2022-06-17T22:16:40.130] sched/backfill: _start_job: Started JobId=44102 in gpu-titan on gpu02
 [2022-06-17T22:18:54.597] sched: Allocate JobId=44103 NodeList=gpu02 #CPUs=16 Partition=gpu-titan
 [2022-06-17T22:18:58.150] sched: Allocate JobId=44083 NodeList=cpu11 #CPUs=1 Partition=cpu-opteron
 [2022-06-17T22:18:58.152] sched: Allocate JobId=44095 NodeList=cpu11 #CPUs=1 Partition=cpu-opteron
@@ -950,6 +959,7 @@
 [2022-06-18T18:20:53.471] sched: Allocate JobId=44250 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-06-18T18:27:45.339] sched: Allocate JobId=44251 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-06-18T18:30:17.552] sched: Allocate JobId=44252 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
+[2022-06-18T18:31:43.089] sched/backfill: _start_job: Started JobId=44253 in gpu-v100s on gpu05
 [2022-06-18T18:33:15.972] sched: Allocate JobId=44254 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-06-18T18:51:15.875] sched: Allocate JobId=44255 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-06-18T18:51:56.931] sched: Allocate JobId=44256 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
@@ -978,6 +988,7 @@
 [2022-06-19T00:14:53.706] sched: Allocate JobId=44281 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-06-19T01:46:47.525] sched: Allocate JobId=44282 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-06-19T07:37:31.119] sched: Allocate JobId=44285 NodeList=gpu02 #CPUs=16 Partition=gpu-titan
+[2022-06-19T08:13:43.402] sched/backfill: _start_job: Started JobId=44295 in gpu-titan on gpu02
 [2022-06-19T10:27:16.251] sched: Allocate JobId=44296 NodeList=cpu12 #CPUs=32 Partition=cpu-epyc
 [2022-06-19T11:25:54.146] sched: Allocate JobId=44299 NodeList=gpu02 #CPUs=4 Partition=gpu-titan
 [2022-06-19T11:25:54.147] sched: Allocate JobId=44300 NodeList=gpu02 #CPUs=4 Partition=gpu-titan
@@ -1014,6 +1025,7 @@
 [2022-06-19T20:25:37.020] sched: Allocate JobId=44325 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-06-19T21:37:57.149] sched: Allocate JobId=44326 NodeList=gpu05 #CPUs=16 Partition=gpu-v100s
 [2022-06-19T22:38:59.377] sched: Allocate JobId=44327 NodeList=gpu05 #CPUs=16 Partition=gpu-v100s
+[2022-06-19T23:41:43.742] sched/backfill: _start_job: Started JobId=44329 in cpu-opteron on cpu11
 [2022-06-20T01:05:54.155] sched: Allocate JobId=44328 NodeList=gpu05 #CPUs=16 Partition=gpu-v100s
 [2022-06-20T07:50:14.694] sched: Allocate JobId=44330 NodeList=gpu05 #CPUs=32 Partition=gpu-v100s
 [2022-06-20T07:51:11.764] sched: Allocate JobId=44331 NodeList=gpu05 #CPUs=32 Partition=gpu-v100s
@@ -1170,6 +1182,7 @@
 [2022-06-21T13:05:00.506] sched: Allocate JobId=44531 NodeList=cpu15 #CPUs=16 Partition=cpu-epyc
 [2022-06-21T13:13:40.979] sched: Allocate JobId=44532 NodeList=cpu15 #CPUs=16 Partition=cpu-epyc
 [2022-06-21T13:25:10.480] sched: Allocate JobId=44533 NodeList=cpu14 #CPUs=16 Partition=cpu-epyc
+[2022-06-21T13:29:44.503] sched/backfill: _start_job: Started JobId=44603 in gpu-titan on gpu02
 [2022-06-21T13:48:28.377] sched: Allocate JobId=44534 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-06-21T13:51:06.476] sched: Allocate JobId=44548 NodeList=cpu15 #CPUs=16 Partition=cpu-epyc
 [2022-06-21T14:11:39.434] sched: Allocate JobId=44549 NodeList=cpu15 #CPUs=16 Partition=cpu-epyc
@@ -1202,6 +1215,7 @@
 [2022-06-21T17:13:03.860] sched: Allocate JobId=44641 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-06-21T17:45:24.863] sched: Allocate JobId=44561 NodeList=cpu15 #CPUs=16 Partition=cpu-epyc
 [2022-06-21T18:07:19.654] sched: Allocate JobId=44562 NodeList=cpu15 #CPUs=16 Partition=cpu-epyc
+[2022-06-21T18:20:45.163] sched/backfill: _start_job: Started JobId=44642 in gpu-titan on gpu02
 [2022-06-21T18:33:11.530] sched: Allocate JobId=44563 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-06-21T18:36:39.065] sched: Allocate JobId=44644 NodeList=gpu02 #CPUs=3 Partition=gpu-titan
 [2022-06-21T18:50:24.289] sched: Allocate JobId=44564 NodeList=cpu15 #CPUs=16 Partition=cpu-epyc
@@ -1281,12 +1295,16 @@
 [2022-06-22T11:48:00.160] sched: Allocate JobId=44692 NodeList=cpu15 #CPUs=32 Partition=cpu-epyc
 [2022-06-22T11:48:16.793] sched: Allocate JobId=44707 NodeList=gpu05 #CPUs=16 Partition=gpu-v100s
 [2022-06-22T12:02:38.398] sched: Allocate JobId=44718 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
+[2022-06-22T12:18:46.013] sched/backfill: _start_job: Started JobId=44725 in gpu-k40c on gpu04
 [2022-06-22T12:47:13.113] sched: Allocate JobId=44726 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-06-22T12:51:44.924] sched: Allocate JobId=44727 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-06-22T12:52:21.979] sched: Allocate JobId=44728 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
+[2022-06-22T12:53:46.032] sched/backfill: _start_job: Started JobId=44730 in gpu-k40c on gpu04
 [2022-06-22T13:00:04.370] sched: Allocate JobId=44699 NodeList=gpu02 #CPUs=10 Partition=gpu-titan
 [2022-06-22T13:00:27.290] sched: Allocate JobId=44732 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
+[2022-06-22T13:00:46.040] sched/backfill: _start_job: Started JobId=44733 in gpu-k40c on gpu04
 [2022-06-22T13:40:17.014] sched: Allocate JobId=44734 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
+[2022-06-22T13:56:46.087] sched/backfill: _start_job: Started JobId=44736 in gpu-titan on gpu02
 [2022-06-22T14:34:33.301] sched: Allocate JobId=44742 NodeList=gpu05 #CPUs=12 Partition=gpu-v100s
 [2022-06-22T14:35:29.764] sched: Allocate JobId=44738 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-06-22T14:35:29.765] sched: Allocate JobId=44737 NodeList=cpu01 #CPUs=2 Partition=cpu-opteron
@@ -1305,6 +1323,7 @@
 [2022-06-22T18:06:15.985] sched: Allocate JobId=44753 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-06-22T18:38:47.826] sched: Allocate JobId=44761 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-06-22T18:43:34.326] sched: Allocate JobId=44762 NodeList=gpu02 #CPUs=1 Partition=gpu-titan
+[2022-06-22T18:43:46.242] sched/backfill: _start_job: Started JobId=44763 in gpu-titan on gpu02
 [2022-06-22T20:39:59.332] sched: Allocate JobId=44765 NodeList=gpu02 #CPUs=1 Partition=gpu-titan
 [2022-06-22T20:54:03.803] sched: Allocate JobId=44766 NodeList=gpu05 #CPUs=2 Partition=gpu-v100s
 [2022-06-22T20:55:57.968] sched: Allocate JobId=44767 NodeList=gpu05 #CPUs=2 Partition=gpu-v100s
@@ -1508,6 +1527,7 @@
 [2022-06-25T18:29:16.318] sched: Allocate JobId=45073 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-06-25T18:30:14.398] sched: Allocate JobId=45074 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-06-25T18:32:14.566] sched: Allocate JobId=45075 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
+[2022-06-25T18:46:47.953] sched/backfill: _start_job: Started JobId=45076 in cpu-opteron on cpu03
 [2022-06-25T18:49:53.616] sched: Allocate JobId=45077 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
 [2022-06-25T18:53:03.537] sched: Allocate JobId=45078 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
 [2022-06-25T18:56:09.979] sched: Allocate JobId=45079 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
@@ -1634,6 +1654,7 @@
 [2022-06-28T11:14:25.278] sched: Allocate JobId=45235 NodeList=cpu11 #CPUs=1 Partition=cpu-opteron
 [2022-06-28T11:14:31.281] sched: Allocate JobId=45236 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-06-28T12:08:21.039] sched: Allocate JobId=45238 NodeList=cpu11 #CPUs=2 Partition=cpu-opteron
+[2022-06-28T12:09:49.518] sched/backfill: _start_job: Started JobId=45239 in cpu-opteron on cpu11
 [2022-06-28T12:10:10.192] sched: Allocate JobId=45240 NodeList=cpu11 #CPUs=2 Partition=cpu-opteron
 [2022-06-28T12:10:38.230] sched: Allocate JobId=45241 NodeList=cpu11 #CPUs=2 Partition=cpu-opteron
 [2022-06-28T12:11:11.275] sched: Allocate JobId=45242 NodeList=cpu11 #CPUs=2 Partition=cpu-opteron
@@ -1645,6 +1666,7 @@
 [2022-06-28T14:38:41.119] sched: Allocate JobId=45250 NodeList=cpu15 #CPUs=32 Partition=cpu-epyc
 [2022-06-28T14:42:05.401] sched: Allocate JobId=45252 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
 [2022-06-28T14:44:12.417] sched: Allocate JobId=45251 NodeList=cpu13 #CPUs=32 Partition=cpu-epyc
+[2022-06-28T15:03:49.574] sched/backfill: _start_job: Started JobId=45253 in cpu-opteron on cpu07
 [2022-06-28T15:04:56.869] sched: Allocate JobId=45255 NodeList=cpu11 #CPUs=48 Partition=cpu-opteron
 [2022-06-28T16:30:05.364] sched: Allocate JobId=45256 NodeList=cpu12 #CPUs=32 Partition=cpu-epyc
 [2022-06-28T17:01:19.230] sched: Allocate JobId=45258 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
@@ -1682,6 +1704,7 @@
 [2022-06-29T01:05:36.354] sched: Allocate JobId=45304 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-06-29T04:00:25.465] sched: Allocate JobId=45305 NodeList=cpu12 #CPUs=48 Partition=cpu-epyc
 [2022-06-29T07:02:13.437] sched: Allocate JobId=45306 NodeList=cpu12 #CPUs=32 Partition=cpu-epyc
+[2022-06-29T07:10:49.819] sched/backfill: _start_job: Started JobId=45308 in cpu-epyc on cpu14
 [2022-06-29T07:15:46.948] sched: Allocate JobId=45311 NodeList=cpu05 #CPUs=64 Partition=cpu-opteron
 [2022-06-29T07:16:15.985] sched: Allocate JobId=45312 NodeList=cpu10 #CPUs=64 Partition=cpu-opteron
 [2022-06-29T08:50:21.033] sched: Allocate JobId=45315 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
@@ -1700,6 +1723,7 @@
 [2022-06-29T12:58:55.327] sched: Allocate JobId=45340 NodeList=cpu01 #CPUs=4 Partition=cpu-opteron
 [2022-06-29T13:01:13.520] sched: Allocate JobId=45341 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-06-29T13:18:14.328] sched: Allocate JobId=45343 NodeList=cpu01 #CPUs=2 Partition=cpu-opteron
+[2022-06-29T13:20:49.904] sched/backfill: _start_job: Started JobId=45344 in cpu-opteron on cpu01
 [2022-06-29T13:28:36.029] sched: Allocate JobId=45347 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-06-29T14:12:26.743] sched: Allocate JobId=45356 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-06-29T14:26:00.106] sched: Allocate JobId=45360 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
@@ -2062,6 +2086,7 @@
 [2022-07-06T19:10:52.084] sched: Allocate JobId=45870 NodeList=cpu13 #CPUs=32 Partition=cpu-epyc
 [2022-07-06T19:25:30.909] sched: Allocate JobId=45871 NodeList=cpu13 #CPUs=32 Partition=cpu-epyc
 [2022-07-06T20:01:34.566] sched: Allocate JobId=45790 NodeList=cpu15 #CPUs=16 Partition=cpu-epyc
+[2022-07-06T20:36:01.261] sched/backfill: _start_job: Started JobId=45872 in cpu-epyc on cpu13
 [2022-07-06T20:47:27.796] sched: Allocate JobId=45873 NodeList=cpu13 #CPUs=32 Partition=cpu-epyc
 [2022-07-06T21:16:45.862] sched: Allocate JobId=45791 NodeList=cpu14 #CPUs=16 Partition=cpu-epyc
 [2022-07-06T21:42:16.052] sched: Allocate JobId=45792 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
@@ -2207,6 +2232,7 @@
 [2022-07-08T03:00:06.415] sched: Allocate JobId=45976 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-07-08T03:05:31.512] sched: Allocate JobId=45977 NodeList=cpu15 #CPUs=16 Partition=cpu-epyc
 [2022-07-08T03:13:33.282] sched: Allocate JobId=45978 NodeList=cpu14 #CPUs=16 Partition=cpu-epyc
+[2022-07-08T03:23:03.561] sched/backfill: _start_job: Started JobId=46055 in gpu-titan on gpu02
 [2022-07-08T03:28:07.724] sched: Allocate JobId=45979 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-07-08T03:46:08.394] sched: Allocate JobId=45935 NodeList=gpu02 #CPUs=10 Partition=gpu-titan
 [2022-07-08T04:12:17.820] sched: Allocate JobId=45980 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
@@ -2315,6 +2341,7 @@
 [2022-07-12T10:22:32.248] sched: Allocate JobId=46189 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-07-12T10:25:24.523] sched: Allocate JobId=46190 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-07-12T10:34:23.521] sched: Allocate JobId=46185 NodeList=gpu02 #CPUs=1 Partition=gpu-titan
+[2022-07-12T10:35:06.463] sched/backfill: _start_job: Started JobId=46194 in cpu-epyc on cpu13
 [2022-07-12T10:38:52.031] sched: Allocate JobId=46198 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
 [2022-07-12T10:39:56.123] sched: Allocate JobId=46199 NodeList=cpu04 #CPUs=8 Partition=cpu-opteron
 [2022-07-12T10:45:05.682] sched: Allocate JobId=46203 NodeList=cpu11 #CPUs=7 Partition=cpu-opteron
@@ -2323,6 +2350,7 @@
 [2022-07-12T10:49:51.133] sched: Allocate JobId=46205 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-07-12T15:08:57.123] sched: Allocate JobId=46207 NodeList=gpu02 #CPUs=10 Partition=gpu-titan
 [2022-07-12T15:48:23.084] sched: Allocate JobId=46209 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
+[2022-07-12T16:28:06.833] sched/backfill: _start_job: Started JobId=46218 in cpu-epyc on cpu13
 [2022-07-12T16:34:39.366] sched: Allocate JobId=46219 NodeList=cpu04 #CPUs=8 Partition=cpu-opteron
 [2022-07-12T16:39:51.298] sched: Allocate JobId=46220 NodeList=cpu04 #CPUs=8 Partition=cpu-opteron
 [2022-07-12T16:40:05.424] sched: Allocate JobId=46221 NodeList=cpu04 #CPUs=8 Partition=cpu-opteron
@@ -2333,6 +2361,7 @@
 [2022-07-13T00:09:35.307] sched: Allocate JobId=45638 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-07-13T00:19:34.250] sched: Allocate JobId=45639 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-07-13T01:08:06.017] sched: Allocate JobId=45628 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
+[2022-07-13T01:08:07.384] sched/backfill: _start_job: Started JobId=46208 in cpu-epyc on cpu14
 [2022-07-13T01:08:14.190] sched: Allocate JobId=45629 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-07-13T01:08:15.186] sched: Allocate JobId=46210 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-07-13T01:08:15.187] sched: Allocate JobId=46214 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
@@ -2436,6 +2465,7 @@
 [2022-07-14T17:40:50.279] sched: Allocate JobId=46341 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-07-14T17:41:59.378] sched: Allocate JobId=46342 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-07-14T17:45:27.783] sched: Allocate JobId=46343 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
+[2022-07-14T18:05:08.335] sched/backfill: _start_job: Started JobId=46344 in cpu-opteron on cpu11
 [2022-07-14T18:05:43.882] sched: Allocate JobId=46345 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-07-14T18:17:03.039] sched: Allocate JobId=46346 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-07-14T19:49:35.103] sched: Allocate JobId=46311 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
@@ -2710,9 +2740,12 @@
 [2022-07-25T20:40:15.345] sched: Allocate JobId=46711 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-07-25T20:41:20.422] sched: Allocate JobId=46712 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-07-25T20:42:40.672] sched: Allocate JobId=46713 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
+[2022-07-25T20:58:15.501] sched/backfill: _start_job: Started JobId=46709 in cpu-epyc on cpu14
 [2022-07-25T21:13:17.782] sched: Allocate JobId=46714 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-07-26T09:05:10.390] sched: Allocate JobId=46706 NodeList=cpu14 #CPUs=24 Partition=cpu-epyc
 [2022-07-26T09:05:10.390] sched: Allocate JobId=46708 NodeList=cpu14 #CPUs=24 Partition=cpu-epyc
+[2022-07-26T11:01:18.102] sched/backfill: _start_job: Started JobId=46700 in cpu-opteron on cpu03
+[2022-07-26T11:16:18.146] sched/backfill: _start_job: Started JobId=46701 in cpu-opteron on cpu03
 [2022-07-26T11:19:39.939] sched: Allocate JobId=46718 NodeList=cpu14 #CPUs=32 Partition=cpu-epyc
 [2022-07-26T11:20:56.979] sched: Allocate JobId=46720 NodeList=cpu14 #CPUs=24 Partition=cpu-epyc
 [2022-07-26T11:54:44.601] sched: Allocate JobId=46722 NodeList=cpu14 #CPUs=16 Partition=cpu-epyc
@@ -2779,14 +2812,22 @@
 [2022-07-28T11:37:09.542] sched: Allocate JobId=46824 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-07-28T12:16:31.122] sched: Allocate JobId=46770 NodeList=cpu14 #CPUs=48 Partition=cpu-epyc
 [2022-07-28T15:26:47.387] sched: Allocate JobId=46831 NodeList=gpu01 #CPUs=8 Partition=gpu-k10
+[2022-07-28T15:32:24.261] sched/backfill: _start_job: Started JobId=46841 in cpu-epyc on cpu12
+[2022-07-28T15:32:24.261] sched/backfill: _start_job: Started JobId=46842 in cpu-epyc on cpu12
 [2022-07-28T15:38:11.627] sched: Allocate JobId=46771 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
 [2022-07-28T15:38:52.295] sched: Allocate JobId=46833 NodeList=gpu01 #CPUs=8 Partition=gpu-k10
+[2022-07-28T16:13:24.395] sched/backfill: _start_job: Started JobId=46843 in cpu-epyc on cpu12
+[2022-07-28T16:33:24.461] sched/backfill: _start_job: Started JobId=46844 in cpu-epyc on cpu12
 [2022-07-28T16:34:37.730] sched: Allocate JobId=46827 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-07-28T16:34:37.731] sched: Allocate JobId=46828 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-07-28T16:43:00.274] sched: Allocate JobId=46850 NodeList=gpu02 #CPUs=15 Partition=gpu-titan
 [2022-07-28T16:46:07.543] sched: Allocate JobId=46851 NodeList=gpu02 #CPUs=16 Partition=gpu-titan
 [2022-07-28T16:48:43.850] sched: Allocate JobId=46852 NodeList=gpu02 #CPUs=16 Partition=gpu-titan
+[2022-07-28T16:58:24.531] sched/backfill: _start_job: Started JobId=46845 in cpu-epyc on cpu12
+[2022-07-28T17:00:24.538] sched/backfill: _start_job: Started JobId=46846 in cpu-epyc on cpu12
 [2022-07-28T17:13:37.826] sched: Allocate JobId=46772 NodeList=cpu14 #CPUs=48 Partition=cpu-epyc
+[2022-07-28T17:24:24.598] sched/backfill: _start_job: Started JobId=46847 in cpu-epyc on cpu12
+[2022-07-28T17:26:24.603] sched/backfill: _start_job: Started JobId=46848 in cpu-epyc on cpu12
 [2022-07-28T18:23:56.423] sched: Allocate JobId=46808 NodeList=cpu11 #CPUs=24 Partition=cpu-opteron
 [2022-07-28T18:38:57.098] sched: Allocate JobId=46854 NodeList=gpu01 #CPUs=8 Partition=gpu-k10
 [2022-07-28T18:41:11.273] sched: Allocate JobId=46855 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
@@ -2800,6 +2841,8 @@
 [2022-07-28T19:30:17.560] sched: Allocate JobId=46864 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
 [2022-07-28T19:31:55.695] sched: Allocate JobId=46865 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
 [2022-07-28T20:04:21.202] sched: Allocate JobId=46866 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
+[2022-07-28T20:30:24.928] sched/backfill: _start_job: Started JobId=46867 in cpu-epyc on cpu12
+[2022-07-28T20:36:24.938] sched/backfill: _start_job: Started JobId=46869 in cpu-epyc on cpu12
 [2022-07-28T20:42:47.769] sched: Allocate JobId=46773 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
 [2022-07-28T20:42:47.782] sched: Allocate JobId=46774 NodeList=cpu12 #CPUs=32 Partition=cpu-epyc
 [2022-07-28T20:50:55.314] sched: Allocate JobId=46871 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
@@ -2848,16 +2891,22 @@
 [2022-08-01T11:17:15.487] sched: Allocate JobId=46950 NodeList=gpu01 #CPUs=8 Partition=gpu-k10
 [2022-08-01T11:23:07.680] sched: Allocate JobId=46951 NodeList=gpu01 #CPUs=8 Partition=gpu-k10
 [2022-08-01T11:37:48.724] sched: Allocate JobId=46955 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
+[2022-08-01T11:42:33.264] sched/backfill: _start_job: Started JobId=46957 in gpu-v100s on gpu05
 [2022-08-01T11:42:47.569] sched: Allocate JobId=46956 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
+[2022-08-01T11:43:33.267] sched/backfill: _start_job: Started JobId=46958 in gpu-v100s on gpu05
 [2022-08-01T11:50:27.865] sched: Allocate JobId=46949 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
 [2022-08-01T11:57:50.389] sched: Allocate JobId=46953 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
 [2022-08-01T12:03:37.411] sched: Allocate JobId=46954 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
 [2022-08-01T12:10:02.409] sched: Allocate JobId=46952 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-08-01T12:44:16.135] sched: Allocate JobId=46959 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
+[2022-08-01T12:47:33.353] sched/backfill: _start_job: Started JobId=46960 in cpu-opteron on cpu09
+[2022-08-01T12:50:33.358] sched/backfill: _start_job: Started JobId=46961 in cpu-epyc on cpu15
+[2022-08-01T12:50:33.359] sched/backfill: _start_job: Started JobId=46962 in cpu-epyc on cpu15
 [2022-08-01T13:27:10.681] sched: Allocate JobId=46963 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
 [2022-08-01T13:29:00.968] sched: Allocate JobId=46964 NodeList=cpu09 #CPUs=8 Partition=cpu-opteron
 [2022-08-01T13:47:54.025] sched: Allocate JobId=46967 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
 [2022-08-01T13:55:28.757] sched: Allocate JobId=46968 NodeList=cpu09 #CPUs=8 Partition=cpu-opteron
+[2022-08-01T16:11:33.693] sched/backfill: _start_job: Started JobId=46969 in cpu-opteron on cpu09
 [2022-08-01T18:31:45.861] sched: Allocate JobId=46936 NodeList=cpu[03,11] #CPUs=128 Partition=cpu-opteron
 [2022-08-01T18:31:45.877] sched: Allocate JobId=46970 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
 [2022-08-01T18:31:45.877] sched: Allocate JobId=46971 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
@@ -2872,7 +2921,11 @@
 [2022-08-02T01:05:19.140] sched: Allocate JobId=46980 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-08-02T01:29:02.430] sched: Allocate JobId=46981 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
 [2022-08-02T02:13:06.505] sched: Allocate JobId=46982 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
+[2022-08-02T02:16:35.531] sched/backfill: _start_job: Started JobId=46998 in cpu-epyc on cpu15
+[2022-08-02T02:25:35.555] sched/backfill: _start_job: Started JobId=46999 in cpu-epyc on cpu15
 [2022-08-02T02:26:56.272] sched: Allocate JobId=46983 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
+[2022-08-02T02:28:35.566] sched/backfill: _start_job: Started JobId=47000 in cpu-epyc on cpu15
+[2022-08-02T02:37:35.588] sched/backfill: _start_job: Started JobId=47001 in cpu-epyc on cpu15
 [2022-08-02T02:40:03.526] sched: Allocate JobId=46984 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
 [2022-08-02T02:46:47.948] sched: Allocate JobId=46985 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-02T03:32:16.939] sched: Allocate JobId=46986 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
@@ -2882,6 +2935,9 @@
 [2022-08-02T08:09:35.551] sched: Allocate JobId=46990 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-02T08:16:06.382] sched: Allocate JobId=46991 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
 [2022-08-02T09:16:14.733] sched: Allocate JobId=46994 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
+[2022-08-02T09:21:36.434] sched/backfill: _start_job: Started JobId=46996 in cpu-opteron on cpu11
+[2022-08-02T09:52:36.500] sched/backfill: _start_job: Started JobId=46995 in cpu-opteron on cpu07
+[2022-08-02T09:59:36.514] sched/backfill: _start_job: Started JobId=47002 in cpu-opteron on cpu11
 [2022-08-02T10:33:25.847] sched: Allocate JobId=46992 NodeList=cpu09 #CPUs=32 Partition=cpu-opteron
 [2022-08-02T10:33:44.028] sched: Allocate JobId=46993 NodeList=cpu09 #CPUs=32 Partition=cpu-opteron
 [2022-08-02T13:04:31.587] sched: Allocate JobId=47003 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
@@ -2916,11 +2972,15 @@
 [2022-08-02T15:56:49.094] sched: Allocate JobId=47053 NodeList=cpu11 #CPUs=32 Partition=cpu-opteron
 [2022-08-02T15:57:25.141] sched: Allocate JobId=47054 NodeList=cpu11 #CPUs=32 Partition=cpu-opteron
 [2022-08-02T15:59:36.430] sched: Allocate JobId=47056 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
+[2022-08-02T16:03:36.960] sched/backfill: _start_job: Started JobId=47058 in cpu-epyc on cpu15
 [2022-08-02T16:11:23.664] sched: Allocate JobId=47059 NodeList=cpu[12-13] #CPUs=8 Partition=cpu-epyc
 [2022-08-02T16:14:33.071] sched: Allocate JobId=47060 NodeList=cpu[12-13] #CPUs=8 Partition=cpu-epyc
+[2022-08-02T16:15:36.975] sched/backfill: _start_job: Started JobId=47061 in cpu-epyc on cpu[12-13]
 [2022-08-02T16:18:19.523] sched: Allocate JobId=47063 NodeList=cpu[12-13] #CPUs=8 Partition=cpu-epyc
 [2022-08-02T16:19:15.604] sched: Allocate JobId=47065 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
+[2022-08-02T16:21:36.984] sched/backfill: _start_job: Started JobId=47066 in cpu-epyc on cpu[12-13]
 [2022-08-02T16:24:29.162] sched: Allocate JobId=47067 NodeList=cpu[12-13] #CPUs=8 Partition=cpu-epyc
+[2022-08-02T16:25:36.993] sched/backfill: _start_job: Started JobId=47068 in cpu-epyc on cpu[12-13]
 [2022-08-02T16:33:20.174] sched: Allocate JobId=47071 NodeList=cpu[12-13] #CPUs=8 Partition=cpu-epyc
 [2022-08-02T16:40:40.071] sched: Allocate JobId=47072 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-02T16:40:43.071] sched: Allocate JobId=47073 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
@@ -2937,6 +2997,7 @@
 [2022-08-02T17:05:26.748] sched: Allocate JobId=47085 NodeList=cpu09 #CPUs=16 Partition=cpu-opteron
 [2022-08-02T17:05:29.749] sched: Allocate JobId=47086 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-08-02T17:05:32.753] sched: Allocate JobId=47087 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
+[2022-08-02T17:05:37.045] sched/backfill: _start_job: Started JobId=47084 in cpu-epyc on cpu[12-13]
 [2022-08-02T17:16:26.070] sched: Allocate JobId=47102 NodeList=cpu[12-13] #CPUs=8 Partition=cpu-epyc
 [2022-08-02T17:17:52.126] sched: Allocate JobId=47088 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-02T17:50:25.789] sched: Allocate JobId=47089 NodeList=cpu09 #CPUs=16 Partition=cpu-opteron
@@ -2966,6 +3027,7 @@
 [2022-08-03T08:01:01.833] sched: Allocate JobId=47122 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T08:59:59.766] sched: Allocate JobId=47125 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
 [2022-08-03T09:02:58.423] sched: Allocate JobId=47126 NodeList=cpu[03,07] #CPUs=16 Partition=cpu-opteron
+[2022-08-03T09:03:39.400] sched/backfill: _start_job: Started JobId=47124 in cpu-opteron on cpu03
 [2022-08-03T09:41:12.173] sched: Allocate JobId=47100 NodeList=cpu10 #CPUs=32 Partition=cpu-opteron
 [2022-08-03T09:44:37.080] sched: Allocate JobId=47130 NodeList=cpu[12-13] #CPUs=64 Partition=cpu-epyc
 [2022-08-03T09:46:23.231] sched: Allocate JobId=47131 NodeList=cpu[12-13] #CPUs=64 Partition=cpu-epyc
@@ -2996,30 +3058,56 @@
 [2022-08-03T11:03:59.589] sched: Allocate JobId=47164 NodeList=cpu[12-13] #CPUs=16 Partition=cpu-epyc
 [2022-08-03T11:04:35.640] sched: Allocate JobId=47165 NodeList=cpu[12-13] #CPUs=16 Partition=cpu-epyc
 [2022-08-03T11:08:54.131] sched: Allocate JobId=47166 NodeList=cpu[12-13] #CPUs=16 Partition=cpu-epyc
+[2022-08-03T11:12:39.615] sched/backfill: _start_job: Started JobId=47167 in cpu-epyc on cpu15
+[2022-08-03T11:12:39.616] sched/backfill: _start_job: Started JobId=47168 in cpu-epyc on cpu12
+[2022-08-03T11:12:39.617] sched/backfill: _start_job: Started JobId=47169 in cpu-epyc on cpu13
 [2022-08-03T11:20:48.713] sched: Allocate JobId=47211 NodeList=cpu[09-10] #CPUs=16 Partition=cpu-opteron
 [2022-08-03T11:33:20.141] sched: Allocate JobId=47212 NodeList=cpu[09-10] #CPUs=16 Partition=cpu-opteron
 [2022-08-03T11:34:14.212] sched: Allocate JobId=47213 NodeList=cpu[09-10] #CPUs=16 Partition=cpu-opteron
+[2022-08-03T11:38:39.701] sched/backfill: _start_job: Started JobId=47170 in cpu-epyc on cpu15
+[2022-08-03T11:40:39.708] sched/backfill: _start_job: Started JobId=47171 in cpu-epyc on cpu13
+[2022-08-03T11:44:39.722] sched/backfill: _start_job: Started JobId=47172 in cpu-epyc on cpu12
 [2022-08-03T11:53:05.431] sched: Allocate JobId=47214 NodeList=cpu[09-10] #CPUs=16 Partition=cpu-opteron
 [2022-08-03T11:54:45.572] sched: Allocate JobId=47215 NodeList=cpu[03,07] #CPUs=32 Partition=cpu-opteron
+[2022-08-03T12:06:39.800] sched/backfill: _start_job: Started JobId=47173 in cpu-epyc on cpu15
 [2022-08-03T12:09:12.074] sched: Allocate JobId=47216 NodeList=cpu[03,07] #CPUs=32 Partition=cpu-opteron
+[2022-08-03T12:26:39.868] sched/backfill: _start_job: Started JobId=47174 in cpu-epyc on cpu12
+[2022-08-03T12:26:39.869] sched/backfill: _start_job: Started JobId=47175 in cpu-epyc on cpu13
+[2022-08-03T12:35:39.897] sched/backfill: _start_job: Started JobId=47176 in cpu-epyc on cpu15
+[2022-08-03T12:55:39.962] sched/backfill: _start_job: Started JobId=47177 in cpu-epyc on cpu12
+[2022-08-03T13:02:39.986] sched/backfill: _start_job: Started JobId=47178 in cpu-epyc on cpu13
 [2022-08-03T13:08:13.555] sched: Allocate JobId=47217 NodeList=cpu[09-10] #CPUs=8 Partition=cpu-opteron
 [2022-08-03T13:08:33.580] sched: Allocate JobId=47218 NodeList=cpu[09-10] #CPUs=8 Partition=cpu-opteron
+[2022-08-03T13:08:40.008] sched/backfill: _start_job: Started JobId=47179 in cpu-epyc on cpu15
 [2022-08-03T13:24:33.351] sched: Allocate JobId=47229 NodeList=cpu03 #CPUs=1 Partition=cpu-opteron
+[2022-08-03T13:28:40.073] sched/backfill: _start_job: Started JobId=47180 in cpu-epyc on cpu12
 [2022-08-03T13:29:29.015] sched: Allocate JobId=46799 NodeList=gpu05 #CPUs=16 Partition=gpu-v100s
+[2022-08-03T13:32:40.086] sched/backfill: _start_job: Started JobId=47181 in cpu-epyc on cpu13
 [2022-08-03T13:36:49.607] sched: Allocate JobId=47231 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-03T13:37:36.743] sched: Allocate JobId=47232 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
+[2022-08-03T13:40:40.114] sched/backfill: _start_job: Started JobId=47182 in cpu-epyc on cpu15
 [2022-08-03T13:57:07.821] sched: Allocate JobId=47233 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
+[2022-08-03T14:02:40.182] sched/backfill: _start_job: Started JobId=47183 in cpu-epyc on cpu13
+[2022-08-03T14:14:40.220] sched/backfill: _start_job: Started JobId=47184 in cpu-epyc on cpu12
+[2022-08-03T14:14:40.221] sched/backfill: _start_job: Started JobId=47185 in cpu-epyc on cpu15
 [2022-08-03T14:15:52.852] sched: Allocate JobId=47234 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-03T14:17:20.976] sched: Allocate JobId=47235 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-03T14:20:49.367] sched: Allocate JobId=47236 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
+[2022-08-03T14:31:40.271] sched/backfill: _start_job: Started JobId=47186 in cpu-epyc on cpu13
 [2022-08-03T14:32:00.768] sched: Allocate JobId=47238 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-03T14:37:25.359] sched: Allocate JobId=47240 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-03T14:38:23.547] sched: Allocate JobId=47241 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-03T14:41:36.816] sched: Allocate JobId=47242 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
+[2022-08-03T14:41:40.301] sched/backfill: _start_job: Started JobId=47187 in cpu-epyc on cpu15
 [2022-08-03T14:41:53.853] sched: Allocate JobId=47243 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-03T14:45:46.310] sched: Allocate JobId=47244 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T14:45:49.301] sched: Allocate JobId=47245 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
+[2022-08-03T14:55:40.356] sched/backfill: _start_job: Started JobId=47246 in cpu-opteron on cpu09
+[2022-08-03T14:56:40.360] sched/backfill: _start_job: Started JobId=47247 in cpu-opteron on cpu11
 [2022-08-03T14:59:37.085] sched: Allocate JobId=47249 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
+[2022-08-03T15:01:40.377] sched/backfill: _start_job: Started JobId=47188 in cpu-epyc on cpu12
+[2022-08-03T15:05:40.390] sched/backfill: _start_job: Started JobId=47189 in cpu-epyc on cpu13
+[2022-08-03T15:05:40.390] sched/backfill: _start_job: Started JobId=47190 in cpu-epyc on cpu15
 [2022-08-03T15:08:47.865] sched: Allocate JobId=47251 NodeList=cpu09 #CPUs=8 Partition=cpu-opteron
 [2022-08-03T15:15:24.028] sched: Allocate JobId=47252 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T15:22:06.200] sched: Allocate JobId=47254 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
@@ -3027,8 +3115,10 @@
 [2022-08-03T15:28:52.999] sched: Allocate JobId=47257 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T15:31:00.174] sched: Allocate JobId=47258 NodeList=cpu[09-10] #CPUs=16 Partition=cpu-opteron
 [2022-08-03T15:32:40.426] sched: Allocate JobId=47259 NodeList=cpu[09-10] #CPUs=16 Partition=cpu-opteron
+[2022-08-03T15:33:40.468] sched/backfill: _start_job: Started JobId=47191 in cpu-epyc on cpu12
 [2022-08-03T15:34:48.637] sched: Allocate JobId=47260 NodeList=cpu[09-10] #CPUs=16 Partition=cpu-opteron
 [2022-08-03T15:35:06.663] sched: Allocate JobId=47261 NodeList=cpu[09-10] #CPUs=16 Partition=cpu-opteron
+[2022-08-03T15:35:40.474] sched/backfill: _start_job: Started JobId=47192 in cpu-epyc on cpu15
 [2022-08-03T15:39:06.090] sched: Allocate JobId=47262 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-03T15:39:22.113] sched: Allocate JobId=47263 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-03T15:42:17.353] sched: Allocate JobId=47264 NodeList=cpu03 #CPUs=4 Partition=cpu-opteron
@@ -3043,6 +3133,7 @@
 [2022-08-03T15:51:20.300] sched: Allocate JobId=47276 NodeList=cpu10 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T15:52:01.360] sched: Allocate JobId=47278 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
 [2022-08-03T15:52:57.586] sched: Allocate JobId=47279 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
+[2022-08-03T15:54:40.529] sched/backfill: _start_job: Started JobId=47193 in cpu-epyc on cpu13
 [2022-08-03T15:55:18.775] sched: Allocate JobId=47282 NodeList=cpu[09-10] #CPUs=16 Partition=cpu-opteron
 [2022-08-03T15:56:50.593] sched: Allocate JobId=47281 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
 [2022-08-03T15:57:26.924] sched: Allocate JobId=47283 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
@@ -3053,9 +3144,13 @@
 [2022-08-03T15:58:35.687] sched: Allocate JobId=47285 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T16:00:43.332] sched: Allocate JobId=47293 NodeList=cpu[09-10] #CPUs=16 Partition=cpu-opteron
 [2022-08-03T16:02:38.567] sched: Allocate JobId=47296 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
+[2022-08-03T16:03:40.565] sched/backfill: _start_job: Started JobId=47194 in cpu-epyc on cpu12
+[2022-08-03T16:03:40.566] sched/backfill: _start_job: Started JobId=47195 in cpu-epyc on cpu15
 [2022-08-03T16:03:41.698] sched: Allocate JobId=47297 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
+[2022-08-03T16:05:40.574] sched/backfill: _start_job: Started JobId=47295 in cpu-opteron on cpu07
 [2022-08-03T16:05:57.719] sched: Allocate JobId=47289 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
 [2022-08-03T16:07:10.995] sched: Allocate JobId=47299 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
+[2022-08-03T16:07:40.583] sched/backfill: _start_job: Started JobId=47298 in cpu-opteron on cpu07
 [2022-08-03T16:07:44.058] sched: Allocate JobId=47290 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
 [2022-08-03T16:09:39.562] sched: Allocate JobId=47291 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
 [2022-08-03T16:09:59.646] sched: Allocate JobId=47292 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
@@ -3063,12 +3158,18 @@
 [2022-08-03T16:15:45.040] sched: Allocate JobId=47301 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T16:15:56.060] sched: Allocate JobId=47302 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
 [2022-08-03T16:23:06.954] sched: Allocate JobId=47303 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
+[2022-08-03T16:23:40.631] sched/backfill: _start_job: Started JobId=47196 in cpu-epyc on cpu13
+[2022-08-03T16:33:40.660] sched/backfill: _start_job: Started JobId=47197 in cpu-epyc on cpu15
 [2022-08-03T16:34:20.089] sched: Allocate JobId=47304 NodeList=cpu10 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T16:34:23.090] sched: Allocate JobId=47305 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T16:34:26.095] sched: Allocate JobId=47306 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T16:34:29.099] sched: Allocate JobId=47307 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T16:38:23.576] sched: Allocate JobId=47308 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
+[2022-08-03T17:02:40.740] sched/backfill: _start_job: Started JobId=47198 in cpu-epyc on cpu15
 [2022-08-03T17:15:49.825] sched: Allocate JobId=47309 NodeList=cpu11 #CPUs=32 Partition=cpu-opteron
+[2022-08-03T17:27:40.810] sched/backfill: _start_job: Started JobId=47199 in cpu-epyc on cpu12
+[2022-08-03T17:35:40.830] sched/backfill: _start_job: Started JobId=47200 in cpu-epyc on cpu15
+[2022-08-03T17:37:40.839] sched/backfill: _start_job: Started JobId=47201 in cpu-epyc on cpu13
 [2022-08-03T17:50:42.392] sched: Allocate JobId=47310 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T17:50:46.395] sched: Allocate JobId=47311 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T17:50:51.402] sched: Allocate JobId=47312 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
@@ -3081,6 +3182,20 @@
 [2022-08-03T17:57:46.613] sched: Allocate JobId=47319 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T17:57:47.945] sched: Allocate JobId=47321 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-08-03T17:58:56.729] sched: Allocate JobId=47322 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
+[2022-08-03T18:06:40.913] sched/backfill: _start_job: Started JobId=47202 in cpu-epyc on cpu13
+[2022-08-03T18:09:40.921] sched/backfill: _start_job: Started JobId=47203 in cpu-epyc on cpu12
+[2022-08-03T18:14:40.933] sched/backfill: _start_job: Started JobId=47204 in cpu-epyc on cpu15
+[2022-08-03T18:41:40.998] sched/backfill: _start_job: Started JobId=47205 in cpu-epyc on cpu12
+[2022-08-03T18:46:41.011] sched/backfill: _start_job: Started JobId=47206 in cpu-epyc on cpu15
+[2022-08-03T19:13:41.083] sched/backfill: _start_job: Started JobId=47207 in cpu-epyc on cpu12
+[2022-08-03T19:14:41.085] sched/backfill: _start_job: Started JobId=47208 in cpu-epyc on cpu15
+[2022-08-03T19:46:41.153] sched/backfill: _start_job: Started JobId=47209 in cpu-epyc on cpu15
+[2022-08-03T22:25:41.430] sched/backfill: _start_job: Started JobId=47323 in cpu-opteron on cpu11
+[2022-08-04T02:01:41.761] sched/backfill: _start_job: Started JobId=47324 in cpu-opteron on cpu07
+[2022-08-04T02:01:41.774] sched/backfill: _start_job: Started JobId=47325 in cpu-opteron on cpu03
+[2022-08-04T02:09:41.787] sched/backfill: _start_job: Started JobId=47327 in cpu-opteron on cpu03
+[2022-08-04T02:14:41.798] sched/backfill: _start_job: Started JobId=47328 in cpu-opteron on cpu10
+[2022-08-04T02:25:41.820] sched/backfill: _start_job: Started JobId=47329 in cpu-opteron on cpu07
 [2022-08-04T03:46:47.049] sched: Allocate JobId=46941 NodeList=cpu12 #CPUs=32 Partition=cpu-epyc
 [2022-08-04T05:13:35.302] sched: Allocate JobId=46942 NodeList=cpu12 #CPUs=32 Partition=cpu-epyc
 [2022-08-04T09:08:18.604] sched: Allocate JobId=47330 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
@@ -3153,13 +3268,24 @@
 [2022-08-04T17:34:44.641] sched: Allocate JobId=47498 NodeList=gpu02 #CPUs=2 Partition=gpu-titan
 [2022-08-04T17:38:17.041] sched: Allocate JobId=47499 NodeList=gpu01 #CPUs=4 Partition=gpu-k10
 [2022-08-04T17:42:50.564] sched: Allocate JobId=46943 NodeList=cpu12 #CPUs=32 Partition=cpu-epyc
+[2022-08-04T17:58:43.411] sched/backfill: _start_job: Started JobId=47501 in cpu-opteron on cpu[09-10]
+[2022-08-04T18:05:43.429] sched/backfill: _start_job: Started JobId=47502 in cpu-opteron on cpu[09-10]
+[2022-08-04T18:11:43.447] sched/backfill: _start_job: Started JobId=47503 in cpu-opteron on cpu09
+[2022-08-04T18:51:43.553] sched/backfill: _start_job: Started JobId=47507 in cpu-opteron on cpu10
 [2022-08-04T19:06:50.616] sched: Allocate JobId=46944 NodeList=cpu12 #CPUs=32 Partition=cpu-epyc
+[2022-08-04T19:21:43.639] sched/backfill: _start_job: Started JobId=47509 in cpu-opteron on cpu[09-10]
+[2022-08-04T19:32:43.675] sched/backfill: _start_job: Started JobId=47511 in cpu-opteron on cpu[09-10]
+[2022-08-04T19:59:43.762] sched/backfill: _start_job: Started JobId=47512 in cpu-opteron on cpu[09-10]
 [2022-08-04T20:07:39.973] sched: Allocate JobId=47407 NodeList=cpu09 #CPUs=16 Partition=cpu-opteron
 [2022-08-04T20:07:39.974] sched: Allocate JobId=47408 NodeList=cpu09 #CPUs=16 Partition=cpu-opteron
 [2022-08-04T22:29:49.379] sched: Allocate JobId=47409 NodeList=cpu09 #CPUs=16 Partition=cpu-opteron
 [2022-08-05T00:39:59.208] sched: Allocate JobId=47515 NodeList=cpu09 #CPUs=32 Partition=cpu-opteron
 [2022-08-05T00:41:10.910] sched: Allocate JobId=47478 NodeList=cpu09 #CPUs=24 Partition=cpu-opteron
 [2022-08-05T00:41:10.911] sched: Allocate JobId=47514 NodeList=cpu[09-10] #CPUs=8 Partition=cpu-opteron
+[2022-08-05T00:46:44.438] sched/backfill: _start_job: Started JobId=47519 in cpu-opteron on cpu09
+[2022-08-05T00:57:44.464] sched/backfill: _start_job: Started JobId=47521 in cpu-opteron on cpu09
+[2022-08-05T01:05:44.480] sched/backfill: _start_job: Started JobId=47522 in cpu-opteron on cpu10
+[2022-08-05T02:22:44.660] sched/backfill: _start_job: Started JobId=47523 in cpu-opteron on cpu11
 [2022-08-05T04:05:51.741] sched: Allocate JobId=46945 NodeList=cpu13 #CPUs=32 Partition=cpu-epyc
 [2022-08-05T06:21:37.984] sched: Allocate JobId=46946 NodeList=cpu12 #CPUs=32 Partition=cpu-epyc
 [2022-08-05T09:10:26.756] sched: Allocate JobId=47516 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
@@ -3249,12 +3375,21 @@
 [2022-08-05T14:38:37.468] sched: Allocate JobId=47638 NodeList=cpu[12-13] #CPUs=24 Partition=cpu-epyc
 [2022-08-05T17:01:34.758] sched: Allocate JobId=47644 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-08-05T18:21:22.403] sched: Allocate JobId=47645 NodeList=gpu02 #CPUs=1 Partition=gpu-titan
+[2022-08-05T18:22:49.685] sched/backfill: _start_job: Started JobId=47646 in cpu-opteron on cpu09
 [2022-08-05T18:23:06.654] sched: Allocate JobId=47647 NodeList=gpu01 #CPUs=4 Partition=gpu-k10
 [2022-08-05T18:27:15.005] sched: Allocate JobId=47648 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-08-05T18:30:26.354] sched: Allocate JobId=47649 NodeList=gpu02 #CPUs=1 Partition=gpu-titan
 [2022-08-05T18:31:09.413] sched: Allocate JobId=47650 NodeList=gpu01 #CPUs=4 Partition=gpu-k10
 [2022-08-05T19:26:24.396] sched: Allocate JobId=47525 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-08-05T19:41:21.028] sched: Allocate JobId=46947 NodeList=cpu13 #CPUs=32 Partition=cpu-epyc
+[2022-08-05T19:42:50.056] sched/backfill: _start_job: Started JobId=47652 in cpu-opteron on cpu09
+[2022-08-05T19:54:50.101] sched/backfill: _start_job: Started JobId=47654 in cpu-opteron on cpu09
+[2022-08-05T19:55:50.105] sched/backfill: _start_job: Started JobId=47655 in cpu-epyc on cpu14
+[2022-08-05T19:58:50.116] sched/backfill: _start_job: Started JobId=47656 in cpu-epyc on cpu14
+[2022-08-05T19:59:50.121] sched/backfill: _start_job: Started JobId=47657 in cpu-epyc on cpu14
+[2022-08-05T20:00:50.125] sched/backfill: _start_job: Started JobId=47658 in cpu-opteron on cpu09
+[2022-08-05T20:03:50.136] sched/backfill: _start_job: Started JobId=47659 in cpu-epyc on cpu14
+[2022-08-05T20:05:50.146] sched/backfill: _start_job: Started JobId=47660 in cpu-epyc on cpu14
 [2022-08-05T20:16:18.520] sched: Allocate JobId=47526 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-08-05T21:35:32.915] sched: Allocate JobId=47527 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-08-05T21:44:31.400] sched: Allocate JobId=47528 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
@@ -3262,20 +3397,34 @@
 [2022-08-05T22:43:08.871] sched: Allocate JobId=47530 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-08-05T23:01:40.038] sched: Allocate JobId=46948 NodeList=cpu14 #CPUs=32 Partition=cpu-epyc
 [2022-08-06T00:18:32.044] sched: Allocate JobId=46918 NodeList=cpu12 #CPUs=24 Partition=cpu-epyc
+[2022-08-06T01:42:51.354] sched/backfill: _start_job: Started JobId=47531 in cpu-opteron on cpu10
+[2022-08-06T01:47:51.371] sched/backfill: _start_job: Started JobId=47641 in cpu-opteron on cpu11
 [2022-08-06T09:49:53.292] sched: Allocate JobId=47374 NodeList=cpu13 #CPUs=32 Partition=cpu-epyc
 [2022-08-06T12:04:51.668] sched: Allocate JobId=47518 NodeList=cpu14 #CPUs=16 Partition=cpu-epyc
 [2022-08-06T12:25:52.664] sched: Allocate JobId=47665 NodeList=cpu14 #CPUs=24 Partition=cpu-epyc
 [2022-08-06T17:20:14.467] sched: Allocate JobId=47669 NodeList=gpu02 #CPUs=16 Partition=gpu-titan
 [2022-08-06T20:01:09.958] sched: Allocate JobId=47672 NodeList=gpu02 #CPUs=16 Partition=gpu-titan
 [2022-08-06T20:11:26.306] sched: Allocate JobId=47640 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
+[2022-08-06T20:16:54.915] sched/backfill: _start_job: Started JobId=47642 in cpu-opteron on cpu03
 [2022-08-08T00:26:58.633] sched: Allocate JobId=47680 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
+[2022-08-08T00:44:59.316] sched/backfill: _start_job: Started JobId=47681 in cpu-opteron on cpu03
 [2022-08-08T10:21:13.871] sched: Allocate JobId=47682 NodeList=cpu03 #CPUs=1 Partition=cpu-opteron
+[2022-08-08T10:40:01.250] sched/backfill: _start_job: Started JobId=47683 in cpu-opteron on cpu03
 [2022-08-08T10:48:54.872] sched: Allocate JobId=47687 NodeList=cpu10 #CPUs=16 Partition=cpu-opteron
 [2022-08-08T10:51:19.057] sched: Allocate JobId=47689 NodeList=cpu10 #CPUs=16 Partition=cpu-opteron
+[2022-08-08T11:44:01.520] sched/backfill: _start_job: Started JobId=47690 in cpu-opteron on cpu10
 [2022-08-08T13:12:06.506] sched: Allocate JobId=47691 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-08T13:13:07.659] sched: Allocate JobId=47692 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-08T13:27:31.016] sched: Allocate JobId=47693 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-08T13:37:43.109] sched: Allocate JobId=47694 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
+[2022-08-08T13:56:02.047] sched/backfill: _start_job: Started JobId=47695 in cpu-opteron on cpu03
+[2022-08-08T14:01:02.066] sched/backfill: _start_job: Started JobId=47696 in cpu-opteron on cpu03
+[2022-08-08T14:02:02.070] sched/backfill: _start_job: Started JobId=47697 in cpu-opteron on cpu03
+[2022-08-08T14:07:02.093] sched/backfill: _start_job: Started JobId=47698 in cpu-opteron on cpu03
+[2022-08-08T14:08:02.097] sched/backfill: _start_job: Started JobId=47699 in cpu-opteron on cpu03
+[2022-08-08T14:28:02.173] sched/backfill: _start_job: Started JobId=47700 in cpu-opteron on cpu03
+[2022-08-08T14:30:02.181] sched/backfill: _start_job: Started JobId=47701 in cpu-opteron on cpu03
+[2022-08-08T14:43:02.232] sched/backfill: _start_job: Started JobId=47702 in cpu-opteron on cpu03
 [2022-08-09T08:45:50.914] sched: Allocate JobId=47705 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-08-09T11:21:02.642] sched: Allocate JobId=47713 NodeList=cpu03 #CPUs=1 Partition=cpu-opteron
 [2022-08-09T12:19:28.588] sched: Allocate JobId=47714 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
@@ -3298,25 +3447,36 @@
 [2022-08-10T00:25:17.931] sched: Allocate JobId=47739 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
 [2022-08-10T00:35:55.002] sched: Allocate JobId=47740 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-08-10T01:01:08.518] sched: Allocate JobId=47741 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
+[2022-08-10T05:11:11.163] sched/backfill: _start_job: Started JobId=47674 in cpu-opteron on cpu03
+[2022-08-10T05:12:11.169] sched/backfill: _start_job: Started JobId=47675 in cpu-opteron on cpu03
+[2022-08-10T05:13:11.173] sched/backfill: _start_job: Started JobId=47676 in cpu-opteron on cpu03
+[2022-08-10T05:14:11.178] sched/backfill: _start_job: Started JobId=47677 in cpu-opteron on cpu03
 [2022-08-10T09:31:28.657] sched: Allocate JobId=47742 NodeList=cpu03 #CPUs=1 Partition=cpu-opteron
+[2022-08-10T14:41:12.309] sched/backfill: _start_job: Started JobId=47749 in gpu-k10 on gpu01
 [2022-08-10T14:52:01.041] sched: Allocate JobId=47517 NodeList=cpu04 #CPUs=64 Partition=cpu-opteron
 [2022-08-10T14:52:21.738] sched: Allocate JobId=47704 NodeList=cpu04 #CPUs=48 Partition=cpu-opteron
 [2022-08-10T14:56:27.712] sched: Allocate JobId=47752 NodeList=cpu04 #CPUs=1 Partition=cpu-opteron
+[2022-08-10T15:00:12.342] sched/backfill: _start_job: Started JobId=47753 in gpu-k10 on gpu01
 [2022-08-10T15:10:03.182] sched: Allocate JobId=47756 NodeList=cpu03 #CPUs=4 Partition=cpu-opteron
 [2022-08-10T15:13:20.422] sched: Allocate JobId=47757 NodeList=cpu03 #CPUs=4 Partition=cpu-opteron
+[2022-08-10T15:20:12.369] sched/backfill: _start_job: Started JobId=47758 in gpu-k10 on gpu01
 [2022-08-10T15:44:06.591] sched: Allocate JobId=47761 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-10T15:46:48.821] sched: Allocate JobId=47762 NodeList=cpu03 #CPUs=4 Partition=cpu-opteron
 [2022-08-10T15:56:42.829] sched: Allocate JobId=47766 NodeList=cpu03 #CPUs=4 Partition=cpu-opteron
 [2022-08-10T16:08:18.085] sched: Allocate JobId=47769 NodeList=gpu01 #CPUs=4 Partition=gpu-k10
 [2022-08-10T16:08:36.100] sched: Allocate JobId=47771 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
+[2022-08-10T16:09:12.434] sched/backfill: _start_job: Started JobId=47770 in gpu-k10 on gpu01
 [2022-08-10T16:14:37.648] sched: Allocate JobId=47772 NodeList=gpu01 #CPUs=4 Partition=gpu-k10
+[2022-08-10T16:27:12.459] sched/backfill: _start_job: Started JobId=47773 in gpu-k10 on gpu01
 [2022-08-10T17:16:58.462] sched: Allocate JobId=47779 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-08-10T17:20:58.863] sched: Allocate JobId=47780 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-08-10T17:21:03.870] sched: Allocate JobId=47781 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-08-10T17:21:47.930] sched: Allocate JobId=47782 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-08-10T17:22:25.981] sched: Allocate JobId=47783 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-08-10T17:27:10.456] sched: Allocate JobId=47784 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
+[2022-08-10T17:28:12.596] sched/backfill: _start_job: Started JobId=47785 in gpu-k10 on gpu01
 [2022-08-10T17:30:18.790] sched: Allocate JobId=47786 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
+[2022-08-10T17:31:12.600] sched/backfill: _start_job: Started JobId=47787 in gpu-k10 on gpu01
 [2022-08-10T17:45:52.320] sched: Allocate JobId=47788 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-08-10T17:46:15.348] sched: Allocate JobId=47789 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-08-10T17:46:39.382] sched: Allocate JobId=47790 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
@@ -3331,6 +3491,7 @@
 [2022-08-10T22:16:25.380] sched: Allocate JobId=47663 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-08-10T22:16:28.706] sched: Allocate JobId=47721 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-08-10T22:17:35.550] sched: Allocate JobId=47801 NodeList=cpu08 #CPUs=48 Partition=cpu-opteron
+[2022-08-11T04:22:13.340] sched/backfill: _start_job: Started JobId=47804 in gpu-k10 on gpu01
 [2022-08-11T06:27:13.877] sched: Allocate JobId=47803 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-08-11T09:29:29.850] sched: Allocate JobId=47805 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-08-11T09:36:50.397] sched: Allocate JobId=47806 NodeList=gpu02 #CPUs=4 Partition=gpu-titan
@@ -3361,10 +3522,12 @@
 [2022-08-11T14:08:15.167] sched: Allocate JobId=47834 NodeList=gpu02 #CPUs=16 Partition=gpu-titan
 [2022-08-11T14:09:22.728] sched: Allocate JobId=47837 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
 [2022-08-11T14:09:59.777] sched: Allocate JobId=47839 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
+[2022-08-11T14:10:13.984] sched/backfill: _start_job: Started JobId=47840 in cpu-epyc on cpu15
 [2022-08-11T15:55:48.454] sched: Allocate JobId=47847 NodeList=cpu15 #CPUs=4 Partition=cpu-epyc
 [2022-08-11T16:27:07.799] sched: Allocate JobId=47848 NodeList=cpu15 #CPUs=1 Partition=cpu-epyc
 [2022-08-11T16:29:14.022] sched: Allocate JobId=47849 NodeList=cpu15 #CPUs=1 Partition=cpu-epyc
 [2022-08-11T17:16:56.900] sched: Allocate JobId=47850 NodeList=cpu15 #CPUs=1 Partition=cpu-epyc
+[2022-08-11T17:39:15.247] sched/backfill: _start_job: Started JobId=47853 in cpu-epyc on cpu12
 [2022-08-11T17:39:40.388] sched: Allocate JobId=47854 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-11T17:42:30.631] sched: Allocate JobId=47856 NodeList=cpu15 #CPUs=1 Partition=cpu-epyc
 [2022-08-11T17:57:26.158] sched: Allocate JobId=47858 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
@@ -3382,17 +3545,34 @@
 [2022-08-12T02:23:26.026] sched: Allocate JobId=47875 NodeList=cpu03 #CPUs=48 Partition=cpu-opteron
 [2022-08-12T02:55:41.311] sched: Allocate JobId=47878 NodeList=cpu04 #CPUs=24 Partition=cpu-opteron
 [2022-08-12T03:02:37.086] sched: Allocate JobId=47879 NodeList=cpu04 #CPUs=40 Partition=cpu-opteron
+[2022-08-12T09:34:16.484] sched/backfill: _start_job: Started JobId=47882 in cpu-epyc on cpu12
+[2022-08-12T09:34:16.485] sched/backfill: _start_job: Started JobId=47883 in cpu-epyc on cpu13
+[2022-08-12T09:34:16.486] sched/backfill: _start_job: Started JobId=47884 in cpu-epyc on cpu14
+[2022-08-12T09:54:16.536] sched/backfill: _start_job: Started JobId=47885 in cpu-epyc on cpu12
+[2022-08-12T09:54:16.537] sched/backfill: _start_job: Started JobId=47886 in cpu-epyc on cpu13
+[2022-08-12T09:54:16.537] sched/backfill: _start_job: Started JobId=47887 in cpu-epyc on cpu14
+[2022-08-12T10:14:16.587] sched/backfill: _start_job: Started JobId=47888 in cpu-epyc on cpu12
+[2022-08-12T10:14:16.588] sched/backfill: _start_job: Started JobId=47889 in cpu-epyc on cpu13
+[2022-08-12T10:14:16.588] sched/backfill: _start_job: Started JobId=47890 in cpu-epyc on cpu14
 [2022-08-12T10:21:54.207] sched: Allocate JobId=47898 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-08-12T10:29:01.991] sched: Allocate JobId=47899 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-08-12T10:29:28.027] sched: Allocate JobId=47900 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-08-12T10:32:29.914] sched: Allocate JobId=47901 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
+[2022-08-12T10:34:16.636] sched/backfill: _start_job: Started JobId=47891 in cpu-epyc on cpu12
+[2022-08-12T10:34:16.637] sched/backfill: _start_job: Started JobId=47892 in cpu-epyc on cpu13
+[2022-08-12T10:34:16.637] sched/backfill: _start_job: Started JobId=47893 in cpu-epyc on cpu14
+[2022-08-12T10:37:16.644] sched/backfill: _start_job: Started JobId=47903 in gpu-titan on gpu02
 [2022-08-12T10:40:52.230] sched: Allocate JobId=47902 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
+[2022-08-12T10:54:16.687] sched/backfill: _start_job: Started JobId=47894 in cpu-epyc on cpu12
+[2022-08-12T10:54:16.687] sched/backfill: _start_job: Started JobId=47895 in cpu-epyc on cpu13
+[2022-08-12T10:54:16.688] sched/backfill: _start_job: Started JobId=47896 in cpu-epyc on cpu14
 [2022-08-12T11:39:28.279] sched: Allocate JobId=47904 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-08-12T11:39:52.309] sched: Allocate JobId=47905 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-08-12T11:42:42.256] sched: Allocate JobId=47906 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-08-12T11:50:37.645] sched: Allocate JobId=47907 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-08-12T11:50:37.645] sched: Allocate JobId=47908 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-08-12T12:08:31.255] sched: Allocate JobId=47909 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
+[2022-08-12T12:09:16.826] sched/backfill: _start_job: Started JobId=47910 in cpu-epyc on cpu12
 [2022-08-12T12:19:49.363] sched: Allocate JobId=47911 NodeList=cpu15 #CPUs=4 Partition=cpu-epyc
 [2022-08-12T12:46:16.885] sched: Allocate JobId=47913 NodeList=cpu15 #CPUs=1 Partition=cpu-epyc
 [2022-08-12T12:50:40.266] sched: Allocate JobId=47914 NodeList=cpu15 #CPUs=1 Partition=cpu-epyc
@@ -3498,21 +3678,45 @@
 [2022-08-17T12:33:29.950] sched: Allocate JobId=48056 NodeList=cpu15 #CPUs=16 Partition=cpu-epyc
 [2022-08-17T12:46:04.504] sched: Allocate JobId=48057 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-08-17T13:55:10.180] sched: Allocate JobId=48058 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
+[2022-08-17T14:06:33.188] sched/backfill: _start_job: Started JobId=48064 in cpu-opteron on cpu09
 [2022-08-17T15:45:05.688] sched: Allocate JobId=48059 NodeList=cpu14 #CPUs=16 Partition=cpu-epyc
 [2022-08-17T15:47:36.238] sched: Allocate JobId=48060 NodeList=cpu15 #CPUs=16 Partition=cpu-epyc
 [2022-08-17T16:00:06.774] sched: Allocate JobId=48061 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-08-17T16:03:34.393] sched: Allocate JobId=48066 NodeList=gpu02 #CPUs=1 Partition=gpu-titan
 [2022-08-17T17:03:44.087] sched: Allocate JobId=48067 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
 [2022-08-17T17:03:44.088] sched: Allocate JobId=48068 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
+[2022-08-17T17:06:33.462] sched/backfill: _start_job: Started JobId=48069 in gpu-k10 on gpu03
 [2022-08-17T17:30:26.337] sched: Allocate JobId=48062 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-08-17T18:56:29.580] sched: Allocate JobId=48070 NodeList=cpu14 #CPUs=1 Partition=cpu-epyc
 [2022-08-17T18:56:31.358] sched: Allocate JobId=48063 NodeList=cpu14 #CPUs=16 Partition=cpu-epyc
+[2022-08-17T20:33:33.776] sched/backfill: _start_job: Started JobId=48073 in cpu-opteron on cpu01
 [2022-08-17T20:50:37.852] sched: Allocate JobId=48074 NodeList=gpu02 #CPUs=16 Partition=gpu-titan
+[2022-08-17T21:11:33.829] sched/backfill: _start_job: Started JobId=48075 in cpu-opteron on cpu01
+[2022-08-17T21:25:33.850] sched/backfill: _start_job: Started JobId=48076 in cpu-opteron on cpu01
+[2022-08-17T21:31:33.859] sched/backfill: _start_job: Started JobId=48077 in cpu-opteron on cpu01
+[2022-08-17T21:34:33.864] sched/backfill: _start_job: Started JobId=48079 in cpu-opteron on cpu01
+[2022-08-17T21:48:33.886] sched/backfill: _start_job: Started JobId=48081 in cpu-opteron on cpu01
+[2022-08-17T21:50:33.890] sched/backfill: _start_job: Started JobId=48082 in cpu-opteron on cpu01
+[2022-08-17T21:51:33.892] sched/backfill: _start_job: Started JobId=48083 in cpu-opteron on cpu01
+[2022-08-17T21:54:33.897] sched/backfill: _start_job: Started JobId=48084 in cpu-opteron on cpu01
+[2022-08-17T22:05:33.915] sched/backfill: _start_job: Started JobId=48085 in cpu-opteron on cpu01
+[2022-08-17T22:10:33.938] sched/backfill: _start_job: Started JobId=48086 in cpu-opteron on cpu01
 [2022-08-17T22:15:51.619] sched: Allocate JobId=48089 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
+[2022-08-17T22:24:33.963] sched/backfill: _start_job: Started JobId=48090 in cpu-opteron on cpu01
+[2022-08-17T22:32:33.976] sched/backfill: _start_job: Started JobId=48091 in cpu-opteron on cpu01
+[2022-08-17T22:40:33.993] sched/backfill: _start_job: Started JobId=48092 in cpu-opteron on cpu01
+[2022-08-17T22:44:33.999] sched/backfill: _start_job: Started JobId=48093 in cpu-opteron on cpu01
+[2022-08-17T22:55:34.019] sched/backfill: _start_job: Started JobId=48094 in cpu-opteron on cpu04
 [2022-08-17T23:16:21.783] sched: Allocate JobId=48095 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
+[2022-08-18T01:46:34.292] sched/backfill: _start_job: Started JobId=48096 in cpu-opteron on cpu01
+[2022-08-18T03:30:34.459] sched/backfill: _start_job: Started JobId=48097 in cpu-epyc on cpu12
+[2022-08-18T04:14:34.519] sched/backfill: _start_job: Started JobId=48100 in cpu-epyc on cpu12
+[2022-08-18T07:36:34.773] sched/backfill: _start_job: Started JobId=48105 in cpu-epyc on cpu15
+[2022-08-18T07:40:34.782] sched/backfill: _start_job: Started JobId=48106 in cpu-epyc on cpu15
 [2022-08-18T08:05:55.953] sched: Allocate JobId=48108 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
 [2022-08-18T12:45:44.961] sched: Allocate JobId=48111 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
 [2022-08-18T14:15:40.969] sched: Allocate JobId=48112 NodeList=cpu11 #CPUs=32 Partition=cpu-opteron
+[2022-08-18T14:49:35.561] sched/backfill: _start_job: Started JobId=48113 in cpu-epyc on cpu12
 [2022-08-18T17:00:14.745] sched: Allocate JobId=48114 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
 [2022-08-18T17:08:23.779] sched: Allocate JobId=48115 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
 [2022-08-18T17:10:40.975] sched: Allocate JobId=48116 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
@@ -3522,6 +3726,8 @@
 [2022-08-18T19:16:16.767] sched: Allocate JobId=48122 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-08-18T20:35:02.064] sched: Allocate JobId=48123 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-08-18T20:53:14.910] sched: Allocate JobId=48125 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
+[2022-08-18T22:10:36.443] sched/backfill: _start_job: Started JobId=48128 in cpu-epyc on cpu12
+[2022-08-18T22:10:36.444] sched/backfill: _start_job: Started JobId=48129 in cpu-opteron on cpu01
 [2022-08-19T09:49:42.335] sched: Allocate JobId=48131 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-08-19T10:14:00.849] sched: Allocate JobId=48130 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-08-19T10:18:10.255] sched: Allocate JobId=48132 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
@@ -3545,6 +3751,9 @@
 [2022-08-20T05:07:46.854] sched: Allocate JobId=48152 NodeList=cpu13 #CPUs=1 Partition=cpu-epyc
 [2022-08-20T05:08:21.941] sched: Allocate JobId=48153 NodeList=cpu13 #CPUs=1 Partition=cpu-epyc
 [2022-08-20T05:09:58.065] sched: Allocate JobId=48154 NodeList=cpu13 #CPUs=1 Partition=cpu-epyc
+[2022-08-20T05:18:40.397] sched/backfill: _start_job: Started JobId=48156 in cpu-epyc on cpu13
+[2022-08-20T05:18:40.397] sched/backfill: _start_job: Started JobId=48157 in cpu-epyc on cpu13
+[2022-08-20T05:20:40.401] sched/backfill: _start_job: Started JobId=48158 in cpu-epyc on cpu13
 [2022-08-20T12:56:30.212] sched: Allocate JobId=48162 NodeList=cpu04 #CPUs=16 Partition=cpu-opteron
 [2022-08-20T12:57:30.275] sched: Allocate JobId=48163 NodeList=cpu04 #CPUs=16 Partition=cpu-opteron
 [2022-08-20T13:08:51.040] sched: Allocate JobId=48164 NodeList=cpu11 #CPUs=32 Partition=cpu-opteron
@@ -3573,6 +3782,7 @@
 [2022-08-21T15:18:03.886] sched: Allocate JobId=48192 NodeList=cpu11 #CPUs=32 Partition=cpu-opteron
 [2022-08-21T15:24:16.450] sched: Allocate JobId=48193 NodeList=cpu11 #CPUs=32 Partition=cpu-opteron
 [2022-08-21T15:32:46.284] sched: Allocate JobId=48194 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
+[2022-08-21T21:36:43.505] sched/backfill: _start_job: Started JobId=48196 in cpu-epyc on cpu13
 [2022-08-21T22:26:29.260] sched: Allocate JobId=48197 NodeList=cpu12 #CPUs=4 Partition=cpu-epyc
 [2022-08-21T22:46:56.421] sched: Allocate JobId=48200 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
 [2022-08-21T22:54:08.259] sched: Allocate JobId=48201 NodeList=cpu[01,04,09,11] #CPUs=16 Partition=cpu-opteron
@@ -3591,20 +3801,38 @@
 [2022-08-22T11:24:15.927] sched: Allocate JobId=48225 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-08-22T11:27:05.162] sched: Allocate JobId=48226 NodeList=cpu15 #CPUs=1 Partition=cpu-epyc
 [2022-08-22T12:41:25.217] sched: Allocate JobId=48227 NodeList=cpu15 #CPUs=1 Partition=cpu-epyc
+[2022-08-22T12:47:44.636] sched/backfill: _start_job: Started JobId=48228 in cpu-epyc on cpu[12-15]
+[2022-08-22T13:15:44.687] sched/backfill: _start_job: Started JobId=48229 in cpu-epyc on cpu[12-15]
+[2022-08-22T13:44:44.741] sched/backfill: _start_job: Started JobId=48230 in cpu-epyc on cpu[12-15]
+[2022-08-22T13:47:44.768] sched/backfill: _start_job: Started JobId=48231 in gpu-v100s on gpu05
+[2022-08-22T13:50:44.774] sched/backfill: _start_job: Started JobId=48232 in gpu-v100s on gpu05
+[2022-08-22T13:54:44.782] sched/backfill: _start_job: Started JobId=48233 in gpu-v100s on gpu05
+[2022-08-22T13:56:44.788] sched/backfill: _start_job: Started JobId=48237 in cpu-epyc on cpu15
 [2022-08-22T14:02:29.442] sched: Allocate JobId=48240 NodeList=cpu15 #CPUs=1 Partition=cpu-epyc
+[2022-08-22T14:02:44.799] sched/backfill: _start_job: Started JobId=48239 in cpu-epyc on cpu15
 [2022-08-22T14:07:11.920] sched: Allocate JobId=48242 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
 [2022-08-22T14:10:07.284] sched: Allocate JobId=48243 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
 [2022-08-22T14:13:31.708] sched: Allocate JobId=48244 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
 [2022-08-22T14:14:06.759] sched: Allocate JobId=48245 NodeList=cpu12 #CPUs=1 Partition=cpu-epyc
 [2022-08-22T14:15:36.882] sched: Allocate JobId=48246 NodeList=cpu15 #CPUs=1 Partition=cpu-epyc
 [2022-08-22T14:16:18.937] sched: Allocate JobId=48247 NodeList=cpu15 #CPUs=1 Partition=cpu-epyc
+[2022-08-22T14:18:44.858] sched/backfill: _start_job: Started JobId=48248 in gpu-titan on gpu02
 [2022-08-22T14:43:12.739] sched: Allocate JobId=48250 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
+[2022-08-22T14:43:44.911] sched/backfill: _start_job: Started JobId=48249 in gpu-v100s on gpu05
+[2022-08-22T14:55:44.938] sched/backfill: _start_job: Started JobId=48251 in gpu-titan on gpu02
 [2022-08-22T14:56:43.002] sched: Allocate JobId=48252 NodeList=gpu02 #CPUs=4 Partition=gpu-titan
+[2022-08-22T15:22:44.999] sched/backfill: _start_job: Started JobId=48253 in cpu-epyc on cpu15
+[2022-08-22T15:35:45.029] sched/backfill: _start_job: Started JobId=48254 in cpu-epyc on cpu15
+[2022-08-22T15:38:45.036] sched/backfill: _start_job: Started JobId=48255 in cpu-epyc on cpu15
+[2022-08-22T15:42:45.045] sched/backfill: _start_job: Started JobId=48257 in cpu-epyc on cpu15
+[2022-08-22T17:28:45.252] sched/backfill: _start_job: Started JobId=48259 in cpu-epyc on cpu15
+[2022-08-22T17:30:45.261] sched/backfill: _start_job: Started JobId=48260 in cpu-epyc on cpu15
 [2022-08-22T17:38:30.796] sched: Allocate JobId=48155 NodeList=cpu12 #CPUs=48 Partition=cpu-epyc
 [2022-08-22T18:12:48.119] sched: Allocate JobId=48261 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-08-22T18:24:39.338] sched: Allocate JobId=48262 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-08-22T18:26:43.492] sched: Allocate JobId=48263 NodeList=cpu04 #CPUs=16 Partition=cpu-opteron
 [2022-08-22T18:30:53.951] sched: Allocate JobId=48264 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
+[2022-08-22T19:01:45.452] sched/backfill: _start_job: Started JobId=48265 in cpu-opteron on cpu11
 [2022-08-22T19:16:31.548] sched: Allocate JobId=48266 NodeList=cpu11 #CPUs=32 Partition=cpu-opteron
 [2022-08-22T22:08:21.567] sched: Allocate JobId=48236 NodeList=cpu07 #CPUs=64 Partition=cpu-opteron
 [2022-08-22T22:08:27.922] sched: Allocate JobId=48241 NodeList=cpu07 #CPUs=64 Partition=cpu-opteron
@@ -3638,24 +3866,44 @@
 [2022-08-23T22:43:32.671] sched: Allocate JobId=48303 NodeList=cpu11 #CPUs=24 Partition=cpu-opteron
 [2022-08-24T01:19:08.779] sched: Allocate JobId=48304 NodeList=cpu04 #CPUs=64 Partition=cpu-opteron
 [2022-08-24T10:39:48.082] sched: Allocate JobId=48305 NodeList=gpu02 #CPUs=4 Partition=gpu-titan
+[2022-08-24T10:40:48.109] sched/backfill: _start_job: Started JobId=48306 in gpu-titan on gpu02
+[2022-08-24T16:26:48.521] sched/backfill: _start_job: Started JobId=48314 in gpu-titan on gpu02
+[2022-08-24T16:27:48.523] sched/backfill: _start_job: Started JobId=48315 in gpu-titan on gpu02
+[2022-08-24T16:29:48.527] sched/backfill: _start_job: Started JobId=48316 in gpu-titan on gpu02
 [2022-08-24T16:33:06.974] sched: Allocate JobId=48317 NodeList=gpu01 #CPUs=2 Partition=gpu-k10
+[2022-08-24T16:34:48.533] sched/backfill: _start_job: Started JobId=48318 in gpu-titan on gpu02
 [2022-08-24T16:35:53.196] sched: Allocate JobId=48319 NodeList=gpu01 #CPUs=1 Partition=gpu-k10
 [2022-08-24T17:03:33.122] sched: Allocate JobId=48323 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-08-24T17:06:05.246] sched: Allocate JobId=48324 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-08-24T17:07:12.340] sched: Allocate JobId=48325 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-08-24T17:09:16.654] sched: Allocate JobId=48326 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-08-24T23:25:04.107] sched: Allocate JobId=48332 NodeList=cpu08 #CPUs=64 Partition=cpu-opteron
+[2022-08-25T10:12:49.705] sched/backfill: _start_job: Started JobId=48333 in cpu-epyc on cpu14
+[2022-08-25T10:23:49.721] sched/backfill: _start_job: Started JobId=48334 in cpu-epyc on cpu14
+[2022-08-25T10:37:49.739] sched/backfill: _start_job: Started JobId=48335 in cpu-epyc on cpu14
+[2022-08-25T10:47:49.753] sched/backfill: _start_job: Started JobId=48336 in cpu-epyc on cpu14
+[2022-08-25T10:56:49.764] sched/backfill: _start_job: Started JobId=48337 in cpu-epyc on cpu14
 [2022-08-25T11:06:44.541] sched: Allocate JobId=47230 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-08-25T11:09:12.691] sched: Allocate JobId=48338 NodeList=cpu13 #CPUs=1 Partition=cpu-epyc
+[2022-08-25T11:13:49.781] sched/backfill: _start_job: Started JobId=48339 in cpu-epyc on cpu14
 [2022-08-25T11:24:42.996] sched: Allocate JobId=47774 NodeList=gpu05 #CPUs=10 Partition=gpu-v100s
 [2022-08-25T11:25:44.313] sched: Allocate JobId=48340 NodeList=cpu13 #CPUs=1 Partition=cpu-epyc
+[2022-08-25T11:30:49.796] sched/backfill: _start_job: Started JobId=48341 in cpu-epyc on cpu14
 [2022-08-25T11:41:55.991] sched: Allocate JobId=48342 NodeList=cpu13 #CPUs=1 Partition=cpu-epyc
+[2022-08-25T11:45:49.810] sched/backfill: _start_job: Started JobId=48343 in cpu-epyc on cpu14
 [2022-08-25T11:56:16.439] sched: Allocate JobId=48344 NodeList=cpu13 #CPUs=1 Partition=cpu-epyc
 [2022-08-25T12:04:26.325] sched: Allocate JobId=48345 NodeList=cpu13 #CPUs=1 Partition=cpu-epyc
 [2022-08-25T12:08:02.771] sched: Allocate JobId=48346 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
+[2022-08-25T12:11:49.834] sched/backfill: _start_job: Started JobId=48348 in cpu-epyc on cpu13
 [2022-08-25T12:12:19.117] sched: Allocate JobId=48349 NodeList=cpu14 #CPUs=1 Partition=cpu-epyc
+[2022-08-25T12:19:49.842] sched/backfill: _start_job: Started JobId=48350 in cpu-epyc on cpu14
+[2022-08-25T12:27:49.854] sched/backfill: _start_job: Started JobId=48351 in cpu-epyc on cpu14
+[2022-08-25T12:34:49.860] sched/backfill: _start_job: Started JobId=48352 in cpu-epyc on cpu14
+[2022-08-25T12:51:49.880] sched/backfill: _start_job: Started JobId=48353 in cpu-epyc on cpu14
+[2022-08-25T13:06:49.897] sched/backfill: _start_job: Started JobId=48354 in cpu-epyc on cpu14
 [2022-08-25T14:27:51.742] sched: Allocate JobId=48302 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-08-25T14:28:20.447] sched: Allocate JobId=48356 NodeList=cpu13 #CPUs=32 Partition=cpu-epyc
+[2022-08-25T14:28:49.983] sched/backfill: _start_job: Started JobId=48331 in cpu-epyc on cpu13
 [2022-08-25T14:29:46.996] sched: Allocate JobId=48309 NodeList=cpu13 #CPUs=24 Partition=cpu-epyc
 [2022-08-25T15:51:49.978] sched: Allocate JobId=48362 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-08-25T15:56:46.505] sched: Allocate JobId=48363 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
@@ -3693,15 +3941,18 @@
 [2022-08-26T09:25:12.110] sched: Allocate JobId=48396 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-26T09:59:25.735] sched: Allocate JobId=48397 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-26T10:16:14.337] sched: Allocate JobId=48401 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
+[2022-08-26T10:31:50.761] sched/backfill: _start_job: Started JobId=48402 in cpu-epyc on cpu15
 [2022-08-26T10:37:35.574] sched: Allocate JobId=48403 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-26T10:49:18.850] sched: Allocate JobId=48404 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-26T11:01:05.021] sched: Allocate JobId=48405 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
+[2022-08-26T11:07:50.806] sched/backfill: _start_job: Started JobId=48406 in cpu-epyc on cpu13
 [2022-08-26T11:13:02.334] sched: Allocate JobId=48407 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-08-26T11:14:34.460] sched: Allocate JobId=48408 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-08-26T11:17:51.804] sched: Allocate JobId=48409 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-26T11:31:02.162] sched: Allocate JobId=48410 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-26T11:45:46.670] sched: Allocate JobId=48411 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-26T12:03:39.683] sched: Allocate JobId=48412 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
+[2022-08-26T12:31:50.883] sched/backfill: _start_job: Started JobId=48413 in cpu-epyc on cpu13
 [2022-08-26T12:40:08.728] sched: Allocate JobId=48414 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-26T13:11:48.105] sched: Allocate JobId=48418 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-26T13:12:25.189] sched: Allocate JobId=48419 NodeList=cpu[09-10] #CPUs=64 Partition=cpu-opteron
@@ -3716,6 +3967,9 @@
 [2022-08-26T20:08:34.587] sched: Allocate JobId=48432 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-26T20:20:15.753] sched: Allocate JobId=48433 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-08-26T20:26:43.357] sched: Allocate JobId=48434 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
+[2022-08-26T23:52:52.462] sched/backfill: _start_job: Started JobId=48436 in cpu-epyc on cpu15
+[2022-08-27T00:40:52.506] sched/backfill: _start_job: Started JobId=48438 in cpu-epyc on cpu15
+[2022-08-27T07:40:52.888] sched/backfill: _start_job: Started JobId=48435 in cpu-epyc on cpu13
 [2022-08-27T07:56:17.522] sched: Allocate JobId=48439 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-08-27T08:07:32.242] sched: Allocate JobId=48400 NodeList=cpu12 #CPUs=48 Partition=cpu-epyc
 [2022-08-27T08:07:32.247] sched: Allocate JobId=48440 NodeList=cpu13 #CPUs=24 Partition=cpu-epyc
@@ -3733,6 +3987,7 @@
 [2022-08-27T14:47:24.752] sched: Allocate JobId=48452 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
 [2022-08-27T14:48:55.959] sched: Allocate JobId=48453 NodeList=cpu08 #CPUs=64 Partition=cpu-opteron
 [2022-08-27T14:50:37.094] sched: Allocate JobId=48454 NodeList=cpu09 #CPUs=64 Partition=cpu-opteron
+[2022-08-27T15:44:53.174] sched/backfill: _start_job: Started JobId=48456 in cpu-epyc on cpu13
 [2022-08-27T16:52:42.607] sched: Allocate JobId=48457 NodeList=cpu10 #CPUs=64 Partition=cpu-opteron
 [2022-08-27T16:56:55.982] sched: Allocate JobId=48458 NodeList=cpu11 #CPUs=64 Partition=cpu-opteron
 [2022-08-27T17:39:16.364] sched: Allocate JobId=48461 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
@@ -3751,9 +4006,18 @@
 [2022-08-28T22:19:17.480] sched: Allocate JobId=48479 NodeList=cpu04 #CPUs=8 Partition=cpu-opteron
 [2022-08-28T22:33:14.939] sched: Allocate JobId=48480 NodeList=cpu04 #CPUs=8 Partition=cpu-opteron
 [2022-08-28T23:51:16.888] sched: Allocate JobId=48482 NodeList=cpu04 #CPUs=4 Partition=cpu-opteron
+[2022-08-29T00:00:54.781] sched/backfill: _start_job: Started JobId=48483 in gpu-titan on gpu02
+[2022-08-29T09:59:55.664] sched/backfill: _start_job: Started JobId=48488 in cpu-opteron on cpu04
+[2022-08-29T10:12:55.688] sched/backfill: _start_job: Started JobId=48489 in cpu-opteron on cpu04
+[2022-08-29T15:11:56.261] sched/backfill: _start_job: Started JobId=48497 in cpu-opteron on cpu04
+[2022-08-29T18:47:56.708] sched/backfill: _start_job: Started JobId=48498 in gpu-titan on gpu02
+[2022-08-29T18:51:56.718] sched/backfill: _start_job: Started JobId=48499 in gpu-titan on gpu02
 [2022-08-30T02:31:35.532] sched: Allocate JobId=48484 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
+[2022-08-30T02:31:57.774] sched/backfill: _start_job: Started JobId=48510 in cpu-opteron on cpu01
 [2022-08-30T06:30:12.458] sched: Allocate JobId=48513 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-08-30T09:42:30.458] sched: Allocate JobId=48515 NodeList=gpu01 #CPUs=10 Partition=gpu-k10
+[2022-08-30T10:10:58.823] sched/backfill: _start_job: Started JobId=48486 in cpu-opteron on cpu04
+[2022-08-30T10:10:58.824] sched/backfill: _start_job: Started JobId=48487 in cpu-opteron on cpu04
 [2022-08-30T10:11:00.326] sched: Allocate JobId=48485 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-08-30T10:11:03.534] sched: Allocate JobId=48462 NodeList=cpu04 #CPUs=32 Partition=cpu-opteron
 [2022-08-30T10:21:13.034] sched: Allocate JobId=48501 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
@@ -3778,13 +4042,26 @@
 [2022-08-31T08:59:12.472] sched: Allocate JobId=48526 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-08-31T10:12:00.861] sched: Allocate JobId=48507 NodeList=cpu04 #CPUs=32 Partition=cpu-opteron
 [2022-08-31T13:17:42.443] sched: Allocate JobId=48538 NodeList=cpu04 #CPUs=32 Partition=cpu-opteron
+[2022-08-31T14:36:03.235] sched/backfill: _start_job: Started JobId=48527 in cpu-epyc on cpu13
+[2022-08-31T14:45:03.248] sched/backfill: _start_job: Started JobId=48528 in cpu-epyc on cpu13
+[2022-08-31T14:48:03.257] sched/backfill: _start_job: Started JobId=48529 in cpu-epyc on cpu13
+[2022-08-31T14:50:03.260] sched/backfill: _start_job: Started JobId=48530 in cpu-epyc on cpu13
+[2022-08-31T14:56:03.269] sched/backfill: _start_job: Started JobId=48531 in cpu-epyc on cpu13
+[2022-08-31T15:13:03.295] sched/backfill: _start_job: Started JobId=48532 in cpu-epyc on cpu13
 [2022-08-31T16:06:42.417] sched: Allocate JobId=48560 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-08-31T17:52:48.554] sched: Allocate JobId=48561 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-08-31T18:12:33.383] sched: Allocate JobId=48562 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-08-31T19:11:36.838] sched: Allocate JobId=48566 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
+[2022-08-31T20:24:03.738] sched/backfill: _start_job: Started JobId=48533 in cpu-epyc on cpu13
+[2022-08-31T20:28:03.745] sched/backfill: _start_job: Started JobId=48534 in cpu-epyc on cpu13
+[2022-08-31T20:47:03.776] sched/backfill: _start_job: Started JobId=48535 in cpu-epyc on cpu13
+[2022-08-31T20:48:03.778] sched/backfill: _start_job: Started JobId=48536 in cpu-epyc on cpu13
+[2022-08-31T20:55:03.789] sched/backfill: _start_job: Started JobId=48537 in cpu-epyc on cpu13
+[2022-09-01T02:01:04.211] sched/backfill: _start_job: Started JobId=48490 in cpu-epyc on cpu13
 [2022-09-01T02:32:16.858] sched: Allocate JobId=48568 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
 [2022-09-01T02:32:19.102] sched: Allocate JobId=48569 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-09-01T02:42:06.068] sched: Allocate JobId=48570 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
+[2022-09-01T02:46:04.265] sched/backfill: _start_job: Started JobId=48491 in cpu-epyc on cpu13
 [2022-09-01T02:53:57.424] sched: Allocate JobId=48571 NodeList=cpu08 #CPUs=4 Partition=cpu-opteron
 [2022-09-01T02:56:06.596] sched: Allocate JobId=48572 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
 [2022-09-01T02:57:56.784] sched: Allocate JobId=48573 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
@@ -3885,10 +4162,13 @@
 [2022-09-01T22:49:17.528] sched: Allocate JobId=48672 NodeList=gpu02 #CPUs=5 Partition=gpu-titan
 [2022-09-01T23:29:22.892] sched: Allocate JobId=48673 NodeList=gpu01 #CPUs=2 Partition=gpu-k10
 [2022-09-01T23:31:02.027] sched: Allocate JobId=48674 NodeList=gpu01 #CPUs=1 Partition=gpu-k10
+[2022-09-01T23:53:05.468] sched/backfill: _start_job: Started JobId=48492 in cpu-epyc on cpu13
+[2022-09-02T00:57:05.542] sched/backfill: _start_job: Started JobId=48616 in cpu-epyc on cpu13
 [2022-09-02T10:19:08.077] sched: Allocate JobId=48676 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-09-02T14:46:48.772] sched: Allocate JobId=48678 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-09-02T14:53:12.530] sched: Allocate JobId=48679 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-09-02T15:05:03.666] sched: Allocate JobId=48680 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
+[2022-09-02T15:25:06.227] sched/backfill: _start_job: Started JobId=48681 in cpu-epyc on cpu13
 [2022-09-02T15:34:01.879] sched: Allocate JobId=48682 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-09-02T16:16:18.230] sched: Allocate JobId=48685 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
 [2022-09-02T19:31:30.690] sched: Allocate JobId=48690 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
@@ -3938,6 +4218,7 @@
 [2022-09-04T01:41:33.986] sched: Allocate JobId=48750 NodeList=cpu10 #CPUs=32 Partition=cpu-opteron
 [2022-09-04T01:43:53.277] sched: Allocate JobId=48751 NodeList=cpu10 #CPUs=32 Partition=cpu-opteron
 [2022-09-04T01:47:58.667] sched: Allocate JobId=48752 NodeList=cpu10 #CPUs=32 Partition=cpu-opteron
+[2022-09-04T01:50:08.807] sched/backfill: _start_job: Started JobId=48753 in cpu-opteron on cpu10
 [2022-09-04T01:55:51.481] sched: Allocate JobId=48754 NodeList=cpu10 #CPUs=32 Partition=cpu-opteron
 [2022-09-04T01:58:23.770] sched: Allocate JobId=48755 NodeList=cpu10 #CPUs=32 Partition=cpu-opteron
 [2022-09-04T02:02:11.055] sched: Allocate JobId=48756 NodeList=cpu10 #CPUs=32 Partition=cpu-opteron
@@ -3970,6 +4251,8 @@
 [2022-09-05T01:00:22.111] sched: Allocate JobId=48807 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-09-05T01:16:09.112] sched: Allocate JobId=48808 NodeList=cpu01 #CPUs=12 Partition=cpu-opteron
 [2022-09-05T01:24:41.000] sched: Allocate JobId=48809 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
+[2022-09-05T01:27:13.522] sched/backfill: _start_job: Started JobId=48775 in cpu-epyc on cpu12
+[2022-09-05T01:28:13.526] sched/backfill: _start_job: Started JobId=48780 in cpu-epyc on cpu12
 [2022-09-05T01:43:33.899] sched: Allocate JobId=48810 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-09-05T01:58:07.512] sched: Allocate JobId=48811 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-09-05T02:09:31.560] sched: Allocate JobId=48812 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
@@ -4007,11 +4290,15 @@
 [2022-09-06T17:20:51.249] sched: Allocate JobId=48867 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-09-06T18:19:18.527] sched: Allocate JobId=48686 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-09-06T23:45:00.299] sched: Allocate JobId=48856 NodeList=cpu01 #CPUs=64 Partition=cpu-opteron
+[2022-09-07T01:32:16.617] sched/backfill: _start_job: Started JobId=48874 in cpu-opteron on cpu11
+[2022-09-07T01:33:16.619] sched/backfill: _start_job: Started JobId=48875 in cpu-opteron on cpu04
 [2022-09-07T09:04:43.759] sched: Allocate JobId=48876 NodeList=gpu02 #CPUs=6 Partition=gpu-titan
 [2022-09-07T09:05:26.794] sched: Allocate JobId=48877 NodeList=gpu02 #CPUs=4 Partition=gpu-titan
 [2022-09-07T09:48:47.546] sched: Allocate JobId=48882 NodeList=cpu04 #CPUs=1 Partition=cpu-opteron
 [2022-09-07T10:53:46.233] sched: Allocate JobId=48873 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
 [2022-09-07T14:13:05.854] sched: Allocate JobId=48883 NodeList=cpu05 #CPUs=64 Partition=cpu-opteron
+[2022-09-07T15:16:17.994] sched/backfill: _start_job: Started JobId=48885 in cpu-opteron on cpu11
+[2022-09-07T15:43:18.096] sched/backfill: _start_job: Started JobId=48887 in cpu-opteron on cpu11
 [2022-09-07T16:23:21.060] sched: Allocate JobId=48868 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-09-07T18:03:37.387] sched: Allocate JobId=48893 NodeList=cpu11 #CPUs=1 Partition=cpu-opteron
 [2022-09-07T18:25:39.154] sched: Allocate JobId=48878 NodeList=cpu04 #CPUs=32 Partition=cpu-opteron
@@ -4021,6 +4308,8 @@
 [2022-09-07T20:46:54.251] sched: Allocate JobId=48898 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-09-07T20:47:25.296] sched: Allocate JobId=48899 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-09-07T20:59:14.457] sched: Allocate JobId=48870 NodeList=cpu01 #CPUs=64 Partition=cpu-opteron
+[2022-09-07T22:35:19.136] sched/backfill: _start_job: Started JobId=48901 in cpu-opteron on cpu11
+[2022-09-08T01:11:19.401] sched/backfill: _start_job: Started JobId=48902 in cpu-opteron on cpu11
 [2022-09-08T04:14:20.646] sched: Allocate JobId=48900 NodeList=cpu08 #CPUs=32 Partition=cpu-opteron
 [2022-09-08T05:00:53.278] sched: Allocate JobId=48890 NodeList=cpu01 #CPUs=64 Partition=cpu-opteron
 [2022-09-08T09:41:47.717] sched: Allocate JobId=48907 NodeList=cpu08 #CPUs=32 Partition=cpu-opteron
@@ -4031,6 +4320,8 @@
 [2022-09-08T09:54:29.267] sched: Allocate JobId=48914 NodeList=cpu08 #CPUs=16 Partition=cpu-opteron
 [2022-09-08T10:35:43.629] sched: Allocate JobId=48917 NodeList=cpu08 #CPUs=32 Partition=cpu-opteron
 [2022-09-08T10:37:52.835] sched: Allocate JobId=48918 NodeList=cpu08 #CPUs=32 Partition=cpu-opteron
+[2022-09-08T11:30:20.213] sched/backfill: _start_job: Started JobId=48919 in cpu-opteron on cpu08
+[2022-09-08T11:31:20.216] sched/backfill: _start_job: Started JobId=48920 in cpu-opteron on cpu08
 [2022-09-08T11:56:21.066] sched: Allocate JobId=48921 NodeList=cpu08 #CPUs=64 Partition=cpu-opteron
 [2022-09-08T12:34:44.073] sched: Allocate JobId=48688 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-09-08T12:34:46.799] sched: Allocate JobId=48689 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
@@ -4042,6 +4333,7 @@
 [2022-09-08T14:52:53.685] sched: Allocate JobId=48923 NodeList=cpu04 #CPUs=32 Partition=cpu-opteron
 [2022-09-08T14:53:08.060] sched: Allocate JobId=48924 NodeList=cpu04 #CPUs=32 Partition=cpu-opteron
 [2022-09-08T14:56:00.373] sched: Allocate JobId=48925 NodeList=cpu07 #CPUs=24 Partition=cpu-opteron
+[2022-09-08T15:09:20.628] sched/backfill: _start_job: Started JobId=48931 in cpu-opteron on cpu11
 [2022-09-08T16:01:57.931] sched: Allocate JobId=48908 NodeList=cpu07 #CPUs=64 Partition=cpu-opteron
 [2022-09-08T16:02:03.877] sched: Allocate JobId=48915 NodeList=cpu07 #CPUs=64 Partition=cpu-opteron
 [2022-09-08T16:15:19.115] sched: Allocate JobId=48937 NodeList=cpu07 #CPUs=64 Partition=cpu-opteron
@@ -4057,6 +4349,7 @@
 [2022-09-08T21:20:19.680] sched: Allocate JobId=48952 NodeList=cpu04 #CPUs=64 Partition=cpu-opteron
 [2022-09-08T21:40:45.532] sched: Allocate JobId=48953 NodeList=cpu11 #CPUs=1 Partition=cpu-opteron
 [2022-09-09T01:07:50.617] sched: Allocate JobId=48955 NodeList=cpu09 #CPUs=64 Partition=cpu-opteron
+[2022-09-09T02:03:21.345] sched/backfill: _start_job: Started JobId=48957 in cpu-opteron on cpu11
 [2022-09-09T14:17:49.807] sched: Allocate JobId=48959 NodeList=cpu09 #CPUs=64 Partition=cpu-opteron
 [2022-09-09T14:53:23.581] sched: Allocate JobId=48961 NodeList=cpu03 #CPUs=1 Partition=cpu-opteron
 [2022-09-09T17:27:02.177] sched: Allocate JobId=48962 NodeList=cpu09 #CPUs=64 Partition=cpu-opteron
@@ -4067,6 +4360,8 @@
 [2022-09-10T00:27:23.080] sched: Allocate JobId=48966 NodeList=cpu05 #CPUs=32 Partition=cpu-opteron
 [2022-09-10T01:23:45.318] sched: Allocate JobId=48972 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
 [2022-09-10T01:24:30.359] sched: Allocate JobId=48973 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
+[2022-09-10T03:23:24.219] sched/backfill: _start_job: Started JobId=48977 in cpu-opteron on cpu05
+[2022-09-10T14:14:25.170] sched/backfill: _start_job: Started JobId=48979 in cpu-opteron on cpu05
 [2022-09-10T17:10:06.031] sched: Allocate JobId=48975 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
 [2022-09-10T17:10:43.007] sched: Allocate JobId=48976 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
 [2022-09-10T17:59:32.081] sched: Allocate JobId=48980 NodeList=cpu01 #CPUs=64 Partition=cpu-opteron
@@ -4082,6 +4377,7 @@
 [2022-09-11T15:30:20.703] sched: Allocate JobId=48995 NodeList=cpu10 #CPUs=64 Partition=cpu-opteron
 [2022-09-11T15:46:38.662] sched: Allocate JobId=48991 NodeList=cpu01 #CPUs=64 Partition=cpu-opteron
 [2022-09-11T18:41:27.091] sched: Allocate JobId=48998 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
+[2022-09-12T00:15:27.318] sched/backfill: _start_job: Started JobId=49004 in cpu-opteron on cpu05
 [2022-09-12T08:24:39.385] sched: Allocate JobId=49002 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-09-12T09:31:22.002] sched: Allocate JobId=48997 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
 [2022-09-12T10:39:31.555] sched: Allocate JobId=48895 NodeList=cpu14 #CPUs=48 Partition=cpu-epyc
@@ -4156,11 +4452,17 @@
 [2022-09-14T15:12:18.844] sched: Allocate JobId=49086 NodeList=cpu05 #CPUs=1 Partition=cpu-opteron
 [2022-09-14T17:18:14.775] sched: Allocate JobId=49089 NodeList=gpu02 #CPUs=2 Partition=gpu-titan
 [2022-09-14T17:29:13.868] sched: Allocate JobId=49090 NodeList=gpu02 #CPUs=2 Partition=gpu-titan
+[2022-09-14T18:09:30.847] sched/backfill: _start_job: Started JobId=49091 in cpu-opteron on cpu11
 [2022-09-14T18:17:44.849] sched: Allocate JobId=49092 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-09-14T18:21:08.207] sched: Allocate JobId=49094 NodeList=cpu10 #CPUs=16 Partition=cpu-opteron
 [2022-09-14T18:22:16.302] sched: Allocate JobId=49095 NodeList=cpu10 #CPUs=16 Partition=cpu-opteron
 [2022-09-14T19:34:33.704] sched: Allocate JobId=49093 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
+[2022-09-14T20:40:30.976] sched/backfill: _start_job: Started JobId=49097 in cpu-opteron on cpu11
+[2022-09-14T20:41:30.978] sched/backfill: _start_job: Started JobId=49098 in cpu-opteron on cpu11
+[2022-09-14T20:56:30.994] sched/backfill: _start_job: Started JobId=49099 in cpu-opteron on cpu11
 [2022-09-14T20:57:39.672] sched: Allocate JobId=49084 NodeList=cpu12 #CPUs=32 Partition=cpu-epyc
+[2022-09-14T20:58:30.996] sched/backfill: _start_job: Started JobId=49100 in cpu-opteron on cpu11
+[2022-09-14T20:58:30.996] sched/backfill: _start_job: Started JobId=49101 in cpu-opteron on cpu11
 [2022-09-15T04:24:07.456] sched: Allocate JobId=49105 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
 [2022-09-15T04:24:07.472] sched: Allocate JobId=49088 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
 [2022-09-15T07:40:21.989] sched: Allocate JobId=49106 NodeList=cpu05 #CPUs=16 Partition=cpu-opteron
@@ -4202,6 +4504,7 @@
 [2022-09-16T12:57:21.096] sched: Allocate JobId=49168 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-09-16T15:09:27.017] sched: Allocate JobId=49149 NodeList=cpu04 #CPUs=64 Partition=cpu-opteron
 [2022-09-16T15:10:26.102] sched: Allocate JobId=49150 NodeList=cpu08 #CPUs=64 Partition=cpu-opteron
+[2022-09-16T17:22:33.113] sched/backfill: _start_job: Started JobId=49175 in cpu-opteron on cpu03
 [2022-09-16T17:27:27.693] sched: Allocate JobId=49172 NodeList=cpu09 #CPUs=64 Partition=cpu-opteron
 [2022-09-16T17:27:54.964] sched: Allocate JobId=49173 NodeList=cpu09 #CPUs=64 Partition=cpu-opteron
 [2022-09-16T17:29:32.382] sched: Allocate JobId=49174 NodeList=cpu09 #CPUs=64 Partition=cpu-opteron
@@ -4210,11 +4513,13 @@
 [2022-09-16T20:35:21.972] sched: Allocate JobId=49153 NodeList=cpu04 #CPUs=64 Partition=cpu-opteron
 [2022-09-16T21:42:22.801] sched: Allocate JobId=49132 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-09-16T22:04:09.283] sched: Allocate JobId=49154 NodeList=cpu09 #CPUs=64 Partition=cpu-opteron
+[2022-09-16T22:07:33.584] sched/backfill: _start_job: Started JobId=49179 in cpu-opteron on cpu03
 [2022-09-17T02:09:56.133] sched: Allocate JobId=49191 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
 [2022-09-17T02:25:08.305] sched: Allocate JobId=49177 NodeList=cpu08 #CPUs=64 Partition=cpu-opteron
 [2022-09-17T02:31:33.636] sched: Allocate JobId=49192 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
 [2022-09-17T02:33:41.915] sched: Allocate JobId=49193 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-09-17T02:51:11.492] sched: Allocate JobId=49178 NodeList=cpu09 #CPUs=64 Partition=cpu-opteron
+[2022-09-17T05:48:34.481] sched/backfill: _start_job: Started JobId=49180 in cpu-opteron on cpu03
 [2022-09-17T07:23:27.208] sched: Allocate JobId=49190 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-09-17T07:23:28.767] sched: Allocate JobId=49143 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
 [2022-09-17T08:13:42.554] sched: Allocate JobId=49196 NodeList=cpu10 #CPUs=16 Partition=cpu-opteron
@@ -4256,17 +4561,24 @@
 [2022-09-18T10:47:01.196] sched: Allocate JobId=49223 NodeList=cpu05 #CPUs=1 Partition=cpu-opteron
 [2022-09-18T10:47:20.223] sched: Allocate JobId=49224 NodeList=cpu05 #CPUs=1 Partition=cpu-opteron
 [2022-09-18T10:47:38.247] sched: Allocate JobId=49225 NodeList=cpu05 #CPUs=1 Partition=cpu-opteron
+[2022-09-18T10:53:37.114] sched/backfill: _start_job: Started JobId=49227 in cpu-epyc on cpu12
 [2022-09-18T11:10:51.722] sched: Allocate JobId=49233 NodeList=cpu03 #CPUs=1 Partition=cpu-opteron
+[2022-09-18T11:36:37.171] sched/backfill: _start_job: Started JobId=49234 in cpu-opteron on cpu05
 [2022-09-18T11:55:23.476] sched: Allocate JobId=49226 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-09-18T11:55:24.975] sched: Allocate JobId=49228 NodeList=cpu13 #CPUs=24 Partition=cpu-epyc
 [2022-09-18T11:55:24.976] sched: Allocate JobId=49229 NodeList=cpu13 #CPUs=24 Partition=cpu-epyc
 [2022-09-18T12:31:50.148] sched: Allocate JobId=49230 NodeList=cpu12 #CPUs=24 Partition=cpu-epyc
+[2022-09-18T12:35:37.292] sched/backfill: _start_job: Started JobId=49235 in cpu-opteron on cpu05
+[2022-09-18T12:59:37.346] sched/backfill: _start_job: Started JobId=49236 in cpu-opteron on cpu10
+[2022-09-18T13:15:37.384] sched/backfill: _start_job: Started JobId=49237 in cpu-opteron on cpu03
 [2022-09-18T13:18:43.583] sched: Allocate JobId=49231 NodeList=cpu13 #CPUs=24 Partition=cpu-epyc
 [2022-09-18T13:21:40.666] sched: Allocate JobId=49243 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-09-18T13:40:03.779] sched: Allocate JobId=49244 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-09-18T13:48:03.621] sched: Allocate JobId=49245 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
+[2022-09-18T13:52:37.460] sched/backfill: _start_job: Started JobId=49238 in cpu-opteron on cpu05
 [2022-09-18T13:57:19.670] sched: Allocate JobId=49246 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-09-18T14:04:57.172] sched: Allocate JobId=49247 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
+[2022-09-18T14:09:37.491] sched/backfill: _start_job: Started JobId=49239 in cpu-opteron on cpu03
 [2022-09-18T14:14:29.864] sched: Allocate JobId=49248 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-09-18T14:15:18.963] sched: Allocate JobId=49252 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-09-18T14:15:36.983] sched: Allocate JobId=49253 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
@@ -4309,6 +4621,7 @@
 [2022-09-18T18:48:21.219] sched: Allocate JobId=49284 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-09-18T21:45:36.602] sched: Allocate JobId=49291 NodeList=cpu03 #CPUs=1 Partition=cpu-opteron
 [2022-09-18T21:46:08.619] sched: Allocate JobId=49292 NodeList=cpu03 #CPUs=1 Partition=cpu-opteron
+[2022-09-18T21:56:37.771] sched/backfill: _start_job: Started JobId=49293 in cpu-epyc on cpu12
 [2022-09-18T22:07:44.844] sched: Allocate JobId=49295 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-09-18T23:22:21.733] sched: Allocate JobId=49285 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-09-19T05:17:14.601] sched: Allocate JobId=49286 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
@@ -4349,13 +4662,18 @@
 [2022-09-20T09:01:42.433] sched: Allocate JobId=49310 NodeList=cpu14 #CPUs=16 Partition=cpu-epyc
 [2022-09-20T09:39:56.703] sched: Allocate JobId=49287 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-09-20T09:43:37.337] sched: Allocate JobId=49384 NodeList=cpu11 #CPUs=1 Partition=cpu-opteron
+[2022-09-20T09:44:41.382] sched/backfill: _start_job: Started JobId=49376 in cpu-epyc on cpu12
+[2022-09-20T10:10:41.429] sched/backfill: _start_job: Started JobId=49377 in cpu-epyc on cpu12
 [2022-09-20T10:19:47.562] sched: Allocate JobId=49385 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-09-20T10:20:15.582] sched: Allocate JobId=49386 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-09-20T10:25:59.179] sched: Allocate JobId=49387 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
+[2022-09-20T10:28:41.463] sched/backfill: _start_job: Started JobId=49378 in cpu-epyc on cpu12
+[2022-09-20T10:29:41.466] sched/backfill: _start_job: Started JobId=49379 in cpu-epyc on cpu12
 [2022-09-20T10:36:48.341] sched: Allocate JobId=49388 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-09-20T10:41:40.808] sched: Allocate JobId=49389 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-09-20T10:42:16.858] sched: Allocate JobId=49391 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-09-20T10:45:39.282] sched: Allocate JobId=49392 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
+[2022-09-20T10:53:41.509] sched/backfill: _start_job: Started JobId=49380 in cpu-epyc on cpu12
 [2022-09-20T11:50:10.204] sched: Allocate JobId=49393 NodeList=cpu11 #CPUs=1 Partition=cpu-opteron
 [2022-09-20T12:01:14.406] sched: Allocate JobId=49394 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
 [2022-09-20T12:19:19.288] sched: Allocate JobId=49395 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
@@ -4440,10 +4758,12 @@
 [2022-09-21T23:50:44.575] sched: Allocate JobId=49437 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
 [2022-09-22T00:21:02.384] sched: Allocate JobId=49438 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-09-22T00:21:02.385] sched: Allocate JobId=49439 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
+[2022-09-22T02:35:45.059] sched/backfill: _start_job: Started JobId=49440 in cpu-epyc on cpu12
 [2022-09-22T02:39:33.748] sched: Allocate JobId=49298 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-09-22T02:41:04.726] sched: Allocate JobId=49441 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
 [2022-09-22T02:54:21.503] sched: Allocate JobId=49452 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-09-22T03:05:36.736] sched: Allocate JobId=49442 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
+[2022-09-22T03:41:45.148] sched/backfill: _start_job: Started JobId=49426 in cpu-epyc on cpu15
 [2022-09-22T05:01:51.332] sched: Allocate JobId=49443 NodeList=cpu14 #CPUs=16 Partition=cpu-epyc
 [2022-09-22T09:00:31.394] sched: Allocate JobId=49454 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
 [2022-09-22T10:16:57.053] sched: Allocate JobId=49455 NodeList=cpu05 #CPUs=35 Partition=cpu-opteron
@@ -4532,6 +4852,8 @@
 [2022-09-23T18:45:01.207] sched: Allocate JobId=49564 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
 [2022-09-23T20:36:54.107] sched: Allocate JobId=49566 NodeList=cpu13 #CPUs=35 Partition=cpu-epyc
 [2022-09-23T23:51:28.222] sched: Allocate JobId=49533 NodeList=cpu03 #CPUs=8 Partition=cpu-opteron
+[2022-09-23T23:58:55.070] sched/backfill: _start_job: Started JobId=49564 in cpu-epyc on cpu15
+[2022-09-24T02:35:55.258] sched/backfill: _start_job: Started JobId=49569 in cpu-opteron on cpu09
 [2022-09-24T03:20:03.141] sched: Allocate JobId=49570 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-09-24T03:20:11.896] sched: Allocate JobId=49568 NodeList=cpu14 #CPUs=24 Partition=cpu-epyc
 [2022-09-24T05:04:25.802] sched: Allocate JobId=49572 NodeList=cpu07 #CPUs=64 Partition=cpu-opteron
@@ -4653,6 +4975,7 @@
 [2022-09-26T07:59:54.965] sched: Allocate JobId=49703 NodeList=cpu10 #CPUs=8 Partition=cpu-opteron
 [2022-09-26T08:03:00.398] sched: Allocate JobId=49704 NodeList=cpu10 #CPUs=8 Partition=cpu-opteron
 [2022-09-26T10:28:56.225] sched: Allocate JobId=49707 NodeList=cpu10 #CPUs=16 Partition=cpu-opteron
+[2022-09-26T10:35:58.869] sched/backfill: _start_job: Started JobId=49708 in cpu-opteron on cpu10
 [2022-09-26T12:37:23.876] sched: Allocate JobId=49709 NodeList=cpu10 #CPUs=32 Partition=cpu-opteron
 [2022-09-26T13:09:18.374] sched: Allocate JobId=49710 NodeList=cpu07 #CPUs=32 Partition=cpu-opteron
 [2022-09-26T13:10:30.470] sched: Allocate JobId=49711 NodeList=cpu07 #CPUs=32 Partition=cpu-opteron
@@ -4695,6 +5018,8 @@
 [2022-09-26T22:56:29.781] sched: Allocate JobId=49763 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
 [2022-09-26T23:09:24.087] sched: Allocate JobId=49764 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
 [2022-09-26T23:11:01.379] sched: Allocate JobId=49765 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
+[2022-09-26T23:15:59.680] sched/backfill: _start_job: Started JobId=49766 in gpu-v100s on gpu05
+[2022-09-26T23:23:59.690] sched/backfill: _start_job: Started JobId=49767 in gpu-v100s on gpu05
 [2022-09-27T00:35:23.782] sched: Allocate JobId=49768 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-09-27T00:36:35.984] sched: Allocate JobId=49769 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-09-27T08:16:08.468] sched: Allocate JobId=49775 NodeList=cpu01 #CPUs=12 Partition=cpu-opteron
@@ -4705,15 +5030,19 @@
 [2022-09-27T08:48:12.201] sched: Allocate JobId=49780 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
 [2022-09-27T08:54:21.784] sched: Allocate JobId=49781 NodeList=cpu11 #CPUs=2 Partition=cpu-opteron
 [2022-09-27T09:04:46.947] sched: Allocate JobId=49782 NodeList=cpu11 #CPUs=12 Partition=cpu-opteron
+[2022-09-27T09:48:00.324] sched/backfill: _start_job: Started JobId=49784 in gpu-v100s on gpu05
 [2022-09-27T10:08:39.272] sched: Allocate JobId=49785 NodeList=cpu14 #CPUs=1 Partition=cpu-epyc
 [2022-09-27T12:05:14.666] sched: Allocate JobId=49787 NodeList=cpu11 #CPUs=1 Partition=cpu-opteron
 [2022-09-27T12:14:14.638] sched: Allocate JobId=49788 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-09-27T12:23:37.564] sched: Allocate JobId=49789 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-09-27T12:24:21.645] sched: Allocate JobId=49790 NodeList=cpu01 #CPUs=35 Partition=cpu-opteron
+[2022-09-27T14:50:00.661] sched/backfill: _start_job: Started JobId=49792 in gpu-v100s on gpu05
 [2022-09-27T15:08:33.220] sched: Allocate JobId=49795 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-09-27T15:10:54.396] sched: Allocate JobId=49796 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-09-27T15:39:15.304] sched: Allocate JobId=49797 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-09-27T15:43:34.751] sched: Allocate JobId=49798 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
+[2022-09-27T15:48:00.748] sched/backfill: _start_job: Started JobId=49799 in cpu-epyc on cpu14
+[2022-09-27T15:50:00.751] sched/backfill: _start_job: Started JobId=49800 in cpu-epyc on cpu14
 [2022-09-27T16:18:07.337] sched: Allocate JobId=49804 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-09-27T16:26:45.352] sched: Allocate JobId=49805 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-09-27T16:30:51.715] sched: Allocate JobId=49813 NodeList=cpu01 #CPUs=35 Partition=cpu-opteron
@@ -4723,17 +5052,36 @@
 [2022-09-27T17:34:52.432] sched: Allocate JobId=49816 NodeList=gpu01 #CPUs=2 Partition=gpu-k10
 [2022-09-27T17:39:19.883] sched: Allocate JobId=49817 NodeList=cpu03 #CPUs=4 Partition=cpu-opteron
 [2022-09-27T17:48:07.790] sched: Allocate JobId=49818 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
+[2022-09-27T17:52:00.989] sched/backfill: _start_job: Started JobId=49793 in gpu-v100s on gpu05
+[2022-09-27T17:53:00.992] sched/backfill: _start_job: Started JobId=49794 in gpu-v100s on gpu05
 [2022-09-27T18:02:46.391] sched: Allocate JobId=49820 NodeList=cpu03 #CPUs=4 Partition=cpu-opteron
 [2022-09-27T18:07:28.871] sched: Allocate JobId=49821 NodeList=cpu03 #CPUs=16 Partition=cpu-opteron
 [2022-09-27T18:11:04.283] sched: Allocate JobId=49822 NodeList=gpu01 #CPUs=2 Partition=gpu-k10
+[2022-09-27T18:18:01.049] sched/backfill: _start_job: Started JobId=49802 in cpu-epyc on cpu14
+[2022-09-27T18:19:01.055] sched/backfill: _start_job: Started JobId=49823 in gpu-v100s on gpu05
+[2022-09-27T18:20:01.059] sched/backfill: _start_job: Started JobId=49824 in gpu-v100s on gpu05
+[2022-09-27T19:02:01.140] sched/backfill: _start_job: Started JobId=49828 in gpu-v100s on gpu05
+[2022-09-27T19:07:01.154] sched/backfill: _start_job: Started JobId=49803 in cpu-epyc on cpu14
+[2022-09-27T19:26:01.191] sched/backfill: _start_job: Started JobId=49829 in gpu-v100s on gpu05
+[2022-09-27T20:47:01.339] sched/backfill: _start_job: Started JobId=49831 in gpu-v100s on gpu05
+[2022-09-27T21:15:01.397] sched/backfill: _start_job: Started JobId=49806 in cpu-epyc on cpu14
+[2022-09-27T22:10:01.486] sched/backfill: _start_job: Started JobId=49807 in cpu-epyc on cpu14
+[2022-09-27T22:51:01.558] sched/backfill: _start_job: Started JobId=49808 in cpu-epyc on cpu14
+[2022-09-27T23:33:01.624] sched/backfill: _start_job: Started JobId=49809 in cpu-epyc on cpu14
+[2022-09-28T00:30:01.721] sched/backfill: _start_job: Started JobId=49810 in cpu-epyc on cpu14
 [2022-09-28T00:53:20.178] sched: Allocate JobId=49535 NodeList=gpu05 #CPUs=32 Partition=gpu-v100s
 [2022-09-28T00:55:10.596] sched: Allocate JobId=49536 NodeList=gpu05 #CPUs=32 Partition=gpu-v100s
 [2022-09-28T00:55:11.258] sched: Allocate JobId=49102 NodeList=gpu05 #CPUs=16 Partition=gpu-v100s
 [2022-09-28T00:55:11.259] sched: Allocate JobId=49103 NodeList=gpu05 #CPUs=16 Partition=gpu-v100s
 [2022-09-28T00:55:13.526] sched: Allocate JobId=49104 NodeList=gpu05 #CPUs=16 Partition=gpu-v100s
 [2022-09-28T00:55:15.014] sched: Allocate JobId=49783 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
+[2022-09-28T00:58:01.765] sched/backfill: _start_job: Started JobId=49811 in cpu-epyc on cpu14
 [2022-09-28T04:44:59.782] sched: Allocate JobId=49837 NodeList=cpu11 #CPUs=2 Partition=cpu-opteron
 [2022-09-28T08:35:27.365] sched: Allocate JobId=49841 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
+[2022-09-28T10:05:02.404] sched/backfill: _start_job: Started JobId=49842 in cpu-epyc on cpu14
+[2022-09-28T10:05:02.405] sched/backfill: _start_job: Started JobId=49843 in cpu-epyc on cpu14
+[2022-09-28T10:29:02.445] sched/backfill: _start_job: Started JobId=49844 in cpu-epyc on cpu14
+[2022-09-28T10:31:02.448] sched/backfill: _start_job: Started JobId=49845 in cpu-epyc on cpu14
 [2022-09-28T11:21:30.085] sched: Allocate JobId=49848 NodeList=gpu01 #CPUs=4 Partition=gpu-k10
 [2022-09-28T12:31:09.346] sched: Allocate JobId=49721 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-09-28T14:00:12.102] sched: Allocate JobId=49832 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
@@ -4754,11 +5102,22 @@
 [2022-09-29T01:35:59.309] sched: Allocate JobId=49870 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
 [2022-09-29T08:40:09.335] sched: Allocate JobId=49874 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-09-29T09:11:51.067] sched: Allocate JobId=49723 NodeList=cpu15 #CPUs=16 Partition=cpu-epyc
+[2022-09-29T09:16:03.918] sched/backfill: _start_job: Started JobId=49876 in cpu-epyc on cpu13
+[2022-09-29T09:16:03.919] sched/backfill: _start_job: Started JobId=49877 in cpu-epyc on cpu13
+[2022-09-29T09:16:03.920] sched/backfill: _start_job: Started JobId=49878 in cpu-epyc on cpu13
+[2022-09-29T09:16:03.921] sched/backfill: _start_job: Started JobId=49879 in cpu-epyc on cpu14
 [2022-09-29T09:27:11.713] sched: Allocate JobId=49881 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
 [2022-09-29T09:27:53.772] sched: Allocate JobId=49882 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
 [2022-09-29T09:56:21.881] sched: Allocate JobId=49889 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-09-29T10:02:22.480] sched: Allocate JobId=49890 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-09-29T10:10:20.236] sched: Allocate JobId=49892 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
+[2022-09-29T10:16:03.986] sched/backfill: _start_job: Started JobId=49893 in cpu-epyc on cpu13
+[2022-09-29T10:16:03.987] sched/backfill: _start_job: Started JobId=49894 in cpu-epyc on cpu13
+[2022-09-29T10:16:03.988] sched/backfill: _start_job: Started JobId=49895 in cpu-epyc on cpu13
+[2022-09-29T10:16:03.988] sched/backfill: _start_job: Started JobId=49896 in cpu-epyc on cpu14
+[2022-09-29T10:16:03.989] sched/backfill: _start_job: Started JobId=49897 in cpu-epyc on cpu14
+[2022-09-29T10:16:03.989] sched/backfill: _start_job: Started JobId=49898 in cpu-epyc on cpu14
+[2022-09-29T10:16:03.990] sched/backfill: _start_job: Started JobId=49899 in cpu-epyc on cpu14
 [2022-09-29T10:17:22.330] sched: Allocate JobId=49819 NodeList=gpu02 #CPUs=5 Partition=gpu-titan
 [2022-09-29T10:19:42.243] sched: Allocate JobId=49904 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-09-29T10:20:26.299] sched: Allocate JobId=49905 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
@@ -4773,6 +5132,10 @@
 [2022-09-29T10:21:05.450] sched: Allocate JobId=49914 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
 [2022-09-29T10:21:09.456] sched: Allocate JobId=49915 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
 [2022-09-29T10:21:15.465] sched: Allocate JobId=49916 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
+[2022-09-29T10:58:04.063] sched/backfill: _start_job: Started JobId=49900 in cpu-epyc on cpu14
+[2022-09-29T10:58:04.063] sched/backfill: _start_job: Started JobId=49901 in cpu-epyc on cpu13
+[2022-09-29T10:58:04.064] sched/backfill: _start_job: Started JobId=49902 in cpu-epyc on cpu13
+[2022-09-29T10:59:04.066] sched/backfill: _start_job: Started JobId=49903 in cpu-epyc on cpu13
 [2022-09-29T11:21:33.046] sched: Allocate JobId=49917 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
 [2022-09-29T12:27:15.291] sched: Allocate JobId=49918 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
 [2022-09-29T12:36:08.201] sched: Allocate JobId=49919 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
@@ -4795,12 +5158,14 @@
 [2022-09-29T18:02:28.544] sched: Allocate JobId=49937 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-09-29T18:19:47.251] sched: Allocate JobId=49938 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-09-29T18:37:44.369] sched: Allocate JobId=49939 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
+[2022-09-29T18:46:04.558] sched/backfill: _start_job: Started JobId=49940 in cpu-opteron on cpu08
 [2022-09-29T18:53:01.924] sched: Allocate JobId=49942 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-09-29T19:15:54.316] sched: Allocate JobId=49943 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-09-29T19:16:54.484] sched: Allocate JobId=49944 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-09-29T19:18:12.636] sched: Allocate JobId=49945 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
 [2022-09-29T19:24:36.201] sched: Allocate JobId=49948 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-09-29T19:24:58.230] sched: Allocate JobId=49949 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
+[2022-09-29T19:56:04.655] sched/backfill: _start_job: Started JobId=49941 in cpu-opteron on cpu11
 [2022-09-29T21:47:40.179] sched: Allocate JobId=49950 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
 [2022-09-29T21:59:42.419] sched: Allocate JobId=49951 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
 [2022-09-29T22:11:20.672] sched: Allocate JobId=49952 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
@@ -4808,6 +5173,7 @@
 [2022-09-29T22:17:39.288] sched: Allocate JobId=49954 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
 [2022-09-30T01:53:54.071] sched: Allocate JobId=49955 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
 [2022-09-30T01:54:37.110] sched: Allocate JobId=49956 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
+[2022-09-30T07:57:05.466] sched/backfill: _start_job: Started JobId=49957 in cpu-epyc on cpu15
 [2022-09-30T08:38:24.354] sched: Allocate JobId=49933 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-09-30T09:38:02.970] sched: Allocate JobId=49962 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
 [2022-09-30T09:38:52.018] sched: Allocate JobId=49963 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
@@ -4839,6 +5205,7 @@
 [2022-10-01T00:39:19.207] sched: Allocate JobId=49996 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
 [2022-10-01T03:03:50.359] sched: Allocate JobId=49997 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
 [2022-10-01T03:18:02.040] sched: Allocate JobId=50000 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
+[2022-10-01T03:18:06.707] sched/backfill: _start_job: Started JobId=50001 in cpu-opteron on cpu07
 [2022-10-01T03:24:44.647] sched: Allocate JobId=50002 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
 [2022-10-01T03:24:47.646] sched: Allocate JobId=50003 NodeList=cpu07 #CPUs=64 Partition=cpu-opteron
 [2022-10-01T03:30:03.145] sched: Allocate JobId=50004 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
@@ -4928,6 +5295,7 @@
 [2022-10-03T23:37:31.705] sched: Allocate JobId=50117 NodeList=cpu05 #CPUs=64 Partition=cpu-opteron
 [2022-10-03T23:40:59.059] sched: Allocate JobId=50119 NodeList=cpu07 #CPUs=64 Partition=cpu-opteron
 [2022-10-03T23:41:50.185] sched: Allocate JobId=50120 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
+[2022-10-03T23:44:10.049] sched/backfill: _start_job: Started JobId=50122 in cpu-opteron on cpu08
 [2022-10-04T09:44:35.253] sched: Allocate JobId=49729 NodeList=cpu14 #CPUs=16 Partition=cpu-epyc
 [2022-10-04T11:52:59.778] sched: Allocate JobId=50125 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
 [2022-10-04T11:53:14.780] sched: Allocate JobId=50126 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
@@ -5054,6 +5422,7 @@
 [2022-10-07T12:26:12.355] sched: Allocate JobId=50273 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-10-07T12:29:59.915] sched: Allocate JobId=50284 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-10-07T12:41:28.318] sched: Allocate JobId=49732 NodeList=cpu14 #CPUs=16 Partition=cpu-epyc
+[2022-10-07T12:42:13.901] sched/backfill: _start_job: Started JobId=49786 in cpu-epyc on cpu14
 [2022-10-07T12:47:16.149] sched: Allocate JobId=50285 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-10-07T13:04:31.783] sched: Allocate JobId=50286 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
 [2022-10-07T13:21:48.761] sched: Allocate JobId=50287 NodeList=gpu05 #CPUs=8 Partition=gpu-v100s
@@ -5167,7 +5536,9 @@
 [2022-10-11T07:00:15.980] sched: Allocate JobId=50151 NodeList=cpu12 #CPUs=48 Partition=cpu-epyc
 [2022-10-11T09:01:59.577] sched: Allocate JobId=50421 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-10-11T10:34:26.369] sched: Allocate JobId=50422 NodeList=gpu02 #CPUs=16 Partition=gpu-titan
+[2022-10-11T10:55:17.977] sched/backfill: _start_job: Started JobId=50424 in gpu-titan on gpu02
 [2022-10-11T11:09:36.729] sched: Allocate JobId=50163 NodeList=cpu12 #CPUs=48 Partition=cpu-epyc
+[2022-10-11T11:10:17.990] sched/backfill: _start_job: Started JobId=50426 in cpu-opteron on cpu01
 [2022-10-11T11:10:45.235] sched: Allocate JobId=50427 NodeList=cpu09 #CPUs=64 Partition=cpu-opteron
 [2022-10-11T11:47:43.269] sched: Allocate JobId=50429 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
 [2022-10-11T11:47:46.260] sched: Allocate JobId=50430 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
@@ -5324,6 +5695,7 @@
 [2022-10-13T16:41:14.603] sched: Allocate JobId=50626 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
 [2022-10-13T16:41:17.607] sched: Allocate JobId=50627 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
 [2022-10-13T16:41:20.612] sched: Allocate JobId=50628 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
+[2022-10-13T16:41:23.335] sched/backfill: _start_job: Started JobId=50629 in cpu-opteron on cpu11
 [2022-10-13T18:17:18.723] sched: Allocate JobId=50688 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
 [2022-10-13T20:01:33.945] sched: Allocate JobId=50630 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-10-13T20:05:37.210] sched: Allocate JobId=50631 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
@@ -5419,6 +5791,7 @@
 [2022-10-14T14:24:04.930] sched: Allocate JobId=50752 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
 [2022-10-14T14:47:57.940] sched: Allocate JobId=50726 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-10-14T14:52:01.063] sched: Allocate JobId=50727 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
+[2022-10-14T15:23:25.950] sched/backfill: _start_job: Started JobId=50784 in cpu-opteron on cpu11
 [2022-10-14T16:11:06.256] sched: Allocate JobId=50728 NodeList=cpu11 #CPUs=8 Partition=cpu-opteron
 [2022-10-14T16:29:12.265] sched: Allocate JobId=50729 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-10-14T16:42:24.544] sched: Allocate JobId=50742 NodeList=cpu15 #CPUs=4 Partition=cpu-epyc
@@ -5646,6 +6019,7 @@
 [2022-10-18T11:13:47.470] sched: Allocate JobId=50984 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-10-18T11:14:29.502] sched: Allocate JobId=50985 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-10-18T11:19:59.032] sched: Allocate JobId=50987 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
+[2022-10-18T11:26:33.651] sched/backfill: _start_job: Started JobId=50988 in cpu-epyc on cpu13
 [2022-10-18T11:27:44.931] sched: Allocate JobId=50989 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-10-18T11:44:13.597] sched: Allocate JobId=50990 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-10-18T11:44:17.599] sched: Allocate JobId=50991 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
@@ -5863,6 +6237,7 @@
 [2022-10-24T22:55:04.400] sched: Allocate JobId=51243 NodeList=cpu04 #CPUs=4 Partition=cpu-opteron
 [2022-10-24T22:59:34.877] sched: Allocate JobId=51244 NodeList=cpu04 #CPUs=4 Partition=cpu-opteron
 [2022-10-24T22:59:37.881] sched: Allocate JobId=51245 NodeList=cpu12 #CPUs=12 Partition=cpu-epyc
+[2022-10-24T23:02:39.267] sched/backfill: _start_job: Started JobId=51246 in gpu-v100s on gpu05
 [2022-10-24T23:13:46.326] sched: Allocate JobId=51247 NodeList=cpu12 #CPUs=32 Partition=cpu-epyc
 [2022-10-24T23:20:20.974] sched: Allocate JobId=51248 NodeList=cpu12 #CPUs=32 Partition=cpu-epyc
 [2022-10-24T23:24:24.592] sched: Allocate JobId=51249 NodeList=cpu12 #CPUs=32 Partition=cpu-epyc
@@ -5985,6 +6360,7 @@
 [2022-10-25T15:06:13.459] sched: Allocate JobId=51390 NodeList=cpu04 #CPUs=8 Partition=cpu-opteron
 [2022-10-25T15:11:22.063] sched: Allocate JobId=51392 NodeList=cpu04 #CPUs=8 Partition=cpu-opteron
 [2022-10-25T15:14:44.343] sched: Allocate JobId=51393 NodeList=cpu04 #CPUs=8 Partition=cpu-opteron
+[2022-10-25T15:19:39.826] sched/backfill: _start_job: Started JobId=51394 in cpu-opteron on cpu07
 [2022-10-25T15:23:54.325] sched: Allocate JobId=51395 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
 [2022-10-25T15:25:34.465] sched: Allocate JobId=51396 NodeList=gpu03 #CPUs=8 Partition=gpu-k10
 [2022-10-25T15:30:03.976] sched: Allocate JobId=51397 NodeList=cpu12 #CPUs=24 Partition=cpu-epyc
@@ -6124,9 +6500,12 @@
 [2022-10-26T12:46:48.794] sched: Allocate JobId=51578 NodeList=cpu10 #CPUs=5 Partition=cpu-opteron
 [2022-10-26T12:48:21.930] sched: Allocate JobId=51579 NodeList=cpu07 #CPUs=1 Partition=cpu-opteron
 [2022-10-26T12:55:10.549] sched: Allocate JobId=51581 NodeList=cpu15 #CPUs=16 Partition=cpu-epyc
+[2022-10-26T12:55:40.717] sched/backfill: _start_job: Started JobId=51562 in cpu-epyc on cpu15
+[2022-10-26T12:55:40.718] sched/backfill: _start_job: Started JobId=51563 in cpu-epyc on cpu15
 [2022-10-26T12:57:26.873] sched: Allocate JobId=51582 NodeList=cpu10 #CPUs=5 Partition=cpu-opteron
 [2022-10-26T12:58:26.953] sched: Allocate JobId=51583 NodeList=cpu07 #CPUs=1 Partition=cpu-opteron
 [2022-10-26T13:01:24.299] sched: Allocate JobId=51584 NodeList=gpu03 #CPUs=2 Partition=gpu-k10
+[2022-10-26T13:42:40.821] sched/backfill: _start_job: Started JobId=51576 in cpu-epyc on cpu13
 [2022-10-26T13:54:37.053] sched: Allocate JobId=51545 NodeList=cpu10 #CPUs=8 Partition=cpu-opteron
 [2022-10-26T13:54:37.054] sched: Allocate JobId=51547 NodeList=cpu10 #CPUs=8 Partition=cpu-opteron
 [2022-10-26T13:54:37.055] sched: Allocate JobId=51548 NodeList=cpu10 #CPUs=8 Partition=cpu-opteron
@@ -6144,6 +6523,7 @@
 [2022-10-26T15:04:23.257] sched: Allocate JobId=51594 NodeList=cpu03 #CPUs=1 Partition=cpu-opteron
 [2022-10-26T15:06:03.391] sched: Allocate JobId=51595 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-10-26T15:08:30.687] sched: Allocate JobId=51596 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
+[2022-10-26T15:09:40.955] sched/backfill: _start_job: Started JobId=51553 in cpu-opteron on cpu11
 [2022-10-26T16:32:11.705] sched: Allocate JobId=51557 NodeList=cpu03 #CPUs=50 Partition=cpu-opteron
 [2022-10-26T16:32:42.956] sched: Allocate JobId=51599 NodeList=cpu11 #CPUs=5 Partition=cpu-opteron
 [2022-10-26T16:33:53.031] sched: Allocate JobId=51600 NodeList=cpu11 #CPUs=1 Partition=cpu-opteron
@@ -6195,6 +6575,7 @@
 [2022-10-26T23:09:39.760] sched: Allocate JobId=51654 NodeList=cpu05 #CPUs=5 Partition=cpu-opteron
 [2022-10-26T23:11:00.900] sched: Allocate JobId=51567 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
 [2022-10-26T23:11:00.901] sched: Allocate JobId=51568 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
+[2022-10-26T23:11:41.548] sched/backfill: _start_job: Started JobId=51647 in cpu-epyc on cpu14
 [2022-10-26T23:32:48.266] sched: Allocate JobId=51656 NodeList=cpu05 #CPUs=64 Partition=cpu-opteron
 [2022-10-27T09:53:46.133] sched: Allocate JobId=51657 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
 [2022-10-27T10:13:16.282] sched: Allocate JobId=51658 NodeList=cpu07 #CPUs=5 Partition=cpu-opteron
@@ -6270,6 +6651,7 @@
 [2022-10-28T15:11:52.199] sched: Allocate JobId=51731 NodeList=gpu03 #CPUs=4 Partition=gpu-k10
 [2022-10-28T15:27:42.792] sched: Allocate JobId=51733 NodeList=gpu03 #CPUs=4 Partition=gpu-k10
 [2022-10-28T15:35:20.524] sched: Allocate JobId=51734 NodeList=gpu03 #CPUs=2 Partition=gpu-k10
+[2022-10-28T16:07:44.401] sched/backfill: _start_job: Started JobId=51735 in cpu-opteron on cpu10
 [2022-10-28T16:22:08.382] sched: Allocate JobId=51737 NodeList=gpu03 #CPUs=4 Partition=gpu-k10
 [2022-10-28T16:30:21.103] sched: Allocate JobId=51738 NodeList=gpu03 #CPUs=2 Partition=gpu-k10
 [2022-10-28T17:04:00.628] sched: Allocate JobId=51741 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
@@ -6416,25 +6798,33 @@
 [2022-11-01T10:03:38.617] sched: Allocate JobId=51903 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
 [2022-11-01T10:03:38.618] sched: Allocate JobId=51904 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
 [2022-11-01T10:03:38.619] sched: Allocate JobId=51905 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
+[2022-11-01T11:39:49.644] sched/backfill: _start_job: Started JobId=51945 in cpu-opteron on cpu04
 [2022-11-01T11:53:46.109] sched: Allocate JobId=51948 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
+[2022-11-01T11:53:49.664] sched/backfill: _start_job: Started JobId=51947 in cpu-opteron on cpu04
 [2022-11-01T12:00:24.148] sched: Allocate JobId=51855 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
 [2022-11-01T12:08:20.705] sched: Allocate JobId=51950 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-11-01T12:09:15.774] sched: Allocate JobId=51951 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-11-01T12:12:01.133] sched: Allocate JobId=51952 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
+[2022-11-01T12:20:49.704] sched/backfill: _start_job: Started JobId=51953 in cpu-opteron on cpu04
 [2022-11-01T12:24:22.276] sched: Allocate JobId=51954 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-11-01T12:30:30.901] sched: Allocate JobId=51957 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-11-01T12:48:15.988] sched: Allocate JobId=51856 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
 [2022-11-01T12:51:25.934] sched: Allocate JobId=51959 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-11-01T12:51:26.327] sched: Allocate JobId=51927 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
+[2022-11-01T14:01:49.851] sched/backfill: _start_job: Started JobId=51962 in cpu-opteron on cpu04
 [2022-11-01T14:09:08.432] sched: Allocate JobId=51963 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
+[2022-11-01T14:20:49.879] sched/backfill: _start_job: Started JobId=51965 in cpu-opteron on cpu04
 [2022-11-01T14:29:54.585] sched: Allocate JobId=51966 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-11-01T14:35:08.077] sched: Allocate JobId=51968 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
+[2022-11-01T14:47:49.920] sched/backfill: _start_job: Started JobId=51969 in cpu-opteron on cpu04
 [2022-11-01T14:55:08.067] sched: Allocate JobId=51973 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-11-01T14:57:29.365] sched: Allocate JobId=51974 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-11-01T14:59:14.203] sched: Allocate JobId=51928 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
 [2022-11-01T15:04:22.009] sched: Allocate JobId=51975 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-11-01T15:11:56.959] sched: Allocate JobId=51976 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-11-01T15:13:21.062] sched: Allocate JobId=51977 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
+[2022-11-01T15:17:49.968] sched/backfill: _start_job: Started JobId=51978 in cpu-opteron on cpu04
+[2022-11-01T15:18:49.970] sched/backfill: _start_job: Started JobId=51979 in cpu-opteron on cpu04
 [2022-11-01T15:21:02.013] sched: Allocate JobId=51929 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-11-01T15:21:02.014] sched: Allocate JobId=51930 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-11-01T15:21:02.015] sched: Allocate JobId=51931 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
@@ -6448,6 +6838,10 @@
 [2022-11-01T21:06:01.369] sched: Allocate JobId=51937 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-11-01T22:24:27.553] sched: Allocate JobId=51985 NodeList=cpu04 #CPUs=4 Partition=cpu-opteron
 [2022-11-02T06:47:08.186] sched: Allocate JobId=51986 NodeList=cpu04 #CPUs=4 Partition=cpu-opteron
+[2022-11-02T08:26:51.514] sched/backfill: _start_job: Started JobId=51938 in cpu-epyc on cpu12
+[2022-11-02T08:30:51.521] sched/backfill: _start_job: Started JobId=51939 in cpu-epyc on cpu12
+[2022-11-02T08:39:51.536] sched/backfill: _start_job: Started JobId=51940 in cpu-epyc on cpu15
+[2022-11-02T08:45:51.545] sched/backfill: _start_job: Started JobId=51941 in cpu-epyc on cpu15
 [2022-11-02T08:52:27.900] sched: Allocate JobId=51987 NodeList=cpu04 #CPUs=4 Partition=cpu-opteron
 [2022-11-02T13:24:43.256] sched: Allocate JobId=51988 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-11-02T14:04:19.415] sched: Allocate JobId=51989 NodeList=cpu11 #CPUs=16 Partition=cpu-opteron
@@ -6464,6 +6858,7 @@
 [2022-11-02T16:53:12.549] sched: Allocate JobId=51982 NodeList=gpu02 #CPUs=16 Partition=gpu-titan
 [2022-11-02T21:52:28.768] sched: Allocate JobId=51983 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-11-02T22:55:38.391] sched: Allocate JobId=51998 NodeList=cpu04 #CPUs=4 Partition=cpu-opteron
+[2022-11-02T22:56:53.427] sched/backfill: _start_job: Started JobId=51999 in cpu-opteron on cpu09
 [2022-11-03T01:04:23.327] sched: Allocate JobId=51996 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
 [2022-11-03T03:48:19.527] sched: Allocate JobId=51960 NodeList=cpu12 #CPUs=48 Partition=cpu-epyc
 [2022-11-03T07:46:19.056] sched: Allocate JobId=51961 NodeList=cpu12 #CPUs=48 Partition=cpu-epyc
@@ -6541,6 +6936,7 @@
 [2022-11-04T15:55:34.924] sched: Allocate JobId=52106 NodeList=cpu09 #CPUs=1 Partition=cpu-opteron
 [2022-11-04T15:58:22.273] sched: Allocate JobId=52107 NodeList=cpu09 #CPUs=1 Partition=cpu-opteron
 [2022-11-04T16:06:13.402] sched: Allocate JobId=52108 NodeList=cpu11 #CPUs=1 Partition=cpu-opteron
+[2022-11-04T16:11:56.244] sched/backfill: _start_job: Started JobId=52107 in cpu-opteron on cpu09
 [2022-11-04T19:27:23.313] sched: Allocate JobId=52085 NodeList=gpu02 #CPUs=5 Partition=gpu-titan
 [2022-11-04T21:51:41.616] sched: Allocate JobId=52057 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
 [2022-11-04T22:33:58.392] sched: Allocate JobId=52058 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
@@ -6560,6 +6956,8 @@
 [2022-11-05T08:22:03.363] sched: Allocate JobId=52063 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-11-05T09:14:01.117] sched: Allocate JobId=52064 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
 [2022-11-05T09:53:02.677] sched: Allocate JobId=52065 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
+[2022-11-05T09:53:57.381] sched/backfill: _start_job: Started JobId=52048 in cpu-epyc on cpu15
+[2022-11-05T10:00:57.390] sched/backfill: _start_job: Started JobId=52110 in cpu-epyc on cpu14
 [2022-11-05T10:50:24.320] sched: Allocate JobId=52121 NodeList=gpu02 #CPUs=5 Partition=gpu-titan
 [2022-11-05T10:50:49.356] sched: Allocate JobId=52122 NodeList=gpu02 #CPUs=5 Partition=gpu-titan
 [2022-11-05T10:52:49.682] sched: Allocate JobId=52123 NodeList=gpu04 #CPUs=4 Partition=gpu-k40c
@@ -6568,13 +6966,20 @@
 [2022-11-05T11:56:09.264] sched: Allocate JobId=52128 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
 [2022-11-05T11:56:29.388] sched: Allocate JobId=52129 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
 [2022-11-05T11:56:56.424] sched: Allocate JobId=52130 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
+[2022-11-05T12:01:57.505] sched/backfill: _start_job: Started JobId=52131 in cpu-opteron on cpu04
+[2022-11-05T12:01:57.506] sched/backfill: _start_job: Started JobId=52132 in cpu-opteron on cpu04
+[2022-11-05T12:13:57.519] sched/backfill: _start_job: Started JobId=52133 in cpu-opteron on cpu04
 [2022-11-05T13:13:21.353] sched: Allocate JobId=52135 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
+[2022-11-05T13:14:57.584] sched/backfill: _start_job: Started JobId=52136 in cpu-opteron on cpu04
+[2022-11-05T13:14:57.585] sched/backfill: _start_job: Started JobId=52137 in cpu-opteron on cpu04
+[2022-11-05T14:23:57.669] sched/backfill: _start_job: Started JobId=52066 in cpu-epyc on cpu12
 [2022-11-05T15:24:08.174] sched: Allocate JobId=52101 NodeList=cpu04 #CPUs=10 Partition=cpu-opteron
 [2022-11-05T16:04:39.486] sched: Allocate JobId=52138 NodeList=cpu08 #CPUs=1 Partition=cpu-opteron
 [2022-11-05T16:07:09.782] sched: Allocate JobId=52139 NodeList=gpu04 #CPUs=4 Partition=gpu-k40c
 [2022-11-05T16:11:50.170] sched: Allocate JobId=52127 NodeList=cpu13 #CPUs=24 Partition=cpu-epyc
 [2022-11-05T16:12:00.016] sched: Allocate JobId=52067 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-11-05T19:43:58.174] sched: Allocate JobId=52141 NodeList=cpu04 #CPUs=64 Partition=cpu-opteron
+[2022-11-05T21:29:58.134] sched/backfill: _start_job: Started JobId=52151 in cpu-opteron on cpu11
 [2022-11-05T23:22:00.414] sched: Allocate JobId=52126 NodeList=gpu02 #CPUs=5 Partition=gpu-titan
 [2022-11-06T01:29:09.008] sched: Allocate JobId=52158 NodeList=cpu08 #CPUs=8 Partition=cpu-opteron
 [2022-11-06T01:30:15.073] sched: Allocate JobId=52159 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
@@ -6589,6 +6994,7 @@
 [2022-11-06T07:06:57.795] sched: Allocate JobId=52165 NodeList=cpu08 #CPUs=4 Partition=cpu-opteron
 [2022-11-06T07:57:57.905] sched: Allocate JobId=52166 NodeList=cpu08 #CPUs=4 Partition=cpu-opteron
 [2022-11-06T23:46:18.079] sched: Allocate JobId=52171 NodeList=cpu09 #CPUs=4 Partition=cpu-opteron
+[2022-11-07T01:00:59.851] sched/backfill: _start_job: Started JobId=52172 in cpu-opteron on cpu10
 [2022-11-07T01:43:44.709] sched: Allocate JobId=52174 NodeList=cpu09 #CPUs=4 Partition=cpu-opteron
 [2022-11-07T03:47:26.022] sched: Allocate JobId=52175 NodeList=cpu09 #CPUs=4 Partition=cpu-opteron
 [2022-11-07T06:55:15.982] sched: Allocate JobId=52176 NodeList=cpu09 #CPUs=4 Partition=cpu-opteron
@@ -6608,6 +7014,7 @@
 [2022-11-07T11:50:50.999] sched: Allocate JobId=52197 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-11-07T11:56:22.743] sched: Allocate JobId=52198 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-11-07T12:11:30.372] sched: Allocate JobId=52199 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
+[2022-11-07T12:13:00.402] sched/backfill: _start_job: Started JobId=52200 in cpu-opteron on cpu10
 [2022-11-07T12:25:03.662] sched: Allocate JobId=52201 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-11-07T13:41:48.528] sched: Allocate JobId=52206 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
 [2022-11-07T13:44:16.730] sched: Allocate JobId=52208 NodeList=cpu09 #CPUs=8 Partition=cpu-opteron
@@ -6617,22 +7024,47 @@
 [2022-11-07T13:48:58.200] sched: Allocate JobId=52212 NodeList=cpu09 #CPUs=8 Partition=cpu-opteron
 [2022-11-07T13:49:57.277] sched: Allocate JobId=52213 NodeList=cpu10 #CPUs=8 Partition=cpu-opteron
 [2022-11-07T14:02:55.701] sched: Allocate JobId=52214 NodeList=cpu10 #CPUs=16 Partition=cpu-opteron
+[2022-11-07T15:04:00.581] sched/backfill: _start_job: Started JobId=52230 in cpu-opteron on cpu09
+[2022-11-07T15:04:00.581] sched/backfill: _start_job: Started JobId=52231 in cpu-opteron on cpu10
+[2022-11-07T15:04:00.582] sched/backfill: _start_job: Started JobId=52232 in cpu-opteron on cpu10
+[2022-11-07T15:04:00.583] sched/backfill: _start_job: Started JobId=52233 in cpu-opteron on cpu10
+[2022-11-07T15:04:00.584] sched/backfill: _start_job: Started JobId=52234 in cpu-opteron on cpu10
 [2022-11-07T15:04:50.155] sched: Allocate JobId=52235 NodeList=cpu10 #CPUs=2 Partition=cpu-opteron
+[2022-11-07T15:08:00.590] sched/backfill: _start_job: Started JobId=52236 in cpu-opteron on cpu10
+[2022-11-07T15:08:00.590] sched/backfill: _start_job: Started JobId=52237 in cpu-opteron on cpu11
+[2022-11-07T15:08:00.591] sched/backfill: _start_job: Started JobId=52238 in cpu-opteron on cpu11
+[2022-11-07T15:08:00.592] sched/backfill: _start_job: Started JobId=52239 in cpu-opteron on cpu11
+[2022-11-07T15:08:00.592] sched/backfill: _start_job: Started JobId=52240 in cpu-opteron on cpu11
+[2022-11-07T15:08:00.593] sched/backfill: _start_job: Started JobId=52241 in cpu-opteron on cpu11
+[2022-11-07T15:08:00.593] sched/backfill: _start_job: Started JobId=52242 in cpu-opteron on cpu11
 [2022-11-07T15:18:39.733] sched: Allocate JobId=52247 NodeList=cpu10 #CPUs=2 Partition=cpu-opteron
 [2022-11-07T15:23:19.448] sched: Allocate JobId=51980 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
+[2022-11-07T15:53:00.659] sched/backfill: _start_job: Started JobId=52243 in cpu-opteron on cpu09
+[2022-11-07T15:55:00.663] sched/backfill: _start_job: Started JobId=52244 in cpu-opteron on cpu09
 [2022-11-07T15:59:33.959] sched: Allocate JobId=52142 NodeList=cpu04 #CPUs=64 Partition=cpu-opteron
+[2022-11-07T16:01:00.672] sched/backfill: _start_job: Started JobId=52245 in cpu-opteron on cpu10
+[2022-11-07T16:08:00.683] sched/backfill: _start_job: Started JobId=52246 in cpu-opteron on cpu09
 [2022-11-07T21:20:41.065] sched: Allocate JobId=52255 NodeList=gpu02 #CPUs=4 Partition=gpu-titan
 [2022-11-07T21:22:46.428] sched: Allocate JobId=52256 NodeList=cpu09 #CPUs=4 Partition=cpu-opteron
 [2022-11-07T21:23:41.495] sched: Allocate JobId=52257 NodeList=cpu09 #CPUs=4 Partition=cpu-opteron
+[2022-11-07T21:47:01.094] sched/backfill: _start_job: Started JobId=52261 in cpu-opteron on cpu10
+[2022-11-07T22:17:01.132] sched/backfill: _start_job: Started JobId=52262 in cpu-opteron on cpu11
+[2022-11-08T01:44:01.427] sched/backfill: _start_job: Started JobId=52271 in cpu-opteron on cpu11
+[2022-11-08T04:14:01.755] sched/backfill: _start_job: Started JobId=52272 in cpu-opteron on cpu11
+[2022-11-08T05:42:01.890] sched/backfill: _start_job: Started JobId=52273 in cpu-opteron on cpu11
 [2022-11-08T06:14:42.603] sched: Allocate JobId=52205 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
+[2022-11-08T08:12:02.114] sched/backfill: _start_job: Started JobId=52274 in cpu-opteron on cpu11
 [2022-11-08T08:12:36.218] sched: Allocate JobId=52277 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-11-08T09:46:15.792] sched: Allocate JobId=52281 NodeList=cpu12 #CPUs=48 Partition=cpu-epyc
+[2022-11-08T10:04:02.327] sched/backfill: _start_job: Started JobId=52275 in cpu-opteron on cpu10
+[2022-11-08T10:04:02.328] sched/backfill: _start_job: Started JobId=52276 in cpu-opteron on cpu10
 [2022-11-08T10:48:49.518] sched: Allocate JobId=52284 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-11-08T10:49:19.536] sched: Allocate JobId=52285 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-11-08T10:49:41.564] sched: Allocate JobId=52286 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-11-08T11:09:49.440] sched: Allocate JobId=52287 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-11-08T11:10:08.789] sched: Allocate JobId=52288 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-11-08T11:10:29.830] sched: Allocate JobId=52289 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
+[2022-11-08T12:01:02.496] sched/backfill: _start_job: Started JobId=52291 in cpu-opteron on cpu09
 [2022-11-08T12:01:54.467] sched: Allocate JobId=52270 NodeList=cpu05 #CPUs=64 Partition=cpu-opteron
 [2022-11-08T12:01:54.469] sched: Allocate JobId=52292 NodeList=cpu09 #CPUs=32 Partition=cpu-opteron
 [2022-11-08T12:11:15.766] sched: Allocate JobId=52293 NodeList=cpu05 #CPUs=24 Partition=cpu-opteron
@@ -6644,6 +7076,11 @@
 [2022-11-08T14:23:22.307] sched: Allocate JobId=52307 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-11-08T15:35:49.083] sched: Allocate JobId=52313 NodeList=cpu05 #CPUs=16 Partition=cpu-opteron
 [2022-11-08T15:45:43.148] sched: Allocate JobId=52315 NodeList=cpu10 #CPUs=4 Partition=cpu-opteron
+[2022-11-08T16:58:02.902] sched/backfill: _start_job: Started JobId=52322 in cpu-opteron on cpu05
+[2022-11-08T18:09:03.033] sched/backfill: _start_job: Started JobId=52326 in cpu-opteron on cpu05
+[2022-11-08T18:13:03.040] sched/backfill: _start_job: Started JobId=52327 in cpu-opteron on cpu05
+[2022-11-08T19:38:03.192] sched/backfill: _start_job: Started JobId=52329 in cpu-opteron on cpu05
+[2022-11-08T20:21:03.279] sched/backfill: _start_job: Started JobId=52331 in cpu-opteron on cpu05
 [2022-11-08T22:21:47.525] sched: Allocate JobId=52332 NodeList=cpu05 #CPUs=16 Partition=cpu-opteron
 [2022-11-08T22:41:31.519] sched: Allocate JobId=52308 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-11-09T10:51:53.300] sched: Allocate JobId=52177 NodeList=cpu15 #CPUs=24 Partition=cpu-epyc
@@ -6653,6 +7090,10 @@
 [2022-11-09T10:52:11.939] sched: Allocate JobId=52216 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-11-09T10:52:11.940] sched: Allocate JobId=52217 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-11-09T11:15:59.798] sched: Allocate JobId=52309 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
+[2022-11-09T11:47:04.686] sched/backfill: _start_job: Started JobId=52352 in gpu-v100s on gpu05
+[2022-11-09T11:58:04.706] sched/backfill: _start_job: Started JobId=52356 in gpu-v100s on gpu05
+[2022-11-09T12:04:04.717] sched/backfill: _start_job: Started JobId=52359 in gpu-v100s on gpu05
+[2022-11-09T12:48:04.813] sched/backfill: _start_job: Started JobId=52360 in cpu-opteron on cpu04
 [2022-11-09T14:21:22.553] sched: Allocate JobId=52364 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-11-09T14:32:09.883] sched: Allocate JobId=52366 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-11-09T14:44:07.103] sched: Allocate JobId=52336 NodeList=cpu04 #CPUs=64 Partition=cpu-opteron
@@ -6671,6 +7112,8 @@
 [2022-11-09T16:20:35.816] sched: Allocate JobId=52391 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-11-09T16:28:36.658] sched: Allocate JobId=52393 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-11-09T16:45:34.297] sched: Allocate JobId=52396 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
+[2022-11-09T17:57:06.344] sched/backfill: _start_job: Started JobId=52398 in cpu-opteron on cpu10
+[2022-11-09T17:58:06.347] sched/backfill: _start_job: Started JobId=52400 in cpu-opteron on cpu10
 [2022-11-09T18:21:00.160] sched: Allocate JobId=52397 NodeList=cpu04 #CPUs=16 Partition=cpu-opteron
 [2022-11-09T18:21:00.186] sched: Allocate JobId=52375 NodeList=cpu04 #CPUs=8 Partition=cpu-opteron
 [2022-11-09T18:21:00.187] sched: Allocate JobId=52376 NodeList=cpu04 #CPUs=8 Partition=cpu-opteron
@@ -6680,9 +7123,15 @@
 [2022-11-09T20:04:53.532] sched: Allocate JobId=52380 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-11-09T20:45:18.322] sched: Allocate JobId=52409 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-11-09T22:21:50.912] sched: Allocate JobId=52381 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
+[2022-11-10T11:15:08.032] sched/backfill: _start_job: Started JobId=52413 in cpu-opteron on cpu10
 [2022-11-10T11:47:09.008] sched: Allocate JobId=52189 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-11-10T12:30:44.531] sched: Allocate JobId=52202 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
+[2022-11-10T12:31:08.194] sched/backfill: _start_job: Started JobId=52218 in cpu-epyc on cpu15
+[2022-11-10T12:31:08.195] sched/backfill: _start_job: Started JobId=52219 in cpu-epyc on cpu15
+[2022-11-10T12:31:08.196] sched/backfill: _start_job: Started JobId=52220 in cpu-epyc on cpu15
+[2022-11-10T12:35:08.223] sched/backfill: _start_job: Started JobId=52417 in cpu-opteron on cpu05
 [2022-11-10T13:03:00.540] sched: Allocate JobId=52203 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
+[2022-11-10T13:20:08.330] sched/backfill: _start_job: Started JobId=52425 in cpu-opteron on cpu10
 [2022-11-10T13:35:06.951] sched: Allocate JobId=52426 NodeList=cpu05 #CPUs=16 Partition=cpu-opteron
 [2022-11-10T13:35:22.779] sched: Allocate JobId=52221 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-11-10T13:35:22.780] sched: Allocate JobId=52222 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
@@ -6690,6 +7139,11 @@
 [2022-11-10T13:35:22.781] sched: Allocate JobId=52224 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-11-10T13:35:22.782] sched: Allocate JobId=52225 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-11-10T13:35:22.783] sched: Allocate JobId=52226 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
+[2022-11-10T14:15:08.475] sched/backfill: _start_job: Started JobId=52442 in cpu-opteron on cpu10
+[2022-11-10T15:02:08.606] sched/backfill: _start_job: Started JobId=52448 in cpu-opteron on cpu10
+[2022-11-10T15:02:08.607] sched/backfill: _start_job: Started JobId=52449 in cpu-opteron on cpu10
+[2022-11-10T15:03:08.610] sched/backfill: _start_job: Started JobId=52450 in cpu-opteron on cpu10
+[2022-11-10T15:07:08.620] sched/backfill: _start_job: Started JobId=52451 in cpu-opteron on cpu10
 [2022-11-10T15:15:05.729] sched: Allocate JobId=52441 NodeList=cpu05 #CPUs=16 Partition=cpu-opteron
 [2022-11-10T15:15:23.432] sched: Allocate JobId=52444 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
 [2022-11-10T15:15:23.432] sched: Allocate JobId=52445 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
@@ -6704,6 +7158,21 @@
 [2022-11-10T17:55:24.544] sched: Allocate JobId=52469 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
 [2022-11-10T17:57:22.839] sched: Allocate JobId=52470 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
 [2022-11-10T18:03:03.348] sched: Allocate JobId=52471 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
+[2022-11-10T18:08:09.093] sched/backfill: _start_job: Started JobId=52473 in cpu-opteron on cpu10
+[2022-11-10T18:10:09.100] sched/backfill: _start_job: Started JobId=52475 in cpu-opteron on cpu10
+[2022-11-10T18:20:09.130] sched/backfill: _start_job: Started JobId=52477 in cpu-opteron on cpu10
+[2022-11-10T18:24:09.142] sched/backfill: _start_job: Started JobId=52478 in cpu-opteron on cpu10
+[2022-11-10T18:27:09.152] sched/backfill: _start_job: Started JobId=52479 in cpu-opteron on cpu10
+[2022-11-10T18:34:09.172] sched/backfill: _start_job: Started JobId=52480 in cpu-opteron on cpu10
+[2022-11-10T18:35:09.176] sched/backfill: _start_job: Started JobId=52481 in cpu-opteron on cpu10
+[2022-11-10T18:40:09.190] sched/backfill: _start_job: Started JobId=52482 in cpu-opteron on cpu10
+[2022-11-10T18:45:09.204] sched/backfill: _start_job: Started JobId=52483 in cpu-opteron on cpu10
+[2022-11-10T18:46:09.208] sched/backfill: _start_job: Started JobId=52484 in cpu-opteron on cpu10
+[2022-11-10T18:48:09.214] sched/backfill: _start_job: Started JobId=52486 in cpu-opteron on cpu10
+[2022-11-10T18:55:09.233] sched/backfill: _start_job: Started JobId=52487 in cpu-opteron on cpu10
+[2022-11-10T18:59:09.244] sched/backfill: _start_job: Started JobId=52488 in cpu-opteron on cpu10
+[2022-11-10T19:02:09.252] sched/backfill: _start_job: Started JobId=52489 in cpu-opteron on cpu10
+[2022-11-10T19:05:09.261] sched/backfill: _start_job: Started JobId=52490 in cpu-opteron on cpu10
 [2022-11-10T19:17:48.215] sched: Allocate JobId=52491 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-11-10T19:26:38.163] sched: Allocate JobId=52492 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
 [2022-11-10T19:27:31.229] sched: Allocate JobId=52493 NodeList=cpu12 #CPUs=16 Partition=cpu-epyc
@@ -6759,12 +7228,25 @@
 [2022-11-11T14:08:36.884] sched: Allocate JobId=52556 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-11-11T14:09:33.979] sched: Allocate JobId=52557 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-11-11T14:33:06.607] sched: Allocate JobId=52558 NodeList=cpu01 #CPUs=4 Partition=cpu-opteron
+[2022-11-11T15:04:11.513] sched/backfill: _start_job: Started JobId=52559 in cpu-opteron on cpu[05,09]
+[2022-11-11T15:05:11.516] sched/backfill: _start_job: Started JobId=52560 in cpu-opteron on cpu[09-10]
+[2022-11-11T15:08:11.522] sched/backfill: _start_job: Started JobId=52561 in cpu-opteron on cpu[09-10]
+[2022-11-11T15:10:11.527] sched/backfill: _start_job: Started JobId=52562 in cpu-opteron on cpu05
+[2022-11-11T15:11:11.530] sched/backfill: _start_job: Started JobId=52563 in cpu-opteron on cpu[09-10]
+[2022-11-11T15:13:11.535] sched/backfill: _start_job: Started JobId=52564 in cpu-opteron on cpu01
+[2022-11-11T15:14:11.538] sched/backfill: _start_job: Started JobId=52565 in cpu-opteron on cpu[09-10]
 [2022-11-11T15:24:08.015] sched: Allocate JobId=52566 NodeList=cpu05 #CPUs=16 Partition=cpu-opteron
+[2022-11-11T15:25:11.559] sched/backfill: _start_job: Started JobId=52568 in cpu-opteron on cpu[09-10]
+[2022-11-11T15:29:11.567] sched/backfill: _start_job: Started JobId=52569 in cpu-opteron on cpu01
 [2022-11-11T15:37:02.357] sched: Allocate JobId=52570 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
+[2022-11-11T15:39:11.585] sched/backfill: _start_job: Started JobId=52571 in cpu-opteron on cpu05
 [2022-11-11T15:44:29.024] sched: Allocate JobId=52573 NodeList=cpu09 #CPUs=16 Partition=cpu-opteron
 [2022-11-11T15:45:43.118] sched: Allocate JobId=52574 NodeList=cpu09 #CPUs=16 Partition=cpu-opteron
+[2022-11-11T15:51:11.610] sched/backfill: _start_job: Started JobId=52575 in cpu-opteron on cpu[09-10]
 [2022-11-11T15:56:05.188] sched: Allocate JobId=52576 NodeList=cpu12 #CPUs=24 Partition=cpu-epyc
 [2022-11-11T15:58:03.410] sched: Allocate JobId=52577 NodeList=cpu12 #CPUs=24 Partition=cpu-epyc
+[2022-11-11T15:58:11.625] sched/backfill: _start_job: Started JobId=52572 in cpu-opteron on cpu01
+[2022-11-11T16:04:11.638] sched/backfill: _start_job: Started JobId=52578 in cpu-opteron on cpu[09-10]
 [2022-11-11T16:10:07.583] sched: Allocate JobId=52580 NodeList=cpu05 #CPUs=16 Partition=cpu-opteron
 [2022-11-11T17:12:17.899] sched: Allocate JobId=52582 NodeList=cpu05 #CPUs=32 Partition=cpu-opteron
 [2022-11-11T17:38:39.645] sched: Allocate JobId=52583 NodeList=cpu09 #CPUs=8 Partition=cpu-opteron
@@ -6783,36 +7265,79 @@
 [2022-11-11T19:18:15.595] sched: Allocate JobId=52601 NodeList=cpu09 #CPUs=8 Partition=cpu-opteron
 [2022-11-11T19:20:31.765] sched: Allocate JobId=52602 NodeList=cpu09 #CPUs=8 Partition=cpu-opteron
 [2022-11-11T19:25:17.243] sched: Allocate JobId=52603 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
+[2022-11-11T19:26:12.030] sched/backfill: _start_job: Started JobId=52579 in cpu-opteron on cpu05
 [2022-11-11T19:27:05.479] sched: Allocate JobId=52604 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-11-11T19:28:43.603] sched: Allocate JobId=52605 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-11-11T19:30:59.774] sched: Allocate JobId=52607 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-11-11T19:31:59.775] sched: Allocate JobId=52608 NodeList=cpu01 #CPUs=8 Partition=cpu-opteron
 [2022-11-11T19:41:02.799] sched: Allocate JobId=52610 NodeList=cpu13 #CPUs=12 Partition=cpu-epyc
 [2022-11-11T19:57:20.512] sched: Allocate JobId=52612 NodeList=cpu09 #CPUs=8 Partition=cpu-opteron
+[2022-11-11T21:41:12.283] sched/backfill: _start_job: Started JobId=52614 in cpu-opteron on cpu11
 [2022-11-12T08:52:26.448] sched: Allocate JobId=52615 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
 [2022-11-12T09:24:00.683] sched: Allocate JobId=52616 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
 [2022-11-12T09:27:09.067] sched: Allocate JobId=52617 NodeList=cpu13 #CPUs=12 Partition=cpu-epyc
 [2022-11-12T09:35:14.799] sched: Allocate JobId=52618 NodeList=cpu15 #CPUs=12 Partition=cpu-epyc
 [2022-11-12T09:49:22.420] sched: Allocate JobId=52619 NodeList=cpu05 #CPUs=8 Partition=cpu-opteron
 [2022-11-12T09:57:18.263] sched: Allocate JobId=52620 NodeList=cpu15 #CPUs=12 Partition=cpu-epyc
+[2022-11-12T11:30:14.285] sched/backfill: _start_job: Started JobId=52621 in cpu-opteron on cpu05
+[2022-11-12T11:31:14.288] sched/backfill: _start_job: Started JobId=52622 in cpu-opteron on cpu11
+[2022-11-12T11:42:14.307] sched/backfill: _start_job: Started JobId=52623 in cpu-opteron on cpu11
+[2022-11-12T11:45:14.313] sched/backfill: _start_job: Started JobId=52624 in cpu-opteron on cpu11
+[2022-11-12T11:57:14.333] sched/backfill: _start_job: Started JobId=52625 in cpu-opteron on cpu11
+[2022-11-12T13:07:14.586] sched/backfill: _start_job: Started JobId=52626 in cpu-opteron on cpu05
 [2022-11-12T13:08:34.831] sched: Allocate JobId=52627 NodeList=cpu15 #CPUs=12 Partition=cpu-epyc
+[2022-11-12T13:10:14.592] sched/backfill: _start_job: Started JobId=52628 in cpu-opteron on cpu05
 [2022-11-12T13:10:50.995] sched: Allocate JobId=52629 NodeList=cpu10 #CPUs=16 Partition=cpu-opteron
+[2022-11-12T13:41:14.728] sched/backfill: _start_job: Started JobId=52630 in cpu-opteron on cpu01
 [2022-11-12T14:34:56.238] sched: Allocate JobId=52631 NodeList=cpu15 #CPUs=12 Partition=cpu-epyc
+[2022-11-12T15:24:14.974] sched/backfill: _start_job: Started JobId=52632 in cpu-opteron on cpu01
+[2022-11-12T16:23:15.306] sched/backfill: _start_job: Started JobId=52633 in cpu-opteron on cpu01
 [2022-11-12T17:11:52.004] sched: Allocate JobId=52634 NodeList=cpu01 #CPUs=2 Partition=cpu-opteron
 [2022-11-12T18:33:25.928] sched: Allocate JobId=52637 NodeList=cpu13 #CPUs=12 Partition=cpu-epyc
 [2022-11-12T18:44:35.970] sched: Allocate JobId=52640 NodeList=cpu10 #CPUs=16 Partition=cpu-opteron
 [2022-11-12T19:26:57.915] sched: Allocate JobId=52641 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
+[2022-11-13T02:45:16.278] sched/backfill: _start_job: Started JobId=52645 in cpu-opteron on cpu01
+[2022-11-13T02:59:16.301] sched/backfill: _start_job: Started JobId=52646 in cpu-opteron on cpu10
+[2022-11-13T03:00:16.305] sched/backfill: _start_job: Started JobId=52647 in cpu-opteron on cpu10
+[2022-11-13T03:01:16.307] sched/backfill: _start_job: Started JobId=52648 in cpu-opteron on cpu10
+[2022-11-13T03:02:16.311] sched/backfill: _start_job: Started JobId=52649 in cpu-opteron on cpu10
+[2022-11-13T03:35:16.363] sched/backfill: _start_job: Started JobId=52650 in cpu-opteron on cpu10
+[2022-11-13T04:04:16.409] sched/backfill: _start_job: Started JobId=52651 in cpu-opteron on cpu10
+[2022-11-13T04:05:16.412] sched/backfill: _start_job: Started JobId=52652 in cpu-opteron on cpu10
+[2022-11-13T04:08:16.418] sched/backfill: _start_job: Started JobId=52653 in cpu-opteron on cpu10
+[2022-11-13T12:30:17.172] sched/backfill: _start_job: Started JobId=52658 in cpu-opteron on cpu10
+[2022-11-13T13:15:17.247] sched/backfill: _start_job: Started JobId=52662 in cpu-opteron on cpu01
 [2022-11-13T15:49:47.446] sched: Allocate JobId=52414 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
+[2022-11-13T16:26:17.570] sched/backfill: _start_job: Started JobId=52663 in cpu-opteron on cpu10
+[2022-11-13T16:27:17.573] sched/backfill: _start_job: Started JobId=52664 in cpu-opteron on cpu10
 [2022-11-13T18:15:07.357] sched: Allocate JobId=52665 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
 [2022-11-13T18:15:07.357] sched: Allocate JobId=52669 NodeList=cpu07 #CPUs=16 Partition=cpu-opteron
 [2022-11-13T19:31:49.132] sched: Allocate JobId=52421 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
 [2022-11-13T20:25:27.905] sched: Allocate JobId=52433 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
 [2022-11-13T21:16:10.870] sched: Allocate JobId=52440 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
+[2022-11-13T23:28:18.185] sched/backfill: _start_job: Started JobId=52670 in cpu-opteron on cpu07
 [2022-11-13T23:44:40.052] sched: Allocate JobId=52068 NodeList=gpu05 #CPUs=32 Partition=gpu-v100s
+[2022-11-14T10:12:19.071] sched/backfill: _start_job: Started JobId=52672 in cpu-opteron on cpu01
 [2022-11-14T10:45:10.231] sched: Allocate JobId=52674 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-11-14T12:25:56.259] sched: Allocate JobId=52680 NodeList=cpu07 #CPUs=1 Partition=cpu-opteron
+[2022-11-14T13:17:19.380] sched/backfill: _start_job: Started JobId=52682 in cpu-opteron on cpu07
+[2022-11-14T13:23:19.389] sched/backfill: _start_job: Started JobId=52683 in cpu-opteron on cpu07
+[2022-11-14T13:49:19.430] sched/backfill: _start_job: Started JobId=52685 in cpu-opteron on cpu07
 [2022-11-14T13:55:42.548] sched: Allocate JobId=52278 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
+[2022-11-14T14:51:19.533] sched/backfill: _start_job: Started JobId=52686 in cpu-opteron on cpu[10-11]
+[2022-11-14T14:53:19.537] sched/backfill: _start_job: Started JobId=52687 in cpu-opteron on cpu[10-11]
+[2022-11-14T15:05:19.569] sched/backfill: _start_job: Started JobId=52539 in cpu-epyc on cpu14
+[2022-11-14T15:05:19.569] sched/backfill: _start_job: Started JobId=52540 in cpu-epyc on cpu14
+[2022-11-14T15:05:19.570] sched/backfill: _start_job: Started JobId=52541 in cpu-epyc on cpu14
+[2022-11-14T15:17:19.603] sched/backfill: _start_job: Started JobId=52691 in cpu-opteron on cpu07
+[2022-11-14T15:20:19.608] sched/backfill: _start_job: Started JobId=52692 in cpu-opteron on cpu07
+[2022-11-14T15:30:19.624] sched/backfill: _start_job: Started JobId=52693 in cpu-opteron on cpu07
+[2022-11-14T15:31:19.626] sched/backfill: _start_job: Started JobId=52694 in cpu-opteron on cpu07
 [2022-11-14T15:33:54.391] sched: Allocate JobId=52696 NodeList=cpu07 #CPUs=4 Partition=cpu-opteron
+[2022-11-14T15:34:19.631] sched/backfill: _start_job: Started JobId=52695 in cpu-opteron on cpu07
+[2022-11-14T15:35:19.633] sched/backfill: _start_job: Started JobId=52542 in cpu-epyc on cpu14
+[2022-11-14T15:37:19.637] sched/backfill: _start_job: Started JobId=52697 in cpu-opteron on cpu07
+[2022-11-14T16:04:19.696] sched/backfill: _start_job: Started JobId=52585 in cpu-epyc on cpu14
 [2022-11-14T17:42:53.376] sched: Allocate JobId=52710 NodeList=cpu12 #CPUs=24 Partition=cpu-epyc
 [2022-11-14T17:52:08.134] sched: Allocate JobId=52536 NodeList=cpu11 #CPUs=64 Partition=cpu-opteron
 [2022-11-14T17:52:08.149] sched: Allocate JobId=52671 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
@@ -6826,6 +7351,14 @@
 [2022-11-14T21:58:24.193] sched: Allocate JobId=52711 NodeList=cpu11 #CPUs=64 Partition=cpu-opteron
 [2022-11-14T23:40:56.767] sched: Allocate JobId=52719 NodeList=cpu13 #CPUs=24 Partition=cpu-epyc
 [2022-11-15T11:42:08.196] sched: Allocate JobId=52729 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
+[2022-11-15T11:47:21.014] sched/backfill: _start_job: Started JobId=52731 in cpu-opteron on cpu10
+[2022-11-15T14:43:21.314] sched/backfill: _start_job: Started JobId=52732 in cpu-opteron on cpu07
+[2022-11-15T14:46:21.320] sched/backfill: _start_job: Started JobId=52733 in cpu-opteron on cpu07
+[2022-11-15T16:04:21.470] sched/backfill: _start_job: Started JobId=52738 in cpu-opteron on cpu[07,10]
+[2022-11-15T16:20:21.500] sched/backfill: _start_job: Started JobId=52739 in cpu-opteron on cpu[07,10]
+[2022-11-15T16:21:21.503] sched/backfill: _start_job: Started JobId=52740 in cpu-opteron on cpu[07,10]
+[2022-11-15T16:22:21.506] sched/backfill: _start_job: Started JobId=52741 in cpu-opteron on cpu[07,10]
+[2022-11-15T16:53:21.564] sched/backfill: _start_job: Started JobId=52742 in gpu-titan on gpu02
 [2022-11-15T17:11:59.696] sched: Allocate JobId=52730 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
 [2022-11-15T17:12:04.683] sched: Allocate JobId=52723 NodeList=cpu04 #CPUs=32 Partition=cpu-opteron
 [2022-11-15T17:12:07.012] sched: Allocate JobId=52724 NodeList=cpu05 #CPUs=32 Partition=cpu-opteron
@@ -6840,21 +7373,28 @@
 [2022-11-15T17:34:57.957] sched: Allocate JobId=52757 NodeList=cpu05 #CPUs=64 Partition=cpu-opteron
 [2022-11-15T17:35:11.973] sched: Allocate JobId=52758 NodeList=cpu08 #CPUs=64 Partition=cpu-opteron
 [2022-11-15T17:35:14.976] sched: Allocate JobId=52759 NodeList=cpu09 #CPUs=64 Partition=cpu-opteron
+[2022-11-15T17:36:21.650] sched/backfill: _start_job: Started JobId=52767 in gpu-titan on gpu02
 [2022-11-15T17:39:13.433] sched: Allocate JobId=52768 NodeList=cpu10 #CPUs=2 Partition=cpu-opteron
 [2022-11-15T17:47:58.365] sched: Allocate JobId=52769 NodeList=cpu[01,03] #CPUs=2 Partition=cpu-opteron
 [2022-11-15T17:55:59.071] sched: Allocate JobId=52770 NodeList=cpu10 #CPUs=4 Partition=cpu-opteron
 [2022-11-15T17:57:10.306] sched: Allocate JobId=52771 NodeList=cpu[01,03] #CPUs=2 Partition=cpu-opteron
+[2022-11-15T18:01:21.696] sched/backfill: _start_job: Started JobId=52774 in gpu-titan on gpu02
 [2022-11-15T18:05:51.159] sched: Allocate JobId=52775 NodeList=cpu10 #CPUs=4 Partition=cpu-opteron
 [2022-11-15T18:07:37.452] sched: Allocate JobId=52776 NodeList=cpu[01,03] #CPUs=2 Partition=cpu-opteron
 [2022-11-15T18:14:46.166] sched: Allocate JobId=52779 NodeList=cpu10 #CPUs=2 Partition=cpu-opteron
 [2022-11-15T20:47:07.810] sched: Allocate JobId=52743 NodeList=cpu13 #CPUs=16 Partition=cpu-epyc
 [2022-11-15T20:47:07.824] sched: Allocate JobId=52734 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
+[2022-11-16T00:49:22.424] sched/backfill: _start_job: Started JobId=52786 in cpu-opteron on cpu07
+[2022-11-16T02:24:22.608] sched/backfill: _start_job: Started JobId=52735 in cpu-epyc on cpu13
+[2022-11-16T02:24:22.609] sched/backfill: _start_job: Started JobId=52736 in cpu-epyc on cpu13
 [2022-11-16T04:58:56.683] sched: Allocate JobId=52644 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-11-16T06:01:23.680] sched: Allocate JobId=52781 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
 [2022-11-16T06:01:39.630] sched: Allocate JobId=52760 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
 [2022-11-16T06:25:32.676] sched: Allocate JobId=52784 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
 [2022-11-16T08:27:47.902] sched: Allocate JobId=52737 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-11-16T10:03:07.345] sched: Allocate JobId=52790 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
+[2022-11-16T10:41:23.505] sched/backfill: _start_job: Started JobId=52791 in cpu-opteron on cpu01
+[2022-11-16T10:47:23.517] sched/backfill: _start_job: Started JobId=52792 in cpu-epyc on cpu15
 [2022-11-16T11:45:50.797] sched: Allocate JobId=52793 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-11-16T12:49:53.307] sched: Allocate JobId=52796 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-11-16T12:51:29.588] sched: Allocate JobId=52797 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
@@ -6863,15 +7403,39 @@
 [2022-11-16T13:06:39.989] sched: Allocate JobId=52801 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-11-16T13:08:51.149] sched: Allocate JobId=52802 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-11-16T13:11:07.314] sched: Allocate JobId=52803 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
+[2022-11-16T13:20:23.814] sched/backfill: _start_job: Started JobId=52806 in cpu-opteron on cpu01
+[2022-11-16T13:23:23.834] sched/backfill: _start_job: Started JobId=52807 in cpu-opteron on cpu01
+[2022-11-16T13:50:23.892] sched/backfill: _start_job: Started JobId=52810 in cpu-opteron on cpu01
 [2022-11-16T14:08:40.385] sched: Allocate JobId=52812 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
+[2022-11-16T14:26:23.968] sched/backfill: _start_job: Started JobId=52813 in cpu-opteron on cpu01
 [2022-11-16T14:36:39.418] sched: Allocate JobId=52814 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-11-16T14:44:29.120] sched: Allocate JobId=52815 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
+[2022-11-16T15:03:24.068] sched/backfill: _start_job: Started JobId=52816 in cpu-opteron on cpu01
+[2022-11-16T15:07:24.077] sched/backfill: _start_job: Started JobId=52817 in cpu-opteron on cpu01
 [2022-11-16T15:13:35.459] sched: Allocate JobId=52818 NodeList=cpu07 #CPUs=1 Partition=cpu-opteron
+[2022-11-16T15:43:24.165] sched/backfill: _start_job: Started JobId=52819 in cpu-opteron on cpu07
+[2022-11-16T16:17:24.256] sched/backfill: _start_job: Started JobId=52820 in cpu-epyc on cpu15
 [2022-11-16T16:20:12.954] sched: Allocate JobId=52821 NodeList=cpu07 #CPUs=1 Partition=cpu-opteron
+[2022-11-16T16:21:24.268] sched/backfill: _start_job: Started JobId=52822 in cpu-opteron on cpu07
 [2022-11-16T18:22:11.469] sched: Allocate JobId=52689 NodeList=gpu04 #CPUs=1 Partition=gpu-k40c
 [2022-11-16T18:41:04.734] sched: Allocate JobId=52823 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
+[2022-11-17T10:54:26.650] sched/backfill: _start_job: Started JobId=52830 in cpu-epyc on cpu15
+[2022-11-17T10:54:26.651] sched/backfill: _start_job: Started JobId=52831 in cpu-epyc on cpu15
+[2022-11-17T10:59:26.677] sched/backfill: _start_job: Started JobId=52839 in cpu-opteron on cpu07
+[2022-11-17T14:47:28.352] sched/backfill: _start_job: Started JobId=52866 in cpu-opteron on cpu07
+[2022-11-17T15:00:28.398] sched/backfill: _start_job: Started JobId=52867 in cpu-opteron on cpu07
+[2022-11-17T15:10:28.435] sched/backfill: _start_job: Started JobId=52868 in cpu-opteron on cpu07
+[2022-11-17T15:36:28.536] sched/backfill: _start_job: Started JobId=52855 in cpu-opteron on cpu07
+[2022-11-17T15:36:28.537] sched/backfill: _start_job: Started JobId=52856 in cpu-opteron on cpu07
+[2022-11-17T15:36:28.538] sched/backfill: _start_job: Started JobId=52857 in cpu-opteron on cpu07
 [2022-11-17T15:45:53.473] sched: Allocate JobId=52805 NodeList=cpu08 #CPUs=64 Partition=cpu-opteron
+[2022-11-17T15:49:28.585] sched/backfill: _start_job: Started JobId=52880 in cpu-opteron on cpu07
+[2022-11-17T15:50:28.588] sched/backfill: _start_job: Started JobId=52858 in cpu-opteron on cpu10
+[2022-11-17T15:50:28.589] sched/backfill: _start_job: Started JobId=52859 in cpu-opteron on cpu10
+[2022-11-17T15:50:28.589] sched/backfill: _start_job: Started JobId=52860 in cpu-opteron on cpu10
 [2022-11-17T16:17:07.874] sched: Allocate JobId=52809 NodeList=cpu08 #CPUs=64 Partition=cpu-opteron
+[2022-11-17T16:17:28.661] sched/backfill: _start_job: Started JobId=52881 in cpu-opteron on cpu07
+[2022-11-17T16:25:28.679] sched/backfill: _start_job: Started JobId=52882 in cpu-opteron on cpu07
 [2022-11-17T16:26:16.448] sched: Allocate JobId=52883 NodeList=cpu07 #CPUs=1 Partition=cpu-opteron
 [2022-11-17T16:40:21.879] sched: Allocate JobId=52884 NodeList=cpu07 #CPUs=1 Partition=cpu-opteron
 [2022-11-17T16:48:22.383] sched: Allocate JobId=52762 NodeList=cpu08 #CPUs=64 Partition=cpu-opteron
@@ -6882,19 +7446,40 @@
 [2022-11-17T16:59:56.800] sched: Allocate JobId=52889 NodeList=cpu07 #CPUs=1 Partition=cpu-opteron
 [2022-11-17T17:02:22.073] sched: Allocate JobId=52890 NodeList=cpu07 #CPUs=1 Partition=cpu-opteron
 [2022-11-17T17:04:37.243] sched: Allocate JobId=52891 NodeList=cpu07 #CPUs=1 Partition=cpu-opteron
+[2022-11-17T18:18:28.926] sched/backfill: _start_job: Started JobId=52861 in cpu-opteron on cpu07
+[2022-11-17T18:19:28.929] sched/backfill: _start_job: Started JobId=52862 in cpu-opteron on cpu07
+[2022-11-17T18:33:28.959] sched/backfill: _start_job: Started JobId=52863 in cpu-opteron on cpu07
+[2022-11-17T18:39:28.973] sched/backfill: _start_job: Started JobId=52864 in cpu-opteron on cpu10
+[2022-11-17T18:47:28.990] sched/backfill: _start_job: Started JobId=52865 in cpu-opteron on cpu10
+[2022-11-17T20:33:29.213] sched/backfill: _start_job: Started JobId=52870 in cpu-opteron on cpu10
+[2022-11-17T20:54:29.256] sched/backfill: _start_job: Started JobId=52871 in cpu-opteron on cpu07
+[2022-11-17T21:11:29.289] sched/backfill: _start_job: Started JobId=52872 in cpu-opteron on cpu07
+[2022-11-17T21:14:29.296] sched/backfill: _start_job: Started JobId=52873 in cpu-opteron on cpu07
 [2022-11-17T21:16:35.473] sched: Allocate JobId=52764 NodeList=cpu09 #CPUs=64 Partition=cpu-opteron
+[2022-11-17T21:17:29.302] sched/backfill: _start_job: Started JobId=52874 in cpu-opteron on cpu10
+[2022-11-17T21:49:29.362] sched/backfill: _start_job: Started JobId=52875 in cpu-opteron on cpu10
+[2022-11-17T23:16:29.519] sched/backfill: _start_job: Started JobId=52876 in cpu-opteron on cpu10
+[2022-11-17T23:34:29.550] sched/backfill: _start_job: Started JobId=52877 in cpu-opteron on cpu07
+[2022-11-17T23:56:29.588] sched/backfill: _start_job: Started JobId=52878 in cpu-opteron on cpu07
 [2022-11-18T08:27:32.385] sched: Allocate JobId=52894 NodeList=cpu10 #CPUs=32 Partition=cpu-opteron
 [2022-11-18T10:01:24.920] sched: Allocate JobId=52896 NodeList=cpu10 #CPUs=32 Partition=cpu-opteron
+[2022-11-18T10:02:30.447] sched/backfill: _start_job: Started JobId=52832 in cpu-epyc on cpu15
+[2022-11-18T10:02:30.448] sched/backfill: _start_job: Started JobId=52833 in cpu-epyc on cpu15
 [2022-11-18T13:48:08.460] sched: Allocate JobId=52898 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-11-18T13:49:01.540] sched: Allocate JobId=52804 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-11-18T13:55:21.138] sched: Allocate JobId=52899 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-11-18T14:05:21.172] sched: Allocate JobId=52900 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-11-18T14:08:48.608] sched: Allocate JobId=52901 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-11-18T14:17:33.417] sched: Allocate JobId=52726 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
+[2022-11-18T15:19:30.870] sched/backfill: _start_job: Started JobId=52834 in cpu-epyc on cpu12
+[2022-11-18T15:19:30.871] sched/backfill: _start_job: Started JobId=52835 in cpu-epyc on cpu12
+[2022-11-18T15:44:30.917] sched/backfill: _start_job: Started JobId=52902 in cpu-opteron on cpu10
 [2022-11-18T15:49:40.496] sched: Allocate JobId=52903 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-11-18T16:39:15.821] sched: Allocate JobId=52910 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-11-18T16:44:36.300] sched: Allocate JobId=52911 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-11-18T17:33:00.332] sched: Allocate JobId=52912 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
+[2022-11-18T20:13:31.324] sched/backfill: _start_job: Started JobId=52836 in cpu-epyc on cpu15
+[2022-11-18T20:13:31.325] sched/backfill: _start_job: Started JobId=52837 in cpu-epyc on cpu15
 [2022-11-18T23:24:17.414] sched: Allocate JobId=52919 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-11-19T02:13:01.213] sched: Allocate JobId=52924 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-11-19T07:26:18.012] sched: Allocate JobId=52925 NodeList=cpu09 #CPUs=1 Partition=cpu-opteron
@@ -6953,6 +7538,7 @@
 [2022-11-24T11:22:47.510] sched: Allocate JobId=53046 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-11-24T13:58:45.937] sched: Allocate JobId=53052 NodeList=cpu14 #CPUs=48 Partition=cpu-epyc
 [2022-11-24T13:59:10.806] sched: Allocate JobId=53053 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
+[2022-11-24T19:16:51.816] sched/backfill: _start_job: Started JobId=53060 in cpu-opteron on cpu01
 [2022-11-24T19:17:13.961] sched: Allocate JobId=53061 NodeList=cpu03 #CPUs=32 Partition=cpu-opteron
 [2022-11-24T19:20:48.227] sched: Allocate JobId=53062 NodeList=cpu04 #CPUs=32 Partition=cpu-opteron
 [2022-11-24T20:35:37.796] sched: Allocate JobId=53064 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
@@ -7049,10 +7635,16 @@
 [2022-11-26T16:32:57.016] sched: Allocate JobId=53171 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-11-26T16:34:39.142] sched: Allocate JobId=53172 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
 [2022-11-26T16:36:23.515] sched: Allocate JobId=53173 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
+[2022-11-26T16:47:58.357] sched/backfill: _start_job: Started JobId=53174 in cpu-epyc on cpu12
 [2022-11-26T16:48:56.785] sched: Allocate JobId=53176 NodeList=cpu01 #CPUs=2 Partition=cpu-opteron
+[2022-11-26T16:48:58.359] sched/backfill: _start_job: Started JobId=53175 in cpu-epyc on cpu12
 [2022-11-26T21:24:05.521] sched: Allocate JobId=52852 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
+[2022-11-26T21:24:58.734] sched/backfill: _start_job: Started JobId=52956 in cpu-epyc on cpu14
+[2022-11-26T21:25:58.737] sched/backfill: _start_job: Started JobId=52976 in cpu-epyc on cpu14
+[2022-11-26T21:27:58.742] sched/backfill: _start_job: Started JobId=53020 in cpu-epyc on cpu14
 [2022-11-26T21:31:24.066] sched: Allocate JobId=52853 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
 [2022-11-26T21:31:26.453] sched: Allocate JobId=52854 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
+[2022-11-26T21:31:58.749] sched/backfill: _start_job: Started JobId=53034 in cpu-epyc on cpu14
 [2022-11-26T22:06:12.549] sched: Allocate JobId=53098 NodeList=cpu13 #CPUs=48 Partition=cpu-epyc
 [2022-11-26T22:11:09.281] sched: Allocate JobId=53180 NodeList=cpu14 #CPUs=24 Partition=cpu-epyc
 [2022-11-26T22:14:51.293] sched: Allocate JobId=53182 NodeList=cpu14 #CPUs=24 Partition=cpu-epyc
@@ -7070,6 +7662,7 @@
 [2022-11-28T11:32:13.489] sched: Allocate JobId=53208 NodeList=cpu04 #CPUs=8 Partition=cpu-opteron
 [2022-11-28T16:14:06.483] sched: Allocate JobId=53211 NodeList=cpu04 #CPUs=2 Partition=cpu-opteron
 [2022-11-28T17:25:48.166] sched: Allocate JobId=53212 NodeList=cpu04 #CPUs=20 Partition=cpu-opteron
+[2022-11-28T21:34:01.822] sched/backfill: _start_job: Started JobId=53214 in cpu-opteron on cpu04
 [2022-11-28T22:07:25.003] sched: Allocate JobId=53215 NodeList=gpu04 #CPUs=4 Partition=gpu-k40c
 [2022-11-28T22:09:55.176] sched: Allocate JobId=53216 NodeList=gpu04 #CPUs=4 Partition=gpu-k40c
 [2022-11-28T22:13:05.620] sched: Allocate JobId=53217 NodeList=gpu04 #CPUs=4 Partition=gpu-k40c
@@ -7097,16 +7690,37 @@
 [2022-11-29T13:55:58.828] sched: Allocate JobId=53246 NodeList=cpu15 #CPUs=24 Partition=cpu-epyc
 [2022-11-29T13:57:39.074] sched: Allocate JobId=53247 NodeList=cpu15 #CPUs=24 Partition=cpu-epyc
 [2022-11-29T14:05:20.772] sched: Allocate JobId=53248 NodeList=cpu15 #CPUs=24 Partition=cpu-epyc
+[2022-11-29T14:09:03.919] sched/backfill: _start_job: Started JobId=53249 in cpu-opteron on cpu01
 [2022-11-29T14:39:13.296] sched: Allocate JobId=53251 NodeList=cpu[01,04] #CPUs=4 Partition=cpu-opteron
 [2022-11-29T14:40:56.399] sched: Allocate JobId=53252 NodeList=cpu[01,04] #CPUs=4 Partition=cpu-opteron
 [2022-11-29T14:51:39.219] sched: Allocate JobId=53253 NodeList=cpu[01,04] #CPUs=4 Partition=cpu-opteron
 [2022-11-29T14:53:09.326] sched: Allocate JobId=53254 NodeList=cpu[01,04] #CPUs=4 Partition=cpu-opteron
 [2022-11-29T15:12:19.411] sched: Allocate JobId=53255 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-11-29T15:12:25.404] sched: Allocate JobId=53256 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
+[2022-11-29T15:43:04.046] sched/backfill: _start_job: Started JobId=53259 in cpu-opteron on cpu01
+[2022-11-29T15:43:04.047] sched/backfill: _start_job: Started JobId=53260 in cpu-opteron on cpu01
+[2022-11-29T15:43:04.048] sched/backfill: _start_job: Started JobId=53261 in cpu-opteron on cpu01
+[2022-11-29T15:43:04.048] sched/backfill: _start_job: Started JobId=53262 in cpu-opteron on cpu04
+[2022-11-29T15:53:04.084] sched/backfill: _start_job: Started JobId=53268 in cpu-opteron on cpu01
+[2022-11-29T17:02:04.211] sched/backfill: _start_job: Started JobId=53273 in cpu-opteron on cpu04
+[2022-11-29T17:02:04.212] sched/backfill: _start_job: Started JobId=53274 in cpu-opteron on cpu04
+[2022-11-29T17:02:04.212] sched/backfill: _start_job: Started JobId=53275 in cpu-opteron on cpu04
+[2022-11-29T17:02:04.213] sched/backfill: _start_job: Started JobId=53276 in cpu-opteron on cpu04
 [2022-11-29T17:13:42.311] sched: Allocate JobId=53272 NodeList=cpu10 #CPUs=32 Partition=cpu-opteron
+[2022-11-29T17:14:04.244] sched/backfill: _start_job: Started JobId=53277 in cpu-opteron on cpu01
+[2022-11-29T17:14:04.245] sched/backfill: _start_job: Started JobId=53278 in cpu-opteron on cpu01
+[2022-11-29T17:14:04.246] sched/backfill: _start_job: Started JobId=53279 in cpu-opteron on cpu01
 [2022-11-29T17:18:28.116] sched: Allocate JobId=53288 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
+[2022-11-29T18:02:04.338] sched/backfill: _start_job: Started JobId=53280 in cpu-opteron on cpu04
+[2022-11-29T18:02:04.339] sched/backfill: _start_job: Started JobId=53281 in cpu-opteron on cpu04
+[2022-11-29T18:02:04.340] sched/backfill: _start_job: Started JobId=53282 in cpu-opteron on cpu04
+[2022-11-29T18:03:04.343] sched/backfill: _start_job: Started JobId=53283 in cpu-opteron on cpu04
+[2022-11-29T18:14:04.365] sched/backfill: _start_job: Started JobId=53284 in cpu-opteron on cpu01
+[2022-11-29T18:15:04.367] sched/backfill: _start_job: Started JobId=53285 in cpu-opteron on cpu01
+[2022-11-29T18:16:04.370] sched/backfill: _start_job: Started JobId=53286 in cpu-opteron on cpu01
 [2022-11-29T18:25:07.561] sched: Allocate JobId=53235 NodeList=cpu10 #CPUs=35 Partition=cpu-opteron
 [2022-11-29T18:25:14.768] sched: Allocate JobId=53237 NodeList=cpu10 #CPUs=32 Partition=cpu-opteron
+[2022-11-29T18:26:04.388] sched/backfill: _start_job: Started JobId=53287 in cpu-opteron on cpu10
 [2022-11-29T18:29:51.906] sched: Allocate JobId=53289 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-11-29T18:32:57.525] sched: Allocate JobId=53290 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-11-29T18:35:00.680] sched: Allocate JobId=53291 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
@@ -7115,6 +7729,7 @@
 [2022-11-29T19:09:23.440] sched: Allocate JobId=53295 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-11-29T19:17:27.320] sched: Allocate JobId=53296 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-11-29T19:20:01.510] sched: Allocate JobId=53297 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
+[2022-11-29T19:26:04.484] sched/backfill: _start_job: Started JobId=53299 in cpu-opteron on cpu01
 [2022-11-29T19:43:08.802] sched: Allocate JobId=53300 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-11-29T20:02:16.900] sched: Allocate JobId=53257 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
 [2022-11-29T20:02:16.901] sched: Allocate JobId=53258 NodeList=cpu12 #CPUs=8 Partition=cpu-epyc
@@ -7133,6 +7748,7 @@
 [2022-11-30T07:59:03.043] sched: Allocate JobId=52551 NodeList=gpu05 #CPUs=32 Partition=gpu-v100s
 [2022-11-30T07:59:03.063] sched: Allocate JobId=52965 NodeList=gpu02 #CPUs=8 Partition=gpu-titan
 [2022-11-30T08:21:59.467] sched: Allocate JobId=53311 NodeList=cpu12 #CPUs=24 Partition=cpu-epyc
+[2022-11-30T08:30:05.085] sched/backfill: _start_job: Started JobId=53313 in cpu-opteron on cpu01
 [2022-11-30T10:58:10.270] sched: Allocate JobId=53315 NodeList=cpu07 #CPUs=32 Partition=cpu-opteron
 [2022-11-30T11:46:32.452] sched: Allocate JobId=53321 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
 [2022-11-30T13:03:46.377] sched: Allocate JobId=53324 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
@@ -7141,12 +7757,26 @@
 [2022-11-30T18:23:08.371] sched: Allocate JobId=53318 NodeList=cpu05 #CPUs=35 Partition=cpu-opteron
 [2022-11-30T22:48:21.825] sched: Allocate JobId=53337 NodeList=cpu07 #CPUs=2 Partition=cpu-opteron
 [2022-12-01T07:19:45.969] sched: Allocate JobId=53338 NodeList=gpu04 #CPUs=16 Partition=gpu-k40c
+[2022-12-01T09:12:19.534] sched/backfill: _start_job: Started JobId=53340 in cpu-opteron on cpu10
+[2022-12-01T10:15:19.609] sched/backfill: _start_job: Started JobId=53341 in cpu-opteron on cpu10
+[2022-12-01T10:28:19.627] sched/backfill: _start_job: Started JobId=53342 in cpu-opteron on cpu10
+[2022-12-01T10:35:19.637] sched/backfill: _start_job: Started JobId=53343 in cpu-opteron on cpu10
+[2022-12-01T10:38:19.642] sched/backfill: _start_job: Started JobId=53344 in cpu-opteron on cpu10
+[2022-12-01T10:39:19.644] sched/backfill: _start_job: Started JobId=53345 in cpu-opteron on cpu10
+[2022-12-01T10:41:19.648] sched/backfill: _start_job: Started JobId=53346 in cpu-opteron on cpu10
+[2022-12-01T10:44:19.653] sched/backfill: _start_job: Started JobId=53347 in cpu-opteron on cpu10
+[2022-12-01T11:00:19.675] sched/backfill: _start_job: Started JobId=53348 in cpu-opteron on cpu10
 [2022-12-01T15:03:57.541] sched: Allocate JobId=53355 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-12-01T15:11:43.366] sched: Allocate JobId=53356 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-12-01T15:15:18.960] sched: Allocate JobId=53357 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-12-02T00:48:37.830] sched: Allocate JobId=53353 NodeList=cpu09 #CPUs=35 Partition=cpu-opteron
 [2022-12-02T08:53:29.852] sched: Allocate JobId=53368 NodeList=cpu12 #CPUs=24 Partition=cpu-epyc
 [2022-12-02T09:26:34.705] sched: Allocate JobId=53373 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
+[2022-12-02T10:26:21.118] sched/backfill: _start_job: Started JobId=53376 in cpu-opteron on cpu01
+[2022-12-02T11:16:21.202] sched/backfill: _start_job: Started JobId=53379 in cpu-opteron on cpu10
+[2022-12-02T13:15:56.563] sched/backfill: _start_job: Started JobId=53384 in cpu-opteron on cpu10
+[2022-12-02T14:00:56.636] sched/backfill: _start_job: Started JobId=53385 in cpu-opteron on cpu10
+[2022-12-02T14:30:56.688] sched/backfill: _start_job: Started JobId=53387 in cpu-opteron on cpu10
 [2022-12-02T17:05:18.938] sched: Allocate JobId=53394 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-12-02T17:30:04.431] sched: Allocate JobId=53395 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-12-02T17:34:06.912] sched: Allocate JobId=53396 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
@@ -7168,6 +7798,9 @@
 [2022-12-05T00:17:46.581] sched: Allocate JobId=53399 NodeList=cpu12 #CPUs=24 Partition=cpu-epyc
 [2022-12-05T08:14:31.664] sched: Allocate JobId=53416 NodeList=cpu07 #CPUs=1 Partition=cpu-opteron
 [2022-12-05T09:11:14.060] sched: Allocate JobId=53325 NodeList=gpu01 #CPUs=16 Partition=gpu-k10
+[2022-12-05T11:27:03.967] sched/backfill: _start_job: Started JobId=53418 in cpu-opteron on cpu01
+[2022-12-05T12:03:04.009] sched/backfill: _start_job: Started JobId=53419 in cpu-opteron on cpu01
+[2022-12-05T12:17:04.026] sched/backfill: _start_job: Started JobId=53420 in cpu-opteron on cpu01
 [2022-12-05T12:32:18.395] sched: Allocate JobId=53366 NodeList=cpu15 #CPUs=48 Partition=cpu-epyc
 [2022-12-05T14:36:47.067] sched: Allocate JobId=53425 NodeList=cpu01 #CPUs=10 Partition=cpu-opteron
 [2022-12-05T14:41:02.448] sched: Allocate JobId=53426 NodeList=cpu01 #CPUs=10 Partition=cpu-opteron
@@ -7181,9 +7814,11 @@
 [2022-12-06T09:14:04.712] sched: Allocate JobId=53449 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-12-06T09:47:10.300] sched: Allocate JobId=53450 NodeList=cpu10 #CPUs=1 Partition=cpu-opteron
 [2022-12-06T10:27:50.184] sched: Allocate JobId=53241 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
+[2022-12-06T12:34:06.671] sched/backfill: _start_job: Started JobId=53371 in gpu-v100s on gpu05
 [2022-12-06T14:47:02.163] sched: Allocate JobId=53414 NodeList=gpu03 #CPUs=16 Partition=gpu-k10
 [2022-12-06T15:00:32.337] sched: Allocate JobId=53444 NodeList=cpu15 #CPUs=24 Partition=cpu-epyc
 [2022-12-06T15:00:32.352] sched: Allocate JobId=53422 NodeList=cpu15 #CPUs=24 Partition=cpu-epyc
+[2022-12-06T16:01:07.014] sched/backfill: _start_job: Started JobId=53451 in cpu-opteron on cpu07
 [2022-12-06T18:25:40.915] sched: Allocate JobId=53417 NodeList=cpu10 #CPUs=64 Partition=cpu-opteron
 [2022-12-06T18:46:48.580] sched: Allocate JobId=53432 NodeList=cpu03 #CPUs=64 Partition=cpu-opteron
 [2022-12-06T19:11:29.547] sched: Allocate JobId=53466 NodeList=cpu08 #CPUs=64 Partition=cpu-opteron
@@ -7211,6 +7846,9 @@
 [2022-12-07T13:28:15.354] sched: Allocate JobId=53544 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
 [2022-12-07T13:33:39.907] sched: Allocate JobId=53545 NodeList=cpu07 #CPUs=12 Partition=cpu-opteron
 [2022-12-07T13:50:01.776] sched: Allocate JobId=53546 NodeList=cpu07 #CPUs=12 Partition=cpu-opteron
+[2022-12-07T14:10:09.056] sched/backfill: _start_job: Started JobId=53548 in cpu-opteron on cpu07
+[2022-12-07T14:35:09.138] sched/backfill: _start_job: Started JobId=53551 in cpu-opteron on cpu07
+[2022-12-07T15:29:09.338] sched/backfill: _start_job: Started JobId=53552 in cpu-opteron on cpu07
 [2022-12-07T16:42:33.946] sched: Allocate JobId=53547 NodeList=cpu07 #CPUs=18 Partition=cpu-opteron
 [2022-12-07T17:19:39.656] sched: Allocate JobId=53559 NodeList=cpu07 #CPUs=12 Partition=cpu-opteron
 [2022-12-07T17:35:19.936] sched: Allocate JobId=53560 NodeList=cpu07 #CPUs=8 Partition=cpu-opteron
@@ -7219,6 +7857,8 @@
 [2022-12-07T19:31:19.020] sched: Allocate JobId=53563 NodeList=cpu05 #CPUs=18 Partition=cpu-opteron
 [2022-12-07T19:31:19.021] sched: Allocate JobId=53564 NodeList=cpu05 #CPUs=18 Partition=cpu-opteron
 [2022-12-07T20:36:25.219] sched: Allocate JobId=53518 NodeList=cpu09 #CPUs=32 Partition=cpu-opteron
+[2022-12-07T20:37:10.406] sched/backfill: _start_job: Started JobId=53555 in cpu-opteron on cpu05
+[2022-12-07T20:37:10.407] sched/backfill: _start_job: Started JobId=53558 in cpu-opteron on cpu09
 [2022-12-07T20:47:48.991] sched: Allocate JobId=53483 NodeList=cpu10 #CPUs=35 Partition=cpu-opteron
 [2022-12-07T20:48:10.171] sched: Allocate JobId=53479 NodeList=cpu10 #CPUs=64 Partition=cpu-opteron
 [2022-12-08T07:48:35.635] sched: Allocate JobId=53549 NodeList=gpu05 #CPUs=16 Partition=gpu-v100s
@@ -7343,6 +7983,7 @@
 [2022-12-12T09:39:08.668] sched: Allocate JobId=53683 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
 [2022-12-12T09:39:11.672] sched: Allocate JobId=53684 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
 [2022-12-12T09:39:14.676] sched: Allocate JobId=53685 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
+[2022-12-12T09:39:17.277] sched/backfill: _start_job: Started JobId=53686 in cpu-epyc on cpu14
 [2022-12-12T09:39:21.686] sched: Allocate JobId=53687 NodeList=cpu14 #CPUs=8 Partition=cpu-epyc
 [2022-12-12T09:39:24.690] sched: Allocate JobId=53688 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
 [2022-12-12T09:39:27.693] sched: Allocate JobId=53689 NodeList=cpu15 #CPUs=8 Partition=cpu-epyc
@@ -7405,6 +8046,7 @@
 [2022-12-13T11:08:22.317] sched: Allocate JobId=53799 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-12-13T11:10:15.457] sched: Allocate JobId=53800 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-12-13T11:12:51.805] sched: Allocate JobId=53801 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
+[2022-12-13T11:15:18.950] sched/backfill: _start_job: Started JobId=53802 in cpu-opteron on cpu01
 [2022-12-13T11:17:37.445] sched: Allocate JobId=53803 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-12-13T11:19:39.596] sched: Allocate JobId=53804 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-12-13T12:05:56.063] sched: Allocate JobId=53807 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
@@ -7430,6 +8072,17 @@
 [2022-12-14T04:52:32.503] sched: Allocate JobId=53832 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-12-14T04:59:31.498] sched: Allocate JobId=53833 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-12-14T07:32:52.568] sched: Allocate JobId=53665 NodeList=gpu05 #CPUs=16 Partition=gpu-v100s
+[2022-12-14T09:40:21.211] sched/backfill: _start_job: Started JobId=53857 in cpu-opteron on cpu01
+[2022-12-14T09:40:21.212] sched/backfill: _start_job: Started JobId=53858 in cpu-opteron on cpu01
+[2022-12-14T09:41:21.215] sched/backfill: _start_job: Started JobId=53859 in cpu-opteron on cpu01
+[2022-12-14T09:42:21.219] sched/backfill: _start_job: Started JobId=53860 in cpu-opteron on cpu01
+[2022-12-14T09:43:21.222] sched/backfill: _start_job: Started JobId=53861 in cpu-opteron on cpu01
+[2022-12-14T10:08:21.271] sched/backfill: _start_job: Started JobId=53862 in cpu-opteron on cpu01
+[2022-12-14T10:09:21.274] sched/backfill: _start_job: Started JobId=53863 in cpu-opteron on cpu01
+[2022-12-14T10:47:21.344] sched/backfill: _start_job: Started JobId=53865 in cpu-opteron on cpu01
+[2022-12-14T10:48:21.347] sched/backfill: _start_job: Started JobId=53866 in cpu-opteron on cpu01
+[2022-12-14T10:49:21.350] sched/backfill: _start_job: Started JobId=53867 in cpu-opteron on cpu01
+[2022-12-14T11:16:21.414] sched/backfill: _start_job: Started JobId=53868 in cpu-opteron on cpu01
 [2022-12-14T12:04:20.090] sched: Allocate JobId=53870 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
 [2022-12-14T12:36:00.617] sched: Allocate JobId=53872 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-12-14T14:08:44.658] sched: Allocate JobId=53875 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
@@ -7504,20 +8157,26 @@
 [2022-12-15T17:12:17.795] sched: Allocate JobId=53987 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
 [2022-12-15T18:27:02.030] sched: Allocate JobId=53988 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-12-15T18:44:57.082] sched: Allocate JobId=53989 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
+[2022-12-15T19:34:25.340] sched/backfill: _start_job: Started JobId=53991 in cpu-opteron on cpu04
 [2022-12-15T19:50:31.172] sched: Allocate JobId=53992 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
 [2022-12-15T20:28:30.583] sched: Allocate JobId=53993 NodeList=cpu01 #CPUs=32 Partition=cpu-opteron
+[2022-12-15T21:35:25.575] sched/backfill: _start_job: Started JobId=54002 in cpu-epyc on cpu13
 [2022-12-15T21:49:39.299] sched: Allocate JobId=54004 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-12-15T21:49:39.300] sched: Allocate JobId=54005 NodeList=cpu01 #CPUs=16 Partition=cpu-opteron
 [2022-12-15T22:11:07.563] sched: Allocate JobId=53913 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-12-15T22:28:47.857] sched: Allocate JobId=53914 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-12-15T22:33:23.310] sched: Allocate JobId=54010 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
+[2022-12-15T22:44:25.708] sched/backfill: _start_job: Started JobId=54011 in cpu-epyc on cpu13
 [2022-12-15T22:44:39.416] sched: Allocate JobId=54013 NodeList=cpu04 #CPUs=64 Partition=cpu-opteron
+[2022-12-16T00:14:25.929] sched/backfill: _start_job: Started JobId=54017 in cpu-epyc on cpu13
 [2022-12-16T02:23:05.812] sched: Allocate JobId=54023 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-12-16T02:26:09.332] sched: Allocate JobId=53963 NodeList=gpu05 #CPUs=32 Partition=gpu-v100s
 [2022-12-16T04:21:52.482] sched: Allocate JobId=53915 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
 [2022-12-16T04:33:10.263] sched: Allocate JobId=53916 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
+[2022-12-16T04:33:26.559] sched/backfill: _start_job: Started JobId=54012 in cpu-epyc on cpu13
 [2022-12-16T09:00:38.355] sched: Allocate JobId=53864 NodeList=gpu05 #CPUs=16 Partition=gpu-v100s
 [2022-12-16T09:59:42.638] sched: Allocate JobId=54040 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
+[2022-12-16T10:45:27.439] sched/backfill: _start_job: Started JobId=54032 in cpu-epyc on cpu13
 [2022-12-16T11:04:11.346] sched: Allocate JobId=54043 NodeList=gpu04 #CPUs=8 Partition=gpu-k40c
 [2022-12-16T11:17:21.871] sched: Allocate JobId=54042 NodeList=cpu11 #CPUs=1 Partition=cpu-opteron
 [2022-12-16T12:28:28.159] sched: Allocate JobId=54051 NodeList=cpu13 #CPUs=8 Partition=cpu-epyc
