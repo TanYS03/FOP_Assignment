@@ -1163,7 +1163,7 @@ public class Assignment extends JFrame {
             dataset.addValue( sepavg , "Seconds" , "September" );
             dataset.addValue( octavg , "Seconds" , "October" );
             dataset.addValue( novavg , "Seconds" , "November" );
-            dataset.addValue( decavg , "Seconds" , "Decemebr" );
+            dataset.addValue( decavg , "Seconds" , "Decemeber" );
             return dataset;
         }
 
