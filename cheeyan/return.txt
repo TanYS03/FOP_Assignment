@@ -1,0 +1,44 @@
+[2022-06-01T15:31:27.874] _slurm_rpc_kill_job: job_str_signal() uid=548300563 JobId=42804 sig=9 returned: Access/permission denied
+[2022-06-05T09:18:49.898] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=43012 sig=9 returned: Access/permission denied
+[2022-06-06T06:39:33.638] _slurm_rpc_kill_job: job_str_signal() uid=548200083 JobId=42957 sig=9 returned: Access/permission denied
+[2022-06-06T16:24:44.401] _slurm_rpc_kill_job: job_str_signal() uid=548200083 JobId=53099 sig=9 returned: Invalid job id specified
+[2022-06-15T14:31:01.275] _slurm_rpc_kill_job: job_str_signal() uid=548300516 JobId=43811 sig=9 returned: Invalid job id specified
+[2022-06-26T23:35:32.612] _slurm_rpc_kill_job: job_str_signal() uid=548200061 JobId=425149 sig=9 returned: Invalid job id specified
+[2022-07-03T22:50:18.631] _slurm_rpc_kill_job: job_str_signal() uid=548200021 JobId=4554 sig=9 returned: Invalid job id specified
+[2022-07-05T08:52:57.870] _slurm_rpc_kill_job: job_str_signal() uid=548200084 JobId=456444 sig=9 returned: Invalid job id specified
+[2022-07-12T00:20:12.600] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=45817 sig=9 returned: Access/permission denied
+[2022-07-12T00:57:34.515] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46168 sig=9 returned: Invalid job id specified
+[2022-07-12T00:57:41.856] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46166 sig=9 returned: Invalid job id specified
+[2022-07-12T00:57:49.711] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=45817 sig=9 returned: Access/permission denied
+[2022-07-12T00:57:58.058] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46165 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:01.119] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46164 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:04.031] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46163 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:06.739] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46162 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:09.370] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46161 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:13.587] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46160 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:15.394] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46160 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:19.279] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46159 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:24.780] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46158 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:28.281] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46157 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:31.171] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46156 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:34.414] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46155 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:37.167] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46154 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:39.770] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46153 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:43.805] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46152 sig=9 returned: Invalid job id specified
+[2022-07-12T00:58:48.479] _slurm_rpc_kill_job: job_str_signal() uid=548300504 JobId=46151 sig=9 returned: Access/permission denied
+[2022-07-18T17:46:50.216] _slurm_rpc_kill_job: job_str_signal() uid=548200036 JobId=46506 sig=9 returned: Invalid job id specified
+[2022-07-27T23:01:37.684] _slurm_rpc_kill_job: job_str_signal() uid=548200021 JobId=46799 sig=9 returned: Access/permission denied
+[2022-07-29T14:08:51.401] _slurm_rpc_kill_job: job_str_signal() uid=548200019 JobId=4689 sig=9 returned: Invalid job id specified
+[2022-08-20T12:56:45.889] _slurm_rpc_kill_job: job_str_signal() uid=548200029 JobId=43162 sig=9 returned: Invalid job id specified
+[2022-08-26T00:38:44.390] _slurm_rpc_kill_job: job_str_signal() uid=548300593 JobId=48393 sig=9 returned: Invalid job id specified
+[2022-08-27T10:22:11.934] _slurm_rpc_kill_job: job_str_signal() uid=548300593 JobId=48420 sig=9 returned: Invalid job id specified
+[2022-09-03T11:49:10.543] _slurm_rpc_kill_job: job_str_signal() uid=548200023 JobId=48795 sig=9 returned: Invalid job id specified
+[2022-09-21T02:13:19.849] _slurm_rpc_kill_job: job_str_signal() uid=548200019 JobId=4941 sig=9 returned: Invalid job id specified
+[2022-10-13T11:21:56.039] _slurm_rpc_kill_job: job_str_signal() uid=548200021 JobId=505580 sig=9 returned: Invalid job id specified
+[2022-10-28T23:05:13.300] _slurm_rpc_kill_job: job_str_signal() uid=548200021 JobId=51753 sig=9 returned: Access/permission denied
+[2022-11-04T10:17:06.859] _slurm_rpc_kill_job: job_str_signal() uid=548300642 JobId=52004 sig=9 returned: Invalid job id specified
+[2022-11-10T13:25:28.767] _slurm_rpc_kill_job: job_str_signal() uid=548300621 JobId=52223 sig=9 returned: Access/permission denied
+[2022-11-11T15:04:02.146] _slurm_rpc_kill_job: job_str_signal() uid=548200023 JobId=52599 sig=9 returned: Invalid job id specified
+[2022-11-14T13:20:46.749] _slurm_rpc_kill_job: job_str_signal() uid=548200023 JobId=52915 sig=9 returned: Invalid job id specified
+[2022-11-22T11:25:18.853] _slurm_rpc_kill_job: job_str_signal() uid=548300543 JobId=52908 sig=9 returned: Access/permission denied
+[2022-11-22T11:25:57.809] _slurm_rpc_kill_job: job_str_signal() uid=548300543 JobId=52908 sig=9 returned: Access/permission denied

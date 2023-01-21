@@ -27,6 +27,10 @@ import org.jfree.chart.plot.PiePlot3D;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.chart.util.Rotation;
 import java.awt.*;
+import org.jfree.ui.ApplicationFrame;
+import org.jfree.ui.RefineryUtilities;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
 
 public class Assignment extends JFrame {
 
@@ -37,6 +41,12 @@ public class Assignment extends JFrame {
     public static final String ERRORS = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
     public static final String D1 = "C:\\Users\\User\\Desktop\\FOP_Assignment\\cheeyan\\return.txt";
     public static final String D2 = "C:\\Users\\User\\Desktop\\FOP_Assignment\\cheeyan\\totalkilljob.txt";
+    public static final String JOBDONE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\Adam\\jobdone.txt";
+    public static final String JOBCREATED = "C:\\Users\\User\\Desktop\\FOP_Assignment\\Adam\\jobcreated.txt";
+    public static final ImageIcon wrongImage = new ImageIcon("C:\\Users\\User\\Desktop\\FOP_Assignment\\ImageForUi\\piffle-error.gif");
+    public static final ImageIcon exitImage = new ImageIcon("C:\\Users\\User\\Desktop\\FOP_Assignment\\ImageForUi\\close.gif");
+    public static final ImageIcon loading = new ImageIcon("C:\\Users\\User\\Desktop\\FOP_Assignment\\ImageForUi\\loadingbar.gif");
+    public static final ImageIcon cny = new ImageIcon("C:\\Users\\User\\Desktop\\FOP_Assignment\\ImageForUi\\cny.gif");
 
     public static void main(String[] args) {
 
@@ -52,8 +62,8 @@ public class Assignment extends JFrame {
                 while (true) {
                     Scanner input = new Scanner(System.in);
                     String find = JOptionPane.showInputDialog("1 -> Number of job created/ended in particular month.\n" //jobrange
-                            + "2 -> Number of job created/ended in each month.\n" //allJobs
-                            + "3 -> Number of job created/ended in particular time range.\n" //days
+                            + "2 -> Number of job created/ended in each month.\n"
+                            + "3 -> Number of job created/ended in particular time range.\n"
                             + "Q -> Back to main menu.");
                     if (find.equals("1")) {
                         jobRange();
@@ -64,7 +74,7 @@ public class Assignment extends JFrame {
                     } else if (find.equalsIgnoreCase("Q")) {
                         break;
                     } else {
-                        JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE, wrongImage);
                     }
                 }
 
@@ -72,16 +82,15 @@ public class Assignment extends JFrame {
                 partition();
             } else if (cmd.equals("3")) {
                 while (true) {
-                    ImageIcon wrong = new ImageIcon("C:\\Users\\User\\Desktop\\WIX 1002 (FOP)\\err2.png");
-                    ImageIcon exit = new ImageIcon("C:\\Users\\User\\Desktop\\WIX 1002 (FOP)\\off1.png");
+
                     String in = JOptionPane.showInputDialog(
                             "1 -> Check total errors caused by users.\n"
                             + "2 -> Display a table with usernames, time, association number and types of errors.\n"
                             + "3 -> Show a username list and number of errors caused by each user.\n"
                             + "4 -> Count errors in a given range of months.\n"
                             + "5 -> Find errors in a given range of date.\n"
-                            + "6 -> Display graph of number of errors in each month.\n"
-                            + "7 -> Display a barchart about errors caused by each users.\n"
+                            + "6 -> Display pie chart about number of errors in each month.\n"
+                            + "7 -> Display a barchart about errors caused by each user.\n"
                             + "Q -> Back to main menu.");
 
                     HashSet<String> months = sortErrorsByMonths();
@@ -98,20 +107,20 @@ public class Assignment extends JFrame {
 
                             String inp = JOptionPane.showInputDialog(null, "A => Sort By Alphabet\nB => Sort By Months\nQ => Back To Main Menu", "Table display", JOptionPane.INFORMATION_MESSAGE);
                             if (inp.equalsIgnoreCase("A")) {
-                                JOptionPane.showMessageDialog(null, "Table will be displayed in the terminal", "Table Display", JOptionPane.INFORMATION_MESSAGE);
+                                JOptionPane.showMessageDialog(null, "Table will be displayed at the terminal", "Table Display", JOptionPane.INFORMATION_MESSAGE, loading);
                                 displayInfoInTable(users);
 
                             } else if (inp.equalsIgnoreCase("B")) {
-                                JOptionPane.showMessageDialog(null, "Table will be displayed in the terminal", "Table Display", JOptionPane.INFORMATION_MESSAGE);
+                                JOptionPane.showMessageDialog(null, "Table will be displayed at the terminal", "Table Display", JOptionPane.INFORMATION_MESSAGE, loading);
                                 displayInfoInTable(month);
                             } else if (inp.equalsIgnoreCase("Q")) {
                                 break;
                             } else {
-                                JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE, wrong);
+                                JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE, wrongImage);
                             }
                         }
                     } else if (in.equals("3")) {
-                        JOptionPane.showMessageDialog(null, "List will be displayed in the terminal.", "Total errors are displayed at the terminal.", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "List will be displayed in the terminal.", "Total errors are displayed at the terminal.", JOptionPane.INFORMATION_MESSAGE, loading);
                         countErrorsCausedByUsers(users);
                     } else if (in.equals("4")) {
 
@@ -132,7 +141,7 @@ public class Assignment extends JFrame {
                                 JOptionPane.showMessageDialog(null, "Total number of errors from " + a + " to " + b + " are : " + sum, "Number of errors in a given range", JOptionPane.INFORMATION_MESSAGE);
                                 break;
                             } else {
-                                JOptionPane.showMessageDialog(null, "Month doesn't exist. Please enter proper month !", "Invalid Command", JOptionPane.INFORMATION_MESSAGE, wrong);
+                                JOptionPane.showMessageDialog(null, "Month doesn't exist or Invalid Command. Please enter proper month !", "Invalid Command", JOptionPane.INFORMATION_MESSAGE, wrongImage);
                             }
                         }
 
@@ -145,7 +154,7 @@ public class Assignment extends JFrame {
                             if (start.equalsIgnoreCase("Q")) {
                                 break;
                             } else if (validityA == false) {
-                                JOptionPane.showMessageDialog(null, "Invalid date format. Please enter again.", "Invalid command", JOptionPane.INFORMATION_MESSAGE, wrong);
+                                JOptionPane.showMessageDialog(null, "Invalid date format. Please enter again.", "Invalid command", JOptionPane.INFORMATION_MESSAGE, wrongImage);
                                 continue;
                             }
 
@@ -154,7 +163,7 @@ public class Assignment extends JFrame {
                             if (end.equalsIgnoreCase("Q")) {
                                 break;
                             } else if (validityB == false) {
-                                JOptionPane.showMessageDialog(null, "Invalid date format. Please enter again.", "Invalid command", JOptionPane.INFORMATION_MESSAGE, wrong);
+                                JOptionPane.showMessageDialog(null, "Invalid date format. Please enter again.", "Invalid command", JOptionPane.INFORMATION_MESSAGE, wrongImage);
                                 continue;
                             }
 
@@ -162,6 +171,7 @@ public class Assignment extends JFrame {
                         }
 
                     } else if (in.equals("6")) {
+
                         PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
                         demo.pack();
                         demo.setVisible(true);
@@ -173,7 +183,7 @@ public class Assignment extends JFrame {
                     } else if (in.equalsIgnoreCase("q")) {
                         break;
                     } else {
-                        JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE, wrong);
+                        JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE, wrongImage);
                     }
                     System.out.println("\n*".repeat(5));
                 }
@@ -189,14 +199,15 @@ public class Assignment extends JFrame {
                             + "6 -> Show October average time.\n"
                             + "7 -> Show November average time.\n"
                             + "8 -> Show December average time.\n"
-                            + "9 -> Total.\n"
+                            + "9 -> Show average time vs month graph.\n"
+                            + "10 -> Total.\n"
                             + "Q -> Back to main menu.");
                     try {
 
-                        BufferedReader reader1 = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\jobdone.txt"));
-                        BufferedReader reader2 = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\FOP_Assignment\\jobcreated.txt"));
+                        BufferedReader reader1 = new BufferedReader(new FileReader(JOBDONE));
+                        BufferedReader reader2 = new BufferedReader(new FileReader(JOBCREATED));
 
-                        int totalcounter = 7530;
+                        int totalcounter = 8189;
                         int fminit;
                         int fhour;
                         int fday;
@@ -313,7 +324,7 @@ public class Assignment extends JFrame {
                         int novm = 0;
                         int decm = 0;
 
-                        for (int i = 0; i < 7530; i++) {
+                        for (int i = 0; i < 8189; i++) {
 
                             String[] sepcre = reader2.readLine().split(" ");
                             String[] sepdon = reader1.readLine().split(" ");
@@ -498,15 +509,18 @@ public class Assignment extends JFrame {
                             }
                         }
                         if (cmd4.equals("1")) {
-                            System.out.println("Execution time of allocated job based on month");
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20s \n", "Month", "Months", "Days", "Hours", "Minutes", "Seconds");
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n", "June", junemon, juned, juneh, junem, junes);
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n", "July", julymon, julyd, julyh, julym, julys);
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n", "August", augmon, augd, augh, augm, augs);
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n", "September", sepmon, sepd, seph, sepm, seps);
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n", "October", octmon, octd, octh, octm, octs);
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n", "Novemeber", novmon, novd, novh, novm, novs);
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n\n", "December", decmon, decd, dech, decm, decs);
+                            System.out.println("Execution time of the jobs submitted based on month ");
+                            System.out.println("------------------------------------------------------------------------");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10s %-2s \n", "|", "Month", "|", "Months", "|", "Days", "|", "Hours", "|", "Minutes", "|", "Seconds", "|");
+                            System.out.println("------------------------------------------------------------------------");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "June", "|", junemon, "|", juned, "|", juneh, "|", junem, "|", junes, "|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "July", "|", julymon, "|", julyd, "|", julyh, "|", julym, "|", julys, "|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "August", "|", augmon, "|", augd, "|", augh, "|", augm, "|", augs, "|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "September", "|", sepmon, "|", sepd, "|", seph, "|", sepm, "|", seps, "|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "October", "|", octmon, "|", octd, "|", octh, "|", octm, "|", octs, "|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "Novemeber", "|", novmon, "|", novd, "|", novh, "|", novm, "|", novs, "|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "December", "|", decmon, "|", decd, "|", dech, "|", decm, "|", decs, "|");
+                            System.out.println("------------------------------------------------------------------------");
                         } else if (cmd4.equals("2")) {
                             System.out.printf("June average :%.3f seconds or ", getavg(junecounter, junes, juned, juneh, junem), " seconds or ");
                             stos(getavg(junecounter, junes, juned, juneh, junem));
@@ -564,6 +578,21 @@ public class Assignment extends JFrame {
                             stos(decmaxtotal);
                             System.out.println();
                         } else if (cmd4.equals("9")) {
+                            Assignment.LineChart_AWT chart = new Assignment.LineChart_AWT(
+                                    "Average execution time by month",
+                                    "Average execution time by month",
+                                    getavg(junecounter, junes, juned, juneh, junem),
+                                    getavg(julycounter, julys, julyd, julyh, julym),
+                                    getavg(augcounter, augs, augd, augh, augm),
+                                    getavg(sepcounter, seps, sepd, seph, sepm),
+                                    getavg(octcounter, octs, octd, octh, octm),
+                                    getavg(novcounter, novs, novd, novh, novm),
+                                    getavg(deccounter, decs, decd, dech, decm));
+
+                            chart.pack();
+                            RefineryUtilities.centerFrameOnScreen(chart);
+                            chart.setVisible(true);
+                        } else if (cmd4.equals("10")) {
                             System.out.println("total month :" + totalmonth);
                             System.out.println("total day :" + totalday);
                             System.out.println("total  hour :" + totalhour);
@@ -581,7 +610,7 @@ public class Assignment extends JFrame {
                         } else if (cmd4.equalsIgnoreCase("Q")) {
                             break;
                         } else {
-                            JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE);
+                            JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE, wrongImage);
                         }
 
                     } catch (FileNotFoundException ex) {
@@ -608,16 +637,17 @@ public class Assignment extends JFrame {
                     } else if (in.equalsIgnoreCase("Q")) {
                         break;
                     } else {
-                        JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE, wrongImage);
                     }
 
                 }
 
             } else if (cmd.equalsIgnoreCase("Q")) {
-                JOptionPane.showMessageDialog(null, "System quited. Thanks for using.", "Sysyem quit", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "System closed. Thanks for using!", "System Closed", JOptionPane.INFORMATION_MESSAGE, exitImage);
+                JOptionPane.showMessageDialog(null, null, "Happy New Year !!", JOptionPane.INFORMATION_MESSAGE, cny);
                 break;
             } else {
-                JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE, wrongImage);
             }
 
             System.out.println(" ");
@@ -628,7 +658,7 @@ public class Assignment extends JFrame {
         }
     }
 
-// -------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------
 // Weili: 
     // function: read raw datas, find and count total number errors caused by users (done)
     public static int countErrors() {
@@ -904,8 +934,8 @@ public class Assignment extends JFrame {
             int x = Integer.parseInt(startMonth);
             int y = Integer.parseInt(endMonth);
 
-            if (x > y) {
-                JOptionPane.showMessageDialog(null, "The range is from year 2022 June to December.", "Invalid range", JOptionPane.INFORMATION_MESSAGE);
+            if (x > y || x < 6) {
+                JOptionPane.showMessageDialog(null, "Invalid range. The range is from year 2022 June to December.", "Invalid range", JOptionPane.INFORMATION_MESSAGE);
                 return false;
             }
 
@@ -980,7 +1010,6 @@ public class Assignment extends JFrame {
         }
     }
 
-    
     public static void FindErrorsInEachMonth(HashSet<String> months) {
         ArrayList<String> month = new ArrayList<>();
         try {
@@ -1116,7 +1145,37 @@ public class Assignment extends JFrame {
 
     }
 
-//------------------------------------------------------------------------------------------
+    public static class LineChart_AWT extends ApplicationFrame {
+
+        public LineChart_AWT(String applicationTitle, String chartTitle, double juneavg, double julyavg, double augavg, double sepavg, double octavg, double novavg, double decavg) {
+            super(applicationTitle);
+            JFreeChart lineChart = ChartFactory.createLineChart(
+                    chartTitle,
+                    "Month", "Average Time",
+                    createDataset(juneavg, julyavg, augavg, sepavg, octavg, novavg, decavg),
+                    PlotOrientation.VERTICAL,
+                    true, true, false);
+
+            ChartPanel chartPanel = new ChartPanel(lineChart);
+            chartPanel.setPreferredSize(new java.awt.Dimension(560, 367));
+            setContentPane(chartPanel);
+        }
+
+        private DefaultCategoryDataset createDataset(double juneavg, double julyavg, double augavg, double sepavg, double octavg, double novavg, double decavg) {
+            DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+            dataset.addValue(juneavg, "Seconds", "June");
+            dataset.addValue(julyavg, "Seconds", "July");
+            dataset.addValue(augavg, "Seconds", "August");
+            dataset.addValue(sepavg, "Seconds", "September");
+            dataset.addValue(octavg, "Seconds", "October");
+            dataset.addValue(novavg, "Seconds", "November");
+            dataset.addValue(decavg, "Seconds", "Decemebr");
+            return dataset;
+        }
+
+    }
+
+// -----------------------------------------------------------------------------------------------------------------------------
 // Yishan
     public static void allJobs() {
         Scanner input = new Scanner(System.in);
@@ -1573,8 +1632,8 @@ public class Assignment extends JFrame {
         frame.setVisible(true);
     }
 
-//------------------------------------------------------------------------------------------------
-//  Cheeyan
+// -----------------------------------------------------------------------------------------------------------------------------
+//  cheeyan:
     public static void totalkilljobmonth() {
 
         int[] successcount = new int[7];
@@ -1755,8 +1814,6 @@ public class Assignment extends JFrame {
                     count++;
                 }
             }
-
-            // System.out.println("Total no of jobs returned: " + count);
             System.out.println();
 
             reader.close();
@@ -1802,7 +1859,6 @@ public class Assignment extends JFrame {
         try {
 
             Scanner abc = new Scanner(new FileInputStream(D1));
-            //PrintWriter writer = new PrintWriter(new FileWriter("totalkilljobmonth.txt"));
 
             while (abc.hasNextLine()) {
                 String line = abc.nextLine();
@@ -1848,7 +1904,6 @@ public class Assignment extends JFrame {
 
         try {
 
-            // System.out.println("+" + "-".repeat(150) + "+");
             System.out.println();
             System.out.println("Details for job being returned per month: ");
 
