@@ -87,7 +87,7 @@ public class Assignment extends JFrame {
                             "1 -> Check total errors caused by users.\n"
                             + "2 -> Display a table with usernames, time, association number and types of errors.\n"
                             + "3 -> Show a username list and number of errors caused by each user.\n"
-                            + "4 -> Count errors in a given range of months.\n"
+                            + "4 -> Count errors within two months.\n"
                             + "5 -> Find errors in a given range of date.\n"
                             + "6 -> Display pie chart about number of errors in each month.\n"
                             + "7 -> Display a barchart about errors caused by each user.\n"
@@ -137,7 +137,7 @@ public class Assignment extends JFrame {
                             if (IsInteger(a, b)) {
                                 int x = Integer.parseInt(a);
                                 int y = Integer.parseInt(b);
-                                int sum = countErrorsInAGivenRange(x, y);
+                                int sum = countErrorsWithinMonths(x, y);
                                 JOptionPane.showMessageDialog(null, "Total number of errors from " + a + " to " + b + " are : " + sum, "Number of errors in a given range", JOptionPane.INFORMATION_MESSAGE);
                                 break;
                             } else {
@@ -511,7 +511,6 @@ public class Assignment extends JFrame {
                         if (cmd4.equals("1")) {
                             System.out.println("Execution time of the jobs submitted based on month ");
                             System.out.println("------------------------------------------------------------------------");
-<<<<<<< HEAD
                             System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10s %-2s \n", "|", "Month", "|", "Months", "|", "Days", "|", "Hours", "|", "Minutes", "|", "Seconds", "|");
                             System.out.println("------------------------------------------------------------------------");
                             System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "June", "|", junemon, "|", juned, "|", juneh, "|", junem, "|", junes, "|");
@@ -521,17 +520,6 @@ public class Assignment extends JFrame {
                             System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "October", "|", octmon, "|", octd, "|", octh, "|", octm, "|", octs, "|");
                             System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "Novemeber", "|", novmon, "|", novd, "|", novh, "|", novm, "|", novs, "|");
                             System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "December", "|", decmon, "|", decd, "|", dech, "|", decm, "|", decs, "|");
-=======
-                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10s %-2s \n","|","Month","|","Months","|","Days","|","Hours","|","Minutes","|","Seconds","|");
-                            System.out.println("------------------------------------------------------------------------");
-                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","June","|",junemon,"|",juned,"|",juneh,"|",junem,"|",junes,"|");
-                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","July","|",julymon,"|",julyd,"|",julyh,"|",julym,"|",julys,"|");
-                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","August","|",augmon,"|",augd,"|",augh,"|",augm,"|",augs,"|");
-                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","September","|",sepmon,"|",sepd,"|",seph,"|",sepm,"|",seps,"|");
-                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","October","|",octmon,"|",octd,"|",octh,"|",octm,"|",octs,"|");
-                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","Novemeber","|",novmon,"|",novd,"|",novh,"|",novm,"|",novs,"|");
-                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","December","|",decmon,"|",decd,"|",dech,"|",decm,"|",decs,"|");
->>>>>>> 9e58f53e1a0f662f4af8aa1142154a8a026ebc7c
                             System.out.println("------------------------------------------------------------------------");
                         } else if (cmd4.equals("2")) {
                             System.out.printf("June average :%.3f seconds or ", getavg(junecounter, junes, juned, juneh, junem), " seconds or ");
@@ -590,7 +578,6 @@ public class Assignment extends JFrame {
                             stos(decmaxtotal);
                             System.out.println();
                         } else if (cmd4.equals("9")) {
-<<<<<<< HEAD
                             Assignment.LineChart_AWT chart = new Assignment.LineChart_AWT(
                                     "Average execution time by month",
                                     "Average execution time by month",
@@ -605,22 +592,6 @@ public class Assignment extends JFrame {
                             chart.pack();
                             RefineryUtilities.centerFrameOnScreen(chart);
                             chart.setVisible(true);
-=======
-                            averagetime.LineChart_AWT chart = new averagetime.LineChart_AWT(
-                                    "Average execution time by month" ,
-                                    "Average execution time by month",
-                                    getavg(junecounter,junes,juned,juneh,junem),
-                                    getavg(julycounter,julys,julyd,julyh,julym),
-                                    getavg(augcounter,augs,augd,augh,augm),
-                                    getavg(sepcounter,seps,sepd,seph,sepm),
-                                    getavg(octcounter,octs,octd,octh,octm),
-                                    getavg(novcounter,novs,novd,novh,novm),
-                                    getavg(deccounter,decs,decd,dech,decm));
-
-                            chart.pack( );
-                            RefineryUtilities.centerFrameOnScreen( chart );
-                            chart.setVisible( true );
->>>>>>> 9e58f53e1a0f662f4af8aa1142154a8a026ebc7c
                         } else if (cmd4.equals("10")) {
                             System.out.println("total month :" + totalmonth);
                             System.out.println("total day :" + totalday);
@@ -927,7 +898,7 @@ public class Assignment extends JFrame {
     }
 
     // function: count total number of errors in given range of time inputted by user
-    public static int countErrorsInAGivenRange(int startMonth, int endMonth) {
+    public static int countErrorsWithinMonths(int startMonth, int endMonth) {
         int sum = 0;
         try {
             BufferedReader reader = new BufferedReader(new FileReader(DEFAULT1));
@@ -1074,6 +1045,875 @@ public class Assignment extends JFrame {
         }
     }
 
+    public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+public class PieChart3D extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private static final String FILE = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+
+    public PieChart3D(String applicationTitle, String chartTitle) {
+        super(applicationTitle);
+        // This will create the dataset
+        PieDataset dataset = createDataset();
+        // based on the dataset we create the chart
+        JFreeChart chart = ChartFactory.createPieChart3D(chartTitle, dataset, true, true, false);
+        // we put the chart into a panel
+        ChartPanel chartPanel = new ChartPanel(chart);
+        // default size
+        chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
+        // add it to our application
+        setContentPane(chartPanel);
+
+        // Get the plot of the chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        // Set the label generator to display the number of errors
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0} ({2})"));
+    }
+
+   
+    private PieDataset createDataset() {
+        
+        DefaultPieDataset result = new DefaultPieDataset();
+        HashMap<String, String> months= new HashMap<String, String>();
+        months.put("01", "January");
+        months.put("02", "February");
+        months.put("03", "March");
+        months.put("04", "April");
+        months.put("05", "May");
+        months.put("06", "June");
+        months.put("07", "July");
+        months.put("08", "August");
+        months.put("09", "September");
+        months.put("10", "October");
+        months.put("11", "November");
+        months.put("12", "December");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILE));
+            String line;
+            
+                while((line = reader.readLine()) != null) {
+                    String[] info = line.split(" ");
+                    result.setValue(months.get(info[0]), Integer.parseInt(info[1]));
+                }
+            reader.close();
+        } catch (FileNotFoundException e) {System.out.println("File not found.");} 
+          catch (IOException ex) {}
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
+        demo.pack();
+        demo.setVisible(true);
+    }
+}
+
 // -----------------------------------------------------------------------------------------------------------------------------
 // Adam
     public static double gettotal(int day, int hour, int minit, double sec) {
@@ -1176,7 +2016,6 @@ public class Assignment extends JFrame {
 
     public static class LineChart_AWT extends ApplicationFrame {
 
-<<<<<<< HEAD
         public LineChart_AWT(String applicationTitle, String chartTitle, double juneavg, double julyavg, double augavg, double sepavg, double octavg, double novavg, double decavg) {
             super(applicationTitle);
             JFreeChart lineChart = ChartFactory.createLineChart(
@@ -1206,39 +2045,6 @@ public class Assignment extends JFrame {
     }
 
 // -----------------------------------------------------------------------------------------------------------------------------
-=======
-        public LineChart_AWT( String applicationTitle , String chartTitle,double juneavg,double julyavg,double augavg,double sepavg,double octavg,double novavg,double decavg ) {
-            super(applicationTitle);
-            JFreeChart lineChart = ChartFactory.createLineChart(
-                    chartTitle,
-                    "Month","Average Time",
-                    createDataset(juneavg,julyavg,augavg,sepavg,octavg,novavg,decavg),
-                    PlotOrientation.VERTICAL,
-                    true,true,false);
-
-            ChartPanel chartPanel = new ChartPanel( lineChart );
-            chartPanel.setPreferredSize( new java.awt.Dimension( 560 , 367 ) );
-            setContentPane( chartPanel );
-        }
-
-        private DefaultCategoryDataset createDataset(double juneavg,double julyavg,double augavg,double sepavg,double octavg,double novavg,double decavg) {
-            DefaultCategoryDataset dataset = new DefaultCategoryDataset( );
-            dataset.addValue( juneavg , "Seconds" , "June" );
-            dataset.addValue( julyavg , "Seconds" , "July" );
-            dataset.addValue( augavg , "Seconds" ,  "August" );
-            dataset.addValue( sepavg , "Seconds" , "September" );
-            dataset.addValue( octavg , "Seconds" , "October" );
-            dataset.addValue( novavg , "Seconds" , "November" );
-            dataset.addValue( decavg , "Seconds" , "Decemeber" );
-            return dataset;
-        }
-
-
-    }
-
-
-    //------------------------------------------------------------------------------------------
->>>>>>> 9e58f53e1a0f662f4af8aa1142154a8a026ebc7c
 // Yishan
     public static void allJobs() {
         Scanner input = new Scanner(System.in);
@@ -1666,7 +2472,7 @@ public class Assignment extends JFrame {
         result.setValue("cpu-epyc\n" + " 26% ", numPartition[5]);
 
         //Create a chart
-        JFreeChart chart = ChartFactory.createPieChart3D("Type of org.example.Partition ", result, true, true, false);
+        JFreeChart chart = ChartFactory.createPieChart3D("Type of Partition ", result, true, true, false);
         //Create a panel to display the chart
         ChartPanel panel = new ChartPanel(chart);
         chart.getTitle().setFont(new Font("Arial", Font.BOLD, 27));
