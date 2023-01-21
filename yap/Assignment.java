@@ -511,6 +511,7 @@ public class Assignment extends JFrame {
                         if (cmd4.equals("1")) {
                             System.out.println("Execution time of the jobs submitted based on month ");
                             System.out.println("------------------------------------------------------------------------");
+<<<<<<< HEAD
                             System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10s %-2s \n", "|", "Month", "|", "Months", "|", "Days", "|", "Hours", "|", "Minutes", "|", "Seconds", "|");
                             System.out.println("------------------------------------------------------------------------");
                             System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "June", "|", junemon, "|", juned, "|", juneh, "|", junem, "|", junes, "|");
@@ -520,6 +521,17 @@ public class Assignment extends JFrame {
                             System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "October", "|", octmon, "|", octd, "|", octh, "|", octm, "|", octs, "|");
                             System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "Novemeber", "|", novmon, "|", novd, "|", novh, "|", novm, "|", novs, "|");
                             System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "December", "|", decmon, "|", decd, "|", dech, "|", decm, "|", decs, "|");
+=======
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10s %-2s \n","|","Month","|","Months","|","Days","|","Hours","|","Minutes","|","Seconds","|");
+                            System.out.println("------------------------------------------------------------------------");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","June","|",junemon,"|",juned,"|",juneh,"|",junem,"|",junes,"|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","July","|",julymon,"|",julyd,"|",julyh,"|",julym,"|",julys,"|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","August","|",augmon,"|",augd,"|",augh,"|",augm,"|",augs,"|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","September","|",sepmon,"|",sepd,"|",seph,"|",sepm,"|",seps,"|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","October","|",octmon,"|",octd,"|",octh,"|",octm,"|",octs,"|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","Novemeber","|",novmon,"|",novd,"|",novh,"|",novm,"|",novs,"|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","December","|",decmon,"|",decd,"|",dech,"|",decm,"|",decs,"|");
+>>>>>>> 9e58f53e1a0f662f4af8aa1142154a8a026ebc7c
                             System.out.println("------------------------------------------------------------------------");
                         } else if (cmd4.equals("2")) {
                             System.out.printf("June average :%.3f seconds or ", getavg(junecounter, junes, juned, juneh, junem), " seconds or ");
@@ -578,6 +590,7 @@ public class Assignment extends JFrame {
                             stos(decmaxtotal);
                             System.out.println();
                         } else if (cmd4.equals("9")) {
+<<<<<<< HEAD
                             Assignment.LineChart_AWT chart = new Assignment.LineChart_AWT(
                                     "Average execution time by month",
                                     "Average execution time by month",
@@ -592,6 +605,22 @@ public class Assignment extends JFrame {
                             chart.pack();
                             RefineryUtilities.centerFrameOnScreen(chart);
                             chart.setVisible(true);
+=======
+                            averagetime.LineChart_AWT chart = new averagetime.LineChart_AWT(
+                                    "Average execution time by month" ,
+                                    "Average execution time by month",
+                                    getavg(junecounter,junes,juned,juneh,junem),
+                                    getavg(julycounter,julys,julyd,julyh,julym),
+                                    getavg(augcounter,augs,augd,augh,augm),
+                                    getavg(sepcounter,seps,sepd,seph,sepm),
+                                    getavg(octcounter,octs,octd,octh,octm),
+                                    getavg(novcounter,novs,novd,novh,novm),
+                                    getavg(deccounter,decs,decd,dech,decm));
+
+                            chart.pack( );
+                            RefineryUtilities.centerFrameOnScreen( chart );
+                            chart.setVisible( true );
+>>>>>>> 9e58f53e1a0f662f4af8aa1142154a8a026ebc7c
                         } else if (cmd4.equals("10")) {
                             System.out.println("total month :" + totalmonth);
                             System.out.println("total day :" + totalday);
@@ -1147,6 +1176,7 @@ public class Assignment extends JFrame {
 
     public static class LineChart_AWT extends ApplicationFrame {
 
+<<<<<<< HEAD
         public LineChart_AWT(String applicationTitle, String chartTitle, double juneavg, double julyavg, double augavg, double sepavg, double octavg, double novavg, double decavg) {
             super(applicationTitle);
             JFreeChart lineChart = ChartFactory.createLineChart(
@@ -1176,6 +1206,39 @@ public class Assignment extends JFrame {
     }
 
 // -----------------------------------------------------------------------------------------------------------------------------
+=======
+        public LineChart_AWT( String applicationTitle , String chartTitle,double juneavg,double julyavg,double augavg,double sepavg,double octavg,double novavg,double decavg ) {
+            super(applicationTitle);
+            JFreeChart lineChart = ChartFactory.createLineChart(
+                    chartTitle,
+                    "Month","Average Time",
+                    createDataset(juneavg,julyavg,augavg,sepavg,octavg,novavg,decavg),
+                    PlotOrientation.VERTICAL,
+                    true,true,false);
+
+            ChartPanel chartPanel = new ChartPanel( lineChart );
+            chartPanel.setPreferredSize( new java.awt.Dimension( 560 , 367 ) );
+            setContentPane( chartPanel );
+        }
+
+        private DefaultCategoryDataset createDataset(double juneavg,double julyavg,double augavg,double sepavg,double octavg,double novavg,double decavg) {
+            DefaultCategoryDataset dataset = new DefaultCategoryDataset( );
+            dataset.addValue( juneavg , "Seconds" , "June" );
+            dataset.addValue( julyavg , "Seconds" , "July" );
+            dataset.addValue( augavg , "Seconds" ,  "August" );
+            dataset.addValue( sepavg , "Seconds" , "September" );
+            dataset.addValue( octavg , "Seconds" , "October" );
+            dataset.addValue( novavg , "Seconds" , "November" );
+            dataset.addValue( decavg , "Seconds" , "Decemeber" );
+            return dataset;
+        }
+
+
+    }
+
+
+    //------------------------------------------------------------------------------------------
+>>>>>>> 9e58f53e1a0f662f4af8aa1142154a8a026ebc7c
 // Yishan
     public static void allJobs() {
         Scanner input = new Scanner(System.in);
