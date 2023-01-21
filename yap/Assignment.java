@@ -503,15 +503,18 @@ public class Assignment extends JFrame {
                             }
                         }
                         if (cmd4.equals("1")) {
-                            System.out.println("Execution time of allocated job based on month");
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20s \n", "Month", "Months", "Days", "Hours", "Minutes", "Seconds");
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n", "June", junemon, juned, juneh, junem, junes);
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n", "July", julymon, julyd, julyh, julym, julys);
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n", "August", augmon, augd, augh, augm, augs);
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n", "September", sepmon, sepd, seph, sepm, seps);
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n", "October", octmon, octd, octh, octm, octs);
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n", "Novemeber", novmon, novd, novh, novm, novs);
-                            System.out.printf("%-10s %-6s %-5s %-8s %-8s %-20.3f \n\n", "December", decmon, decd, dech, decm, decs);
+                            System.out.println("Execution time of the jobs submitted based on month ");
+                            System.out.println("------------------------------------------------------------------------");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10s %-2s \n","|","Month","|","Months","|","Days","|","Hours","|","Minutes","|","Seconds","|");
+                            System.out.println("------------------------------------------------------------------------");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","June","|",junemon,"|",juned,"|",juneh,"|",junem,"|",junes,"|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","July","|",julymon,"|",julyd,"|",julyh,"|",julym,"|",julys,"|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","August","|",augmon,"|",augd,"|",augh,"|",augm,"|",augs,"|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","September","|",sepmon,"|",sepd,"|",seph,"|",sepm,"|",seps,"|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","October","|",octmon,"|",octd,"|",octh,"|",octm,"|",octs,"|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","Novemeber","|",novmon,"|",novd,"|",novh,"|",novm,"|",novs,"|");
+                            System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n","|","December","|",decmon,"|",decd,"|",dech,"|",decm,"|",decs,"|");
+                            System.out.println("------------------------------------------------------------------------");
                         } else if (cmd4.equals("2")) {
                             System.out.printf("June average :%.3f seconds or ", getavg(junecounter, junes, juned, juneh, junem), " seconds or ");
                             stos(getavg(junecounter, junes, juned, juneh, junem));
