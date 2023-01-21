@@ -35,6 +35,8 @@ public class Assignment extends JFrame {
     public static final String DEFAULT2 = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\usernames.txt";
     public static final String DEFAULT3 = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\errorsByDate.txt";
     public static final String ERRORS = "C:\\Users\\User\\Desktop\\FOP_Assignment\\yap\\NumErrorsEachMonths.txt";
+    public static final String D1 = "C:\\Users\\User\\Desktop\\FOP_Assignment\\cheeyan\\return.txt";
+    public static final String D2 = "C:\\Users\\User\\Desktop\\FOP_Assignment\\cheeyan\\totalkilljob.txt";
 
     public static void main(String[] args) {
 
@@ -43,32 +45,28 @@ public class Assignment extends JFrame {
                     + "2 -> Partitions.\n"
                     + "3 -> Errors.\n"
                     + "4 -> Average time.\n"
+                    + "5 -> Kill Jobs.\n"
                     + "Q -> Quit.");
-            
+
             if (cmd.equals("1")) {
                 while (true) {
                     Scanner input = new Scanner(System.in);
-                    String find = JOptionPane.showInputDialog("1 -> Number of job created/ended in particular month.\n"  //jobrange
-                                                            + "2 -> Number of job created/ended in each month.\n"        //allJobs
-                                                            + "3 -> Number of job created/ended in particular time range.\n" //days
-                                                            + "Q -> Back to main menu."  ); 
-                    if(find.equals("1")) {
+                    String find = JOptionPane.showInputDialog("1 -> Number of job created/ended in particular month.\n" //jobrange
+                            + "2 -> Number of job created/ended in each month.\n" //allJobs
+                            + "3 -> Number of job created/ended in particular time range.\n" //days
+                            + "Q -> Back to main menu.");
+                    if (find.equals("1")) {
                         jobRange();
-                    }
-                    else if(find.equals("2")) {
+                    } else if (find.equals("2")) {
                         allJobs();
-                    }
-                    else if(find.equals("3")) {
+                    } else if (find.equals("3")) {
                         JobRangeDay();
-                    }
-                    else if(find.equalsIgnoreCase("Q")) {
+                    } else if (find.equalsIgnoreCase("Q")) {
                         break;
-                    }
-                    else {
+                    } else {
                         JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE);
                     }
                 }
-
 
             } else if (cmd.equals("2")) {
                 partition();
@@ -83,6 +81,7 @@ public class Assignment extends JFrame {
                             + "4 -> Count errors in a given range of months.\n"
                             + "5 -> Find errors from in a given range.\n"
                             + "6 -> Display graph of number of errors in each month.\n"
+                            + "7 -> Display a barchart about errors caused by each users.\n"
                             + "Q -> Back to main menu.");
 
                     HashSet<String> months = sortErrorsByMonths();
@@ -166,14 +165,19 @@ public class Assignment extends JFrame {
                         PieChart3D demo = new PieChart3D("Comparison", "Number of Errors In Particular Months");
                         demo.pack();
                         demo.setVisible(true);
+                    } else if (in.equals("7")) {
+                        EventQueue.invokeLater(() -> {
+                            BarChartExample ex = new BarChartExample();
+                            ex.setVisible(true);
+                        });
                     } else if (in.equalsIgnoreCase("q")) {
-                        // JOptionPane.showMessageDialog(null, "System closed ! Thanks for using ! ", "System Closed", JOptionPane.INFORMATION_MESSAGE,exit);
                         break;
                     } else {
                         JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE, wrong);
                     }
                     System.out.println("\n*".repeat(5));
                 }
+
             } else if (cmd.equals("4")) {
                 while (true) {
 
@@ -570,7 +574,6 @@ public class Assignment extends JFrame {
 
                             System.out.printf("longest runtime  : " + maxid + " ");
                             stos(maxtotal);
-                            //  double avg =  (totalsec+secondconvert(totalday,totalhour,totalminit))/7530;
 
                             System.out.printf("Average :  %.3f seconds or ", getavg(totalcounter, totalsec, totalday, totalhour, totalminit));
                             stos(getavg(totalcounter, totalsec, totalday, totalhour, totalminit));
@@ -585,6 +588,29 @@ public class Assignment extends JFrame {
                         System.out.println("File not found");
                     } catch (IOException ex) {
                     }
+                }
+
+            } else if (cmd.equals("5")) {
+                while (true) {
+                    String in = JOptionPane.showInputDialog("1 -> Display a graph and a table about total number of jobs being killed each month.\n"
+                            + "2 -> Display a table about killed jobs with time, request, jobID and UID.\n"
+                            + "3 -> Display a graph and a table about total number of jobs being returned per month\n"
+                            + "4 -> Display a table about returned jobs with jobID, time, status and reason.\n"
+                            + "Q -> Back to main menu.");
+                    if (in.equals("1")) {
+                        totalkilljobmonth();
+                    } else if (in.equals("2")) {
+                        totalkilljob();
+                    } else if (in.equals("3")) {
+                        MonthReturnedJob();
+                    } else if (in.equals("4")) {
+                        displaytReturnedMonthInTable();
+                    } else if (in.equalsIgnoreCase("Q")) {
+                        break;
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Not a valid command. Please enter a proper command", "Invalid Command", JOptionPane.INFORMATION_MESSAGE);
+                    }
+
                 }
 
             } else if (cmd.equalsIgnoreCase("Q")) {
@@ -603,7 +629,7 @@ public class Assignment extends JFrame {
     }
 
 // -------------------------------------------------------------------------------------------------
-    // Weili: 
+// Weili: 
     // function: read raw datas, find and count errors caused by users (done)
     public static int countErrors() {
         int count = 0;
@@ -1004,7 +1030,7 @@ public class Assignment extends JFrame {
     }
 
 // -----------------------------------------------------------------------------------------------------------------------------
-    // Adam: 
+// Adam
     public static double gettotal(int day, int hour, int minit, double sec) {
         return (day * 86400) + (hour * 3600) + (minit * 60) + sec;
     }
@@ -1559,4 +1585,306 @@ public class Assignment extends JFrame {
         frame.pack();
         frame.setVisible(true);
     }
+
+//------------------------------------------------------------------------------------------------
+//  Cheeyan
+//  function : display total number of job being killed successfully from june to december.
+    public static void totalkilljob() {
+
+        System.out.println("Details for job successfully being killed per month: \n");
+
+        try {
+
+            Scanner scanner = new Scanner(new FileInputStream(DEFAULT));
+            PrintWriter writer = new PrintWriter(new FileWriter(D2));
+
+            int count = 0;
+            String content = "\\[*(\\d{4}-\\d{2}-\\w+:\\d{2}:\\d{2}.\\d{3})\\]* .*job: (\\w*\\_*\\w*\\_*\\w*) JobId=(\\d+) uid (\\d+)";
+
+            System.out.println("+-----------------------------------------------------------------------------+");
+            System.out.println("|          Date           |          Request         |   JobId   |     uid    |");
+            System.out.println("+-----------------------------------------------------------------------------+");
+
+            while (scanner.hasNextLine()) {
+
+                String line = scanner.nextLine();
+                Pattern hi = Pattern.compile(content);
+                Matcher matcher = hi.matcher(line);
+
+                if (matcher.find()) {
+                    if ((matcher.group(3).length() == 5)) {
+                        System.out.printf("| %15s | %20s     | %7s   | %10s |\n", matcher.group(1), matcher.group(2), matcher.group(3), matcher.group(4));
+                        System.out.println("|-----------------------------------------------------------------------------|");
+                        // writer.println(matcher.group(1) + " " + matcher.group(2) + " " + matcher.group(3) + " "  + matcher.group(4));
+                        writer.println(line);
+                        count++;
+                    }
+                }
+            }
+            System.out.println("| Total number of jobs being killed in all months is: " + count + "                    |");
+            System.out.println("+-----------------------------------------------------------------------------+");
+            System.out.println();
+
+            scanner.close();
+            writer.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File Not Found.");
+        } catch (IOException e) {
+            System.out.println("Problem with file input.");
+        }
+    }
+
+//  function : display a table with date, request, job id and uid
+    public static void totalkilljobmonth() {
+
+        int[] count = new int[7];
+        for (int i = 0; i < 7; i++) {
+            count[i] = 0;
+        }
+        System.out.println("Total number of job being killed successfully per month: ");
+        System.out.println();
+
+        try {
+
+            Scanner abc = new Scanner(new FileInputStream(D2));
+            //PrintWriter writer = new PrintWriter(new FileWriter("totalkilljobmonth.txt"));
+
+            while (abc.hasNextLine()) {
+                String line = abc.nextLine();
+
+                if (line.contains("2022-06")) {
+                    count[0] += 1;
+                } else if (line.contains("2022-07")) {
+                    count[1] += 1;
+                } else if (line.contains("2022-08")) {
+                    count[2] += 1;
+                } else if (line.contains("2022-09")) {
+                    count[3] += 1;
+                } else if (line.contains("2022-10")) {
+                    count[4] += 1;
+                } else if (line.contains("2022-11")) {
+                    count[5] += 1;
+                } else if (line.contains("2022-12")) {
+                    count[6] += 1;
+                }
+            }
+
+            System.out.printf("+ %-20s + %17s +\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17s     |\n", "       Month", "     Number Of Job Killed ");
+            System.out.printf("+ %-20s | %17s +\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "       June", count[0]);
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "       July", count[1]);
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "      August", count[2]);
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "     September", count[3]);
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "      October", count[4]);
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "      November", count[5]);
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "      December", count[6]);
+            System.out.printf("+ %-20s%17s +\n", "-".repeat(23), "-".repeat(30));
+            System.out.println();
+
+            PieChartforsuccessjobkill(count);
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File Not Found.");
+        } catch (IOException ex) {
+            System.out.println("Problem with file input.");
+        }
+    }
+
+//  function : total number of jobs being returned from june to december.
+    public static void MonthReturnedJob() {
+        int[] count = new int[7];
+        for (int i = 0; i < 7; i++) {
+            count[i] = 0;
+        }
+        System.out.println("Total number of job being returned per month: ");
+        System.out.println();
+
+        try {
+
+            Scanner abc = new Scanner(new FileInputStream(D1));
+            //PrintWriter writer = new PrintWriter(new FileWriter("totalkilljobmonth.txt"));
+
+            while (abc.hasNextLine()) {
+                String line = abc.nextLine();
+
+                if (line.contains("2022-06")) {
+                    count[0] += 1;
+                } else if (line.contains("2022-07")) {
+                    count[1] += 1;
+                } else if (line.contains("2022-08")) {
+                    count[2] += 1;
+                } else if (line.contains("2022-09")) {
+                    count[3] += 1;
+                } else if (line.contains("2022-10")) {
+                    count[4] += 1;
+                } else if (line.contains("2022-11")) {
+                    count[5] += 1;
+                } else if (line.contains("2022-12")) {
+                    count[6] += 1;
+                }
+            }
+
+            System.out.printf("+ %-20s%17s +\n", "-".repeat(23), "-".repeat(30));
+            System.out.printf("| %-20s | %17s   |\n", "       Month", "     Number Of Job Returned ");
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "       June", count[0]);
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "       July", count[1]);
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "      August", count[2]);
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "     September", count[3]);
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "      October", count[4]);
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "      November", count[5]);
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            System.out.printf("| %-20s | %17d              |\n", "      December", count[6]);
+            System.out.printf("+ %-20s%17s +\n", "-".repeat(23), "-".repeat(30));
+            System.out.println();
+
+            PieChartforreturnedjob(count);
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File Not Found.");
+        } catch (IOException e) {
+            System.out.println("Problem with file input.");
+        }
+    }
+
+//  function : detail for jobs being returned 
+    public static void displaytReturnedMonthInTable() {
+
+        try {
+
+            // System.out.println("+" + "-".repeat(150) + "+");
+            System.out.println();
+            System.out.println("Details for job being returned per month: ");
+
+            BufferedReader reader = new BufferedReader(new FileReader(D1));
+
+            int count = 0;
+            String line;
+
+            System.out.println(" ");
+            System.out.printf("+ %-27s%-30s%-30s%-33s +\n", "-".repeat(37), "-".repeat(30), "-".repeat(30), "-".repeat(36));
+            System.out.printf("| %-27s | %-30s | %-30s |  %-33s    |\n", "           JobID", "            Time", "            Status", "               Reason");
+            System.out.printf("| %-27s | %-30s | %-30s |  %-33s |\n", "-".repeat(27), "-".repeat(30), "-".repeat(30), "-".repeat(36));
+
+            while ((line = reader.readLine()) != null) {
+                Pattern pattern = Pattern.compile("\\[(.*)\\] .* (uid=)([0-9]*) (JobId=)([0-9]*) (sig=9 returned:) (.*)");
+                Matcher matcher = pattern.matcher(line);
+
+                if (matcher.matches()) {
+                    System.out.printf("|            %-16s |     %-26s |           %-20s |        %10s       | \n", matcher.group(5), matcher.group(1), "returned", matcher.group(7));
+                    count++;
+                }
+            }
+
+            System.out.printf("| %-27s%-30s%-16s%-30s |\n", "-".repeat(37), "-".repeat(30), "-".repeat(30), "-".repeat(36));
+            System.out.printf("|" + " ".repeat(12) + "Total number of jobs being returned in all months is: " + count + " ".repeat(67) + "|\n");
+            System.out.printf("+ %-27s%-30s%-16s%-30s +\n", "-".repeat(37), "-".repeat(30), "-".repeat(30), "-".repeat(36));
+
+            reader.close();
+
+        } catch (FileNotFoundException ex) {
+            System.out.println("File not found");
+        } catch (IOException ex) {
+        }
+    }
+
+//  function : show a pie chart about the 
+    public static void PieChartforsuccessjobkill(int[] count) {
+
+        DefaultPieDataset result = new DefaultPieDataset();
+        result.setValue("June\n" + " 25% ", count[0]);
+        result.setValue("July\n" + " 13% ", count[1]);
+        result.setValue("August\n" + " 17% ", count[2]);
+        result.setValue("September\n" + " 10% ", count[3]);
+        result.setValue("October\n" + " 13% ", count[4]);
+        result.setValue("November\n" + " 13% ", count[5]);
+        result.setValue("December\n" + " 9% ", count[6]);
+
+        //Create a chart
+        JFreeChart chart = ChartFactory.createPieChart3D("Total number of job successfully being killed ", result, true, true, false);
+        //Create a panel to display the chart
+        ChartPanel panel = new ChartPanel(chart);
+        chart.getTitle().setFont(new Font("Arial", Font.BOLD, 27));
+        chart.getTitle().setPaint(Color.BLACK);
+        chart.getLegend().setItemFont(new Font("Arial", Font.ITALIC, 18));
+        chart.getLegend().setBackgroundPaint(Color.LIGHT_GRAY);
+
+        PiePlot3D plot = (PiePlot3D) chart.getPlot();
+        plot.setSectionPaint(0, Color.GREEN);
+        plot.setSectionPaint(1, Color.RED);
+        plot.setSectionPaint(2, Color.BLUE);
+        plot.setSectionPaint(3, Color.magenta);
+        plot.setSectionPaint(4, Color.darkGray);
+        plot.setSectionPaint(5, Color.cyan);
+        plot.setSectionPaint(6, Color.YELLOW);
+        plot.setLabelFont(new Font("Arial", Font.PLAIN, 14));
+        plot.setStartAngle(290);
+        plot.setDirection(Rotation.CLOCKWISE);
+        plot.setForegroundAlpha(0.5f);
+        plot.setNoDataMessage("No data to display");
+
+        //Add the panel to a frame
+        JFrame frame = new JFrame("Bar Chart Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(panel);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
+//  function : 
+    public static void PieChartforreturnedjob(int[] count) {
+
+        DefaultPieDataset result = new DefaultPieDataset();
+        result.setValue("June\n" + " 14% ", count[0]);
+        result.setValue("July\n" + " 57% ", count[1]);
+        result.setValue("August\n" + " 7% ", count[2]);
+        result.setValue("September\n" + " 5% ", count[3]);
+        result.setValue("October\n" + " 5% ", count[4]);
+        result.setValue("November\n" + " 14% ", count[5]);
+        result.setValue("December\n" + " 0% ", count[6]);
+
+        //Create a chart
+        JFreeChart chart = ChartFactory.createPieChart3D("Total number of job being returned ", result, true, true, false);
+        //Create a panel to display the chart
+        ChartPanel panel = new ChartPanel(chart);
+        chart.getTitle().setFont(new Font("Arial", Font.BOLD, 30));
+        chart.getTitle().setPaint(Color.BLACK);
+        chart.getLegend().setItemFont(new Font("Arial", Font.ITALIC, 18));
+        chart.getLegend().setBackgroundPaint(Color.LIGHT_GRAY);
+
+        PiePlot3D plot = (PiePlot3D) chart.getPlot();
+        plot.setSectionPaint(0, Color.RED);
+        plot.setSectionPaint(1, Color.ORANGE);
+        plot.setSectionPaint(2, Color.YELLOW);
+        plot.setSectionPaint(3, Color.GREEN);
+        plot.setSectionPaint(4, Color.BLUE);
+        plot.setSectionPaint(5, Color.cyan);
+        plot.setSectionPaint(6, Color.PINK);
+        plot.setLabelFont(new Font("Arial", Font.PLAIN, 14));
+        plot.setStartAngle(290);
+        plot.setDirection(Rotation.CLOCKWISE);
+        plot.setForegroundAlpha(0.5f);
+        plot.setNoDataMessage("No data to display");
+
+        //Add the panel to a frame
+        JFrame frame = new JFrame("Bar Chart Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(panel);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
 }
