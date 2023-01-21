@@ -79,7 +79,7 @@ public class Assignment extends JFrame {
                             + "2 -> Display a table with usernames, time, association number and types of errors.\n"
                             + "3 -> Show a username list and number of errors caused by each user.\n"
                             + "4 -> Count errors in a given range of months.\n"
-                            + "5 -> Find errors from in a given range.\n"
+                            + "5 -> Find errors in a given range of date.\n"
                             + "6 -> Display graph of number of errors in each month.\n"
                             + "7 -> Display a barchart about errors caused by each users.\n"
                             + "Q -> Back to main menu.");
@@ -630,7 +630,7 @@ public class Assignment extends JFrame {
 
 // -------------------------------------------------------------------------------------------------
 // Weili: 
-    // function: read raw datas, find and count errors caused by users (done)
+    // function: read raw datas, find and count total number errors caused by users (done)
     public static int countErrors() {
         int count = 0;
         try {
@@ -833,7 +833,7 @@ public class Assignment extends JFrame {
         }
     }
 
-    // function: display the number of errors caused by each users.
+    // function: display the number of errors caused by each user.
     public static void countErrorsCausedByUsers(HashSet<String> users) {
 
         ArrayList<String> usernames = new ArrayList<>();
@@ -980,20 +980,7 @@ public class Assignment extends JFrame {
         }
     }
 
-    // public static StringBuilder TableFromFile(String file) {
-    //     StringBuilder str = new StringBuilder();
-    //     try { 
-    //         BufferedReader reader = new BufferedReader(new FileReader(file));
-    //         String line;
-    //         while((line = reader.readLine()) != null) {
-    //             str.append(line);
-    //             str.append("\n");
-    //         }
-    //         reader.close();
-    //     } catch (FileNotFoundException e) {System.out.println("File not found");} 
-    //       catch (IOException ex) {}
-    //       return str;
-    // }
+    
     public static void FindErrorsInEachMonth(HashSet<String> months) {
         ArrayList<String> month = new ArrayList<>();
         try {
@@ -1588,44 +1575,191 @@ public class Assignment extends JFrame {
 
 //------------------------------------------------------------------------------------------------
 //  Cheeyan
-//  function : display total number of job being killed successfully from june to december.
+    public static void totalkilljobmonth() {
+
+        int[] successcount = new int[7];
+        int[] requestcount = new int[7];
+        int[] failurecount = new int[7];
+        String[] Month = {"June", "July", "August", "September", "October", "November", "December"};
+
+        System.out.println("Total number of job being killed successfully per month: ");
+        System.out.println();
+
+        try {
+
+            Scanner scanner = new Scanner(new FileInputStream(DEFAULT));
+
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                if (line.contains("_slurm_rpc_kill_job")) {
+                    if (line.contains("REQUEST_KILL_JOB")) {
+                        checkMonth(line, requestcount);
+                    }
+                    if (line.contains("job_str_signal()")) {
+                        checkMonth(line, failurecount);
+                    }
+                }
+            }
+
+            scanner.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File Not Found.");
+        } catch (IOException e) {
+            System.out.println("Problem with file input.");
+        }
+
+        for (int i = 0; i < successcount.length; i++) {
+            successcount[i] = requestcount[i] - failurecount[i];
+        }
+
+        System.out.printf("+ %-20s%17s +\n", "-".repeat(23), "-".repeat(30));
+        System.out.printf("| %-20s | %17s     |\n", "Month", "     Number Of Job Killed ");
+        System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+        for (int i = 0; i < successcount.length - 1; i++) {
+            System.out.printf("| %-20s | %17d              |\n", Month[i], successcount[i]);
+            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+        }
+        System.out.printf("| %-20s | %17d              |\n", "December", successcount[6]);
+        System.out.printf("+ %-20s%17s +\n", "-".repeat(23), "-".repeat(30));
+        System.out.println();
+
+        PieChartforsuccessjobkill(successcount);
+    }
+
+    public static void checkMonth(String line, int[] monthcount) {
+        Pattern pattern = Pattern.compile("\\[2022-(\\d+)-(.+)](.+)");
+        Matcher matcher = pattern.matcher(line);
+        matcher.find();
+        switch (matcher.group(1)) {
+            case "06":
+                monthcount[0]++;
+                break;
+            case "07":
+                monthcount[1]++;
+                break;
+            case "08":
+                monthcount[2]++;
+                break;
+            case "09":
+                monthcount[3]++;
+                break;
+            case "10":
+                monthcount[4]++;
+                break;
+            case "11":
+                monthcount[5]++;
+                break;
+            case "12":
+                monthcount[6]++;
+                break;
+        }
+    }
+
     public static void totalkilljob() {
+
+        String[] successDate = new String[2336];
+        String[] successRequest = new String[2336];
+        String[] successId = new String[2336];
+        String[] successUid = new String[2336];
+        String[] failDate = new String[44];
+        String[] failRequest = new String[44];
+        String[] failId = new String[44];
+        String[] failUid = new String[44];
+        String[] failReason = new String[44];
+        int successCount = 0;
+        int failCount = 0;
+        String id = null;
 
         System.out.println("Details for job successfully being killed per month: \n");
 
         try {
 
             Scanner scanner = new Scanner(new FileInputStream(DEFAULT));
-            PrintWriter writer = new PrintWriter(new FileWriter(D2));
-
-            int count = 0;
-            String content = "\\[*(\\d{4}-\\d{2}-\\w+:\\d{2}:\\d{2}.\\d{3})\\]* .*job: (\\w*\\_*\\w*\\_*\\w*) JobId=(\\d+) uid (\\d+)";
-
-            System.out.println("+-----------------------------------------------------------------------------+");
-            System.out.println("|          Date           |          Request         |   JobId   |     uid    |");
-            System.out.println("+-----------------------------------------------------------------------------+");
 
             while (scanner.hasNextLine()) {
-
                 String line = scanner.nextLine();
-                Pattern hi = Pattern.compile(content);
-                Matcher matcher = hi.matcher(line);
+                Pattern pattern = Pattern.compile("\\[(2022-\\d+-\\d+T.+)] _slurm_rpc_kill_job: (REQUEST_KILL_JOB) JobId=(\\d+) uid (\\d+)");
+                Matcher matcher = pattern.matcher(line);
+                Pattern failedpattern = Pattern.compile("\\[(2022-\\d+-\\d+T.+)] _slurm_rpc_kill_job: (job_str_signal(.+)) uid=(\\d+) JobId=(\\d+) sig=9 returned: (.+)");
+                Matcher failedmatcher = failedpattern.matcher(line);
+                matcher.find();
+                failedmatcher.find();
 
-                if (matcher.find()) {
-                    if ((matcher.group(3).length() == 5)) {
-                        System.out.printf("| %15s | %20s     | %7s   | %10s |\n", matcher.group(1), matcher.group(2), matcher.group(3), matcher.group(4));
-                        System.out.println("|-----------------------------------------------------------------------------|");
-                        // writer.println(matcher.group(1) + " " + matcher.group(2) + " " + matcher.group(3) + " "  + matcher.group(4));
-                        writer.println(line);
-                        count++;
+                if (line.contains("job_str_signal()")) {
+                    if (failedmatcher.group(5).compareToIgnoreCase(id) == 0) {
+                        successDate[successCount - 1] = null;
+                        successRequest[successCount - 1] = null;
+                        successId[successCount - 1] = null;
+                        successUid[successCount - 1] = null;
+                        successCount--;
                     }
+
+                    failDate[failCount] = failedmatcher.group(1);
+                    failRequest[failCount] = failedmatcher.group(2);
+                    failId[failCount] = failedmatcher.group(5);
+                    failUid[failCount] = failedmatcher.group(4);
+                    failReason[failCount] = failedmatcher.group(6);
+                    failCount++;
+                }
+
+                if (matcher.matches()) {
+                    successDate[successCount] = matcher.group(1);
+                    successRequest[successCount] = matcher.group(2);
+                    successId[successCount] = matcher.group(3);
+                    successUid[successCount] = matcher.group(4);
+                    id = matcher.group(3);
+                    successCount++;
                 }
             }
-            System.out.println("| Total number of jobs being killed in all months is: " + count + "                    |");
-            System.out.println("+-----------------------------------------------------------------------------+");
-            System.out.println();
 
             scanner.close();
+
+            int counter = 0;
+
+            System.out.printf("+ %-27s%-30s%-30s%-24s +\n", "-".repeat(37), "-".repeat(30), "-".repeat(30), "-".repeat(27));
+            System.out.printf("| %-27s | %-30s | %-35s |  %-23s|\n", "           JobID", "            Date", "              Request", "         uid");
+            System.out.printf("| %-27s%-30s%-30s%-24s |\n", "-".repeat(37), "-".repeat(30), "-".repeat(30), "-".repeat(27));
+
+            for (int i = 0; i < successDate.length; i++) {
+                System.out.printf("|            %-16s |     %-26s |           %-25s |        %10s       | \n", successId[i], successDate[i], successRequest[i], successUid[i]);
+                counter++;
+            }
+
+            System.out.printf("| %-27s%-30s%-30s%-24s |\n", "-".repeat(37), "-".repeat(30), "-".repeat(30), "-".repeat(27));
+            System.out.printf("|" + " ".repeat(11) + " Total number of jobs being killed in all months is: " + counter + " ".repeat(57) + "|\n");
+            System.out.printf("+ %-27s%-30s%-30s%-24s +\n", "-".repeat(37), "-".repeat(30), "-".repeat(30), "-".repeat(27));
+            System.out.println();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File Not Found.");
+        } catch (IOException e) {
+            System.out.println("Problem with file input.");
+        }
+    }
+
+    public static void TotalReturnedJob() {
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(DEFAULT));
+            PrintWriter writer = new PrintWriter(new FileWriter(D1));
+
+            String line = "";
+            int count = 0;
+
+            while ((line = reader.readLine()) != null) {
+                Pattern pattern = Pattern.compile(".*(sig=9 returned).*");
+                Matcher matcher = pattern.matcher(line);
+                if (matcher.matches()) {
+                    writer.println(line);
+                    count++;
+                }
+            }
+
+            // System.out.println("Total no of jobs returned: " + count);
+            System.out.println();
+
+            reader.close();
             writer.close();
 
         } catch (FileNotFoundException e) {
@@ -1635,71 +1769,29 @@ public class Assignment extends JFrame {
         }
     }
 
-//  function : display a table with date, request, job id and uid
-    public static void totalkilljobmonth() {
+    public int[] monthCount(String line, int[] count) {
 
-        int[] count = new int[7];
-        for (int i = 0; i < 7; i++) {
-            count[i] = 0;
+        if (line.contains("2022-06")) {
+            count[0] += 1;
+        } else if (line.contains("2022-07")) {
+            count[1] += 1;
+        } else if (line.contains("2022-08")) {
+            count[2] += 1;
+        } else if (line.contains("2022-09")) {
+            count[3] += 1;
+        } else if (line.contains("2022-10")) {
+            count[4] += 1;
+        } else if (line.contains("2022-11")) {
+            count[5] += 1;
+        } else if (line.contains("2022-12")) {
+            count[6] += 1;
         }
-        System.out.println("Total number of job being killed successfully per month: ");
-        System.out.println();
-
-        try {
-
-            Scanner abc = new Scanner(new FileInputStream(D2));
-            //PrintWriter writer = new PrintWriter(new FileWriter("totalkilljobmonth.txt"));
-
-            while (abc.hasNextLine()) {
-                String line = abc.nextLine();
-
-                if (line.contains("2022-06")) {
-                    count[0] += 1;
-                } else if (line.contains("2022-07")) {
-                    count[1] += 1;
-                } else if (line.contains("2022-08")) {
-                    count[2] += 1;
-                } else if (line.contains("2022-09")) {
-                    count[3] += 1;
-                } else if (line.contains("2022-10")) {
-                    count[4] += 1;
-                } else if (line.contains("2022-11")) {
-                    count[5] += 1;
-                } else if (line.contains("2022-12")) {
-                    count[6] += 1;
-                }
-            }
-
-            System.out.printf("+ %-20s + %17s +\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17s     |\n", "       Month", "     Number Of Job Killed ");
-            System.out.printf("+ %-20s | %17s +\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "       June", count[0]);
-            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "       July", count[1]);
-            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "      August", count[2]);
-            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "     September", count[3]);
-            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "      October", count[4]);
-            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "      November", count[5]);
-            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "      December", count[6]);
-            System.out.printf("+ %-20s%17s +\n", "-".repeat(23), "-".repeat(30));
-            System.out.println();
-
-            PieChartforsuccessjobkill(count);
-
-        } catch (FileNotFoundException e) {
-            System.out.println("File Not Found.");
-        } catch (IOException ex) {
-            System.out.println("Problem with file input.");
-        }
+        return count;
     }
 
-//  function : total number of jobs being returned from june to december.
     public static void MonthReturnedJob() {
+
+        String[] Month = {"June", "July", "August", "September", "October", "November", "December"};
         int[] count = new int[7];
         for (int i = 0; i < 7; i++) {
             count[i] = 0;
@@ -1733,21 +1825,13 @@ public class Assignment extends JFrame {
             }
 
             System.out.printf("+ %-20s%17s +\n", "-".repeat(23), "-".repeat(30));
-            System.out.printf("| %-20s | %17s   |\n", "       Month", "     Number Of Job Returned ");
+            System.out.printf("| %-20s | %17s   |\n", "Month", "     Number Of Job Returned ");
             System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "       June", count[0]);
-            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "       July", count[1]);
-            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "      August", count[2]);
-            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "     September", count[3]);
-            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "      October", count[4]);
-            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "      November", count[5]);
-            System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
-            System.out.printf("| %-20s | %17d              |\n", "      December", count[6]);
+            for (int i = 0; i < count.length - 1; i++) {
+                System.out.printf("| %-20s | %17d              |\n", Month[i], count[i]);
+                System.out.printf("| %-20s | %17s |\n", "-".repeat(20), "-".repeat(30));
+            }
+            System.out.printf("| %-20s | %17d              |\n", "December", count[6]);
             System.out.printf("+ %-20s%17s +\n", "-".repeat(23), "-".repeat(30));
             System.out.println();
 
@@ -1760,7 +1844,6 @@ public class Assignment extends JFrame {
         }
     }
 
-//  function : detail for jobs being returned 
     public static void displaytReturnedMonthInTable() {
 
         try {
@@ -1776,8 +1859,8 @@ public class Assignment extends JFrame {
 
             System.out.println(" ");
             System.out.printf("+ %-27s%-30s%-30s%-33s +\n", "-".repeat(37), "-".repeat(30), "-".repeat(30), "-".repeat(36));
-            System.out.printf("| %-27s | %-30s | %-30s |  %-33s    |\n", "           JobID", "            Time", "            Status", "               Reason");
-            System.out.printf("| %-27s | %-30s | %-30s |  %-33s |\n", "-".repeat(27), "-".repeat(30), "-".repeat(30), "-".repeat(36));
+            System.out.printf("| %-27s | %-30s | %-30s |  %-33s    |\n", "           JobID", "            Date", "           Status", "               Reason");
+            System.out.printf("| %-27s%-30s%-30s%-33s |\n", "-".repeat(37), "-".repeat(30), "-".repeat(30), "-".repeat(36));
 
             while ((line = reader.readLine()) != null) {
                 Pattern pattern = Pattern.compile("\\[(.*)\\] .* (uid=)([0-9]*) (JobId=)([0-9]*) (sig=9 returned:) (.*)");
@@ -1801,13 +1884,12 @@ public class Assignment extends JFrame {
         }
     }
 
-//  function : show a pie chart about the 
     public static void PieChartforsuccessjobkill(int[] count) {
 
         DefaultPieDataset result = new DefaultPieDataset();
         result.setValue("June\n" + " 25% ", count[0]);
-        result.setValue("July\n" + " 13% ", count[1]);
-        result.setValue("August\n" + " 17% ", count[2]);
+        result.setValue("July\n" + " 12% ", count[1]);
+        result.setValue("August\n" + " 18% ", count[2]);
         result.setValue("September\n" + " 10% ", count[3]);
         result.setValue("October\n" + " 13% ", count[4]);
         result.setValue("November\n" + " 13% ", count[5]);
@@ -1844,7 +1926,6 @@ public class Assignment extends JFrame {
         frame.setVisible(true);
     }
 
-//  function : 
     public static void PieChartforreturnedjob(int[] count) {
 
         DefaultPieDataset result = new DefaultPieDataset();
@@ -1886,5 +1967,4 @@ public class Assignment extends JFrame {
         frame.pack();
         frame.setVisible(true);
     }
-
 }
