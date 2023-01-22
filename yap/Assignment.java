@@ -166,7 +166,7 @@ public class Assignment extends JFrame {
                                 JOptionPane.showMessageDialog(null, "Invalid date format. Please enter again.", "Invalid command", JOptionPane.INFORMATION_MESSAGE, wrongImage);
                                 continue;
                             }
-
+                            JOptionPane.showMessageDialog(null, "Result will be displayed at the console.", null, JOptionPane.INFORMATION_MESSAGE, loading);
                             countErrorsBetween(start, end);
                         }
 
@@ -509,6 +509,7 @@ public class Assignment extends JFrame {
                             }
                         }
                         if (cmd4.equals("1")) {
+                            JOptionPane.showMessageDialog(null, "Result will be displayed at the console.", null, JOptionPane.INFORMATION_MESSAGE, loading);
                             System.out.println("Execution time of the jobs submitted based on month ");
                             System.out.println("------------------------------------------------------------------------");
                             System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10s %-2s \n", "|", "Month", "|", "Months", "|", "Days", "|", "Hours", "|", "Minutes", "|", "Seconds", "|");
@@ -522,6 +523,7 @@ public class Assignment extends JFrame {
                             System.out.printf("%-2s %-10s %-2s %-6s %-2s %-5s %-2s %-8s %-2s %-8s %-2s %-10.3f %-2s \n", "|", "December", "|", decmon, "|", decd, "|", dech, "|", decm, "|", decs, "|");
                             System.out.println("------------------------------------------------------------------------");
                         } else if (cmd4.equals("2")) {
+                            JOptionPane.showMessageDialog(null, "Result will be displayed at the console.", null, JOptionPane.INFORMATION_MESSAGE, loading);
                             System.out.printf("June average :%.3f seconds or ", getavg(junecounter, junes, juned, juneh, junem), " seconds or ");
                             stos(getavg(junecounter, junes, juned, juneh, junem));
                             System.out.printf("shortest runtime : " + juneminid + " ");
@@ -530,6 +532,7 @@ public class Assignment extends JFrame {
                             stos(junemaxtotal);
                             System.out.println();
                         } else if (cmd4.equals("3")) {
+                            JOptionPane.showMessageDialog(null, "Result will be displayed at the console.", null, JOptionPane.INFORMATION_MESSAGE, loading);
                             System.out.printf("July average :%.3f seconds or ", getavg(julycounter, julys, julyd, julyh, julym));
                             stos(getavg(julycounter, julys, julyd, julyh, julym));
                             System.out.printf("shortest runtime : " + julyminid + " ");
@@ -538,6 +541,7 @@ public class Assignment extends JFrame {
                             stos(julymaxtotal);
                             System.out.println();
                         } else if (cmd4.equals("4")) {
+                            JOptionPane.showMessageDialog(null, "Result will be displayed at the console.", null, JOptionPane.INFORMATION_MESSAGE, loading);
                             System.out.printf("August average :%.3f seconds or ", getavg(augcounter, augs, augd, augh, augm), " seconds or ");
                             stos(getavg(augcounter, augs, augd, augh, augm));
                             System.out.printf("shortest runtime : " + augminid + " ");
@@ -546,6 +550,7 @@ public class Assignment extends JFrame {
                             stos(augmaxtotal);
                             System.out.println();
                         } else if (cmd4.equals("5")) {
+                            JOptionPane.showMessageDialog(null, "Result will be displayed at the console.", null, JOptionPane.INFORMATION_MESSAGE, loading);
                             System.out.printf("September average :%.3f seconds or ", getavg(sepcounter, seps, sepd, seph, sepm), " seconds or ");
                             stos(getavg(sepcounter, seps, sepd, seph, sepm));
                             System.out.printf("shortest runtime : " + sepminid + " ");
@@ -554,6 +559,7 @@ public class Assignment extends JFrame {
                             stos(sepmaxtotal);
                             System.out.println();
                         } else if (cmd4.equals("6")) {
+                            JOptionPane.showMessageDialog(null, "Result will be displayed at the console.", null, JOptionPane.INFORMATION_MESSAGE, loading);
                             System.out.printf("October average :%.3f seconds or ", getavg(octcounter, octs, octd, octh, octm), " seconds or ");
                             stos(getavg(octcounter, octs, octd, octh, octm));
                             System.out.printf("shortest runtime : " + octminid + " ");
@@ -562,6 +568,7 @@ public class Assignment extends JFrame {
                             stos(octmaxtotal);
                             System.out.println();
                         } else if (cmd4.equals("7")) {
+                            JOptionPane.showMessageDialog(null, "Result will be displayed at the console.", null, JOptionPane.INFORMATION_MESSAGE, loading);
                             System.out.printf("November average :%.3f seconds or ", getavg(novcounter, novs, novd, novh, novm), " seconds or ");
                             stos(getavg(novcounter, novs, novd, novh, novm));
                             System.out.printf("shortest runtime : " + novminid + " ");
@@ -570,6 +577,7 @@ public class Assignment extends JFrame {
                             stos(novmaxtotal);
                             System.out.println();
                         } else if (cmd4.equals("8")) {
+                            JOptionPane.showMessageDialog(null, "Result will be displayed at the console.", null, JOptionPane.INFORMATION_MESSAGE, loading);
                             System.out.printf("December average :%.3f seconds or ", getavg(deccounter, decs, decd, dech, decm), " seconds or ");
                             stos(getavg(deccounter, decs, decd, dech, decm));
                             System.out.printf("shortest runtime : " + decminid + " ");
@@ -593,6 +601,7 @@ public class Assignment extends JFrame {
                             RefineryUtilities.centerFrameOnScreen(chart);
                             chart.setVisible(true);
                         } else if (cmd4.equals("10")) {
+                            JOptionPane.showMessageDialog(null, "Result will be displayed at the console.", null, JOptionPane.INFORMATION_MESSAGE, loading);
                             System.out.println("total month :" + totalmonth);
                             System.out.println("total day :" + totalday);
                             System.out.println("total  hour :" + totalhour);
@@ -629,10 +638,12 @@ public class Assignment extends JFrame {
                     if (in.equals("1")) {
                         totalkilljobmonth();
                     } else if (in.equals("2")) {
+                        JOptionPane.showMessageDialog(null, "Result will be displayed at the console.", null, JOptionPane.INFORMATION_MESSAGE, loading);
                         totalkilljob();
                     } else if (in.equals("3")) {
                         MonthReturnedJob();
                     } else if (in.equals("4")) {
+                        JOptionPane.showMessageDialog(null, "Result will be displayed at the console.", null, JOptionPane.INFORMATION_MESSAGE, loading);
                         displaytReturnedMonthInTable();
                     } else if (in.equalsIgnoreCase("Q")) {
                         break;
@@ -1540,7 +1551,7 @@ public class Assignment extends JFrame {
                         }
                     }
                 }
-                if (matcherDate.group(2).compareTo(fmonth) > 0) {
+                if (matcherDate.group(1).compareTo(fmonth) > 0) {
                     break;
                 }
             }
@@ -1596,12 +1607,12 @@ public class Assignment extends JFrame {
     public static void PieChartforpartition(int[] numPartition) {
 
         DefaultPieDataset result = new DefaultPieDataset();
-        result.setValue("gpu-k10\n" + " 8% ", numPartition[0]);
+        result.setValue("gpu-k10\n" + " 5% ", numPartition[0]);
         result.setValue("gpu-k40c\n" + " 3% ", numPartition[1]);
-        result.setValue("gpu-v100s\n" + " 7% ", numPartition[2]);
+        result.setValue("gpu-v100s\n" + " 6% ", numPartition[2]);
         result.setValue("gpu-titan\n" + " 7% ", numPartition[3]);
         result.setValue("cpu-opteron\n" + " 49%", numPartition[4]);
-        result.setValue("cpu-epyc\n" + " 26% ", numPartition[5]);
+        result.setValue("cpu-epyc\n" + " 30% ", numPartition[5]);
 
         //Create a chart
         JFreeChart chart = ChartFactory.createPieChart3D("Type of Partition ", result, true, true, false);
